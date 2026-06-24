@@ -20,7 +20,7 @@ function GridTile({ index, left }: { index: number; left: string }) {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute h-[1461px] w-[1513px] -translate-x-1/2 origin-top scale-[0.27] md:scale-[0.53] lg:scale-[0.71] xl:scale-[1] opacity-50 xl:opacity-[0.11]"
+      className="pointer-events-none absolute h-[1461px] w-[1513px] -translate-x-1/2 origin-top scale-[0.27] md:scale-[0.53] lg:scale-[0.71] xl:scale-[1] opacity-20 xl:opacity-[0.11]"
       style={{ top: `calc(var(--tile-step) * ${index})`, left }}
     >
       <div className="absolute h-[1049px] w-[1440px]" style={{ left: 37, top: 0 }}>
