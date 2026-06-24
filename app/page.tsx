@@ -64,8 +64,8 @@ function GridTile({ top, left }: { top: number; left: string }) {
 /* ── Nav ─────────────────────────────────────────────────────── */
 function Nav() {
   return (
-    <header className="relative z-10 flex justify-center pt-[64px]">
-      <nav aria-label="Primary navigation">
+    <header className="fixed top-[16px] inset-x-0 z-50 flex justify-center pointer-events-none">
+      <nav aria-label="Primary navigation" className="pointer-events-auto">
         <NavPill />
       </nav>
     </header>
@@ -75,7 +75,7 @@ function Nav() {
 /* ── Hero ─────────────────────────────────────────────────────── */
 function Hero() {
   return (
-    <section aria-label="Introduction" className="relative z-20 pt-[24px] xl:pt-[48px] enter-1">
+    <section aria-label="Introduction" className="relative z-20 pt-[88px] xl:pt-[100px] enter-1">
       <h1 className="font-display text-center text-[64px] md:text-[120px] xl:text-[200px] leading-none tracking-[3px] md:tracking-[8px] xl:tracking-[14px] text-white">
         Martins
       </h1>
