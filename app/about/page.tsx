@@ -19,12 +19,12 @@ const A = {
 };
 
 /* ── Grid tile — same component pattern as landing page ────────── */
-function GridTile({ top, left }: { top: number; left: string }) {
+function GridTile({ index, left }: { index: number; left: string }) {
   return (
     <div
       aria-hidden="true"
       className="pointer-events-none absolute h-[1461px] w-[1513px] -translate-x-1/2 origin-top scale-[0.27] md:scale-[0.53] lg:scale-[0.71] xl:scale-[1] opacity-50 xl:opacity-[0.11]"
-      style={{ top, left }}
+      style={{ top: `calc(var(--tile-step) * ${index})`, left }}
     >
       <div className="absolute h-[1049px] w-[1440px]" style={{ left: 37, top: 0 }}>
         <img src={A.hline} alt="" className="absolute inset-0 block size-full max-w-none" />
@@ -242,9 +242,8 @@ export default function AboutPage() {
   return (
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-hidden">
       {/* Grid: tile 1 starts at -25px (centred at 706px top), tile 2 at 703px */}
-      <GridTile top={0} left="calc(50% - 0.5px)" />
-      <GridTile top={728} left="calc(50% - 0.5px)" />
-
+      <GridTile index={0} left="calc(50% - 0.5px)" />
+      <GridTile index={1} left="calc(50% - 0.5px)" />
       {/* Nav — ABOUT active */}
       <StickyHeader defaultActive="ABOUT" />
 

@@ -24,12 +24,12 @@ const A = {
 };
 
 /* ── Grid tile (1513×1461px) — absolute within body ─────────── */
-function GridTile({ top, left }: { top: number; left: string }) {
+function GridTile({ index, left }: { index: number; left: string }) {
   return (
     <div
       aria-hidden="true"
       className="pointer-events-none absolute h-[1461px] w-[1513px] -translate-x-1/2 origin-top scale-[0.27] md:scale-[0.53] lg:scale-[0.71] xl:scale-[1] opacity-50 xl:opacity-[0.11]"
-      style={{ top, left }}
+      style={{ top: `calc(var(--tile-step) * ${index})`, left }}
     >
       {/* Horizontal lines: 1440×1049 at left=37 */}
       <div className="absolute h-[1049px] w-[1440px]" style={{ left: 37, top: 0 }}>
@@ -315,11 +315,10 @@ export default function Home() {
        Body background (#415a77) fills the remaining width on both sides. */
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-hidden">
       {/* Grid tiles — absolute within this 1440px container */}
-      <GridTile top={0}    left="calc(50% - 0.5px)" />
-      <GridTile top={1049} left="calc(45.83% + 45.5px)" />
-      <GridTile top={2098} left="calc(45.83% + 45.5px)" />
-      <GridTile top={3147} left="calc(45.83% + 45.5px)" />
-
+      <GridTile index={0} left="calc(50% - 0.5px)" />
+      <GridTile index={1} left="calc(50% - 0.5px)" />
+      <GridTile index={2} left="calc(50% - 0.5px)" />
+      <GridTile index={3} left="calc(50% - 0.5px)" />
       <Nav />
       <main className="flex-1">
         <Hero />

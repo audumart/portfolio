@@ -14,12 +14,12 @@ const A = {
   banner:     "/9lives store.png",
 };
 
-function GridTile({ top, left }: { top: number; left: string }) {
+function GridTile({ index, left }: { index: number; left: string }) {
   return (
     <div
       aria-hidden="true"
       className="pointer-events-none absolute h-[1461px] w-[1513px] -translate-x-1/2 origin-top scale-[0.27] md:scale-[0.53] lg:scale-[0.71] xl:scale-[1] opacity-50 xl:opacity-[0.11]"
-      style={{ top, left }}
+      style={{ top: `calc(var(--tile-step) * ${index})`, left }}
     >
       <div className="absolute h-[1049px] w-[1440px]" style={{ left: 37, top: 0 }}>
         <img src={A.hline} alt="" className="absolute inset-0 block size-full max-w-none" />
@@ -84,8 +84,8 @@ function Footer() {
 export default function NineLivesPage() {
   return (
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-hidden">
-      {[0, 729, 1650, 2571, 3492].map((top) => (
-        <GridTile key={top} top={top} left="calc(50% - 0.5px)" />
+      {[0, 1, 2, 3, 4].map((index) => (
+        <GridTile key={index} index={index} left="calc(50% - 0.5px)" />
       ))}
 
       <StickyHeader />

@@ -84,6 +84,12 @@ input, textarea, [contenteditable] {
   box-shadow: none !important;
 }
 
+/* Responsive grid tile step — matches visual height at each scale breakpoint */
+:root                        { --tile-step: calc(1461px * 0.27); }
+@media (min-width: 768px)  { :root { --tile-step: calc(1461px * 0.53); } }
+@media (min-width: 1024px) { :root { --tile-step: calc(1461px * 0.71); } }
+@media (min-width: 1280px) { :root { --tile-step: 1461px; } }
+
 /* On true desktop: restore user-select + focus rings, but keep cursor: none
    so the CursorDot circle is the only pointer visible */
 @media (min-width: 1280px) and (hover: hover) and (pointer: fine) {
