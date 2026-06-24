@@ -158,7 +158,7 @@ export default function TsePage() {
               portfolio websites while being something that still possessed the same essence and
               purpose. I worked on several iterations to come up with different layouts and device
               breakpoints in order to understand what would work and what wouldn&apos;t. Working with TSE
-              and the most experienced web developer (shoutout to Chudi Oranu) I know we tested
+              and the most experienced web developer (shoutout to director tetsuo) I know we tested
               several of the iterations until we were able to arrive at the final version of the
               site. The images below give a general overview of most of the iterations that were
               explored. Photographs at their most fundamental level represent stillness, a piece of
