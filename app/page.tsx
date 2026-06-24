@@ -189,8 +189,8 @@ function Projects() {
 
       <Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
-          <NineLivesCard />
           <QrPayCard />
+          <NineLivesCard />
         </div>
       </Reveal>
     </section>
