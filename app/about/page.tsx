@@ -244,6 +244,10 @@ export default function AboutPage() {
       {/* Grid: tile 1 starts at -25px (centred at 706px top), tile 2 at 703px */}
       <GridTile index={0} left="calc(50% - 0.5px)" />
       <GridTile index={1} left="calc(50% - 0.5px)" />
+      <GridTile index={2} left="calc(50% - 0.5px)" />
+      <GridTile index={3} left="calc(50% - 0.5px)" />
+      <GridTile index={4} left="calc(50% - 0.5px)" />
+      <GridTile index={5} left="calc(50% - 0.5px)" />
       {/* Nav — ABOUT active */}
       <StickyHeader defaultActive="ABOUT" />
 

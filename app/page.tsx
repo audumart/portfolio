@@ -319,6 +319,10 @@ export default function Home() {
       <GridTile index={1} left="calc(50% - 0.5px)" />
       <GridTile index={2} left="calc(50% - 0.5px)" />
       <GridTile index={3} left="calc(50% - 0.5px)" />
+      <GridTile index={4} left="calc(50% - 0.5px)" />
+      <GridTile index={5} left="calc(50% - 0.5px)" />
+      <GridTile index={6} left="calc(50% - 0.5px)" />
+      <GridTile index={7} left="calc(50% - 0.5px)" />
       <Nav />
       <main className="flex-1">
         <Hero />

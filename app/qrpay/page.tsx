@@ -89,7 +89,7 @@ function Footer() {
 export default function QrPayPage() {
   return (
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-hidden">
-      {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+      {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map((index) => (
         <GridTile key={index} index={index} left="calc(50% - 0.5px)" />
       ))}
 
