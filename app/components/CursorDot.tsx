@@ -8,6 +8,15 @@ export default function CursorDot() {
   const dotRef = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
+  /* Inject cursor:none at runtime — sits after all static stylesheets,
+     guaranteed to win the cascade on every browser */
+  useEffect(() => {
+    const style = document.createElement("style");
+    style.textContent = "*, *::before, *::after { cursor: none !important; }";
+    document.head.appendChild(style);
+    return () => { document.head.removeChild(style); };
+  }, []);
+
   useEffect(() => {
     const mq = window.matchMedia(DESKTOP_MQ);
     setIsDesktop(mq.matches);

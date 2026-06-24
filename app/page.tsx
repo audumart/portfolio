@@ -211,19 +211,18 @@ function ResearchTextPanel({ children }: { children: React.ReactNode }) {
 /* ── Decision Fatigue card (326px tall image) ────────────────── */
 function DecisionFatigueCard() {
   return (
-    <Link href="/decision-fatigue" className="block group">
     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[20px]">
-      <div className="relative aspect-[580/326] lg:aspect-auto lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px] transition-opacity group-hover:opacity-90">
+      <Link href="/decision-fatigue" className="relative block aspect-[580/326] lg:aspect-auto lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px] transition-opacity hover:opacity-90">
         <img
           src={A.accessibility}
           alt="Decision Fatigue"
           className="absolute inset-0 size-full max-w-none object-cover pointer-events-none rounded-[5px]"
         />
-      </div>
+      </Link>
       <ResearchTextPanel>
-        <p className="font-ui w-full text-[20px] font-medium leading-[1.34] tracking-[-0.2px]">
+        <Link href="/decision-fatigue" className="font-ui w-full text-[20px] font-medium leading-[1.34] tracking-[-0.2px] transition-opacity hover:opacity-70">
           Decision Fatigue for Users in online streaming platforms
-        </p>
+        </Link>
         <p className="font-ui w-full text-[16px] font-normal leading-[1.6] tracking-[0.16px]">
           Streaming platforms have a paradox at their core: more content, less satisfaction.
           Users open Netflix to relax and instead spend thirty minutes scrolling, abandoning
@@ -232,28 +231,26 @@ function DecisionFatigueCard() {
         </p>
       </ResearchTextPanel>
     </div>
-    </Link>
   );
 }
 
 /* ── Accessibility card (326px tall image) ───────────────────── */
 function AccessibilityCard() {
   return (
-    <Link href="/accessibility" className="block group">
     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[20px]">
-      <div className="relative aspect-[580/326] lg:aspect-auto lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px]">
+      <Link href="/accessibility" className="relative block aspect-[580/326] lg:aspect-auto lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px] transition-opacity hover:opacity-90">
         <img
           src={A.decision}
           alt="Accessibility research"
           className="absolute inset-0 size-full max-w-none object-cover pointer-events-none rounded-[5px]"
         />
-      </div>
+      </Link>
       <ResearchTextPanel>
-        <div className="font-heading w-full text-[20px] font-bold leading-[0] tracking-[-0.2px]">
+        <Link href="/accessibility" className="font-heading w-full text-[20px] font-bold leading-[0] tracking-[-0.2px] transition-opacity hover:opacity-70">
           <p className="mb-0 leading-[1.34]">End-to-End Accessibility Barriers</p>
           <p className="mb-0 leading-[1.34]">Experienced by Blind and Low Vision</p>
           <p className="leading-[1.34]">Users in Online Food Ordering</p>
-        </div>
+        </Link>
         <p className="font-ui w-full text-[16px] font-normal leading-[1.6] tracking-[0.16px]">
           Food delivery apps promise convenience, but that promise isn&apos;t evenly distributed.
           For Blind and Low Vision (BLV) users, ordering a meal can mean guessing at portion sizes,
@@ -263,7 +260,6 @@ function AccessibilityCard() {
         </p>
       </ResearchTextPanel>
     </div>
-    </Link>
   );
 }
 
