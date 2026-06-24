@@ -91,11 +91,14 @@ function Footer() {
 /* ── Page ────────────────────────────────────────────────────── */
 export default function NextHavnPage() {
   return (
-    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-hidden">
+    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-x-hidden">
       {/* Grid tiles */}
-      {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((index) => (
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((index) => (
         <GridTile key={index} index={index} left="calc(50% - 0.5px)" />
       ))}
+      </div>
+
 
       {/* Nav */}
       <StickyHeader />

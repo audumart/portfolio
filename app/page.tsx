@@ -200,7 +200,7 @@ function Projects() {
 /* ── Research text panel (shared 3D-shadow style) ────────────── */
 function ResearchTextPanel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex w-full lg:w-[578px] shrink lg:shrink-0 flex-col items-start rounded-[5px] border border-[#252525] bg-[#415a77] p-[20px] drop-shadow-[5px_5px_0px_#252525]">
+    <div className="flex w-full lg:w-[578px] shrink lg:shrink-0 flex-col items-start rounded-[5px] border border-[#252525] bg-[#415a77] p-[20px] shadow-[5px_5px_0px_0px_#252525]">
       <div className="flex w-full flex-col gap-[12px] text-white">
         {children}
       </div>
@@ -313,8 +313,9 @@ export default function Home() {
   return (
     /* Page container: max 1440px, centered for ultrawide screens.
        Body background (#415a77) fills the remaining width on both sides. */
-    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-hidden">
+    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-x-hidden">
       {/* Grid tiles — absolute within this 1440px container */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <GridTile index={0} left="calc(50% - 0.5px)" />
       <GridTile index={1} left="calc(50% - 0.5px)" />
       <GridTile index={2} left="calc(50% - 0.5px)" />
@@ -323,6 +324,7 @@ export default function Home() {
       <GridTile index={5} left="calc(50% - 0.5px)" />
       <GridTile index={6} left="calc(50% - 0.5px)" />
       <GridTile index={7} left="calc(50% - 0.5px)" />
+      </div>
       <Nav />
       <main className="flex-1">
         <Hero />
