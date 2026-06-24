@@ -140,7 +140,7 @@ export default function QrPayPage() {
         {/* ── The solution ─────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <div className="mx-auto max-w-[846px]">
-            <p className="font-ui text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
+            <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               THE SOLUTION
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -168,7 +168,7 @@ export default function QrPayPage() {
         {/* ── Role ─────────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <div className="mx-auto max-w-[846px]">
-            <p className="font-ui text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
+            <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               ROLE
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -231,7 +231,7 @@ export default function QrPayPage() {
         {/* ── Wrapping up ──────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <div className="mx-auto max-w-[846px]">
-            <p className="font-ui text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
+            <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               WRAPPING UP
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">

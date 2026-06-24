@@ -60,7 +60,7 @@ function Section({ label, children }: { label: string; children: React.ReactNode
   return (
     <Reveal className="mt-[48px] xl:mt-[64px]">
       <div className="mx-auto max-w-[846px]">
-        <p className="font-ui text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
+        <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
           {label}
         </p>
         {children}
@@ -233,7 +233,7 @@ export default function DecisionFatiguePage() {
 
         {/* ── Personas ─────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <p className="font-ui text-[23px] font-bold tracking-[1px] text-white uppercase mb-[20px] mx-auto max-w-[846px]">
+          <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[20px] mx-auto max-w-[846px]">
             PERSONAS
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] xl:gap-[24px]">

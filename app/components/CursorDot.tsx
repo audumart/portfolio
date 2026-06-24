@@ -1,21 +1,33 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const DESKTOP_MQ = "(min-width: 1280px) and (pointer: fine) and (hover: hover)";
 
 export default function CursorDot() {
   const dotRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    const mq = window.matchMedia(DESKTOP_MQ);
+    setIsDesktop(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
     const dot = dotRef.current;
     if (!dot) return;
-
     const onMove = (e: MouseEvent) => {
       dot.style.transform = `translate(${e.clientX - 16}px, ${e.clientY - 16}px)`;
     };
-
     window.addEventListener("mousemove", onMove, { passive: true });
     return () => window.removeEventListener("mousemove", onMove);
-  }, []);
+  }, [isDesktop]);
+
+  if (!isDesktop) return null;
 
   return (
     <div

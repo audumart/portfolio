@@ -153,7 +153,7 @@ export default function NextHavnPage() {
         {/* ── Role ─────────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <div className="mx-auto max-w-[846px]">
-            <p className="font-ui text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
+            <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               ROLE
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -211,7 +211,7 @@ export default function NextHavnPage() {
         {/* ── Case pillars ─────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <div className="mx-auto max-w-[846px]">
-            <p className="font-ui text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
+            <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               CORE PILLARS AND FUNCTIONALITY
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -259,7 +259,7 @@ export default function NextHavnPage() {
         {/* ── Why design matters ────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <div className="mx-auto max-w-[846px]">
-            <p className="font-ui text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
+            <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               WHY THE ECOSYSTEM MATTERS
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">

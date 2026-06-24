@@ -84,14 +84,10 @@ input, textarea, [contenteditable] {
   box-shadow: none !important;
 }
 
-/* Restore ONLY on a true desktop:
-   ≥ 1280px viewport + hover capable + fine pointer (rules out all iPads/tablets) */
+/* On true desktop: restore user-select + focus rings, but keep cursor: none
+   so the CursorDot circle is the only pointer visible */
 @media (min-width: 1280px) and (hover: hover) and (pointer: fine) {
-  html, body {
-    cursor: auto !important;
-  }
   *, *::before, *::after {
-    cursor: revert !important;
     user-select: revert;
     -webkit-user-select: revert;
   }
