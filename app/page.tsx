@@ -255,8 +255,7 @@ function AccessibilityCard() {
           Food delivery apps promise convenience, but that promise isn&apos;t evenly distributed.
           For Blind and Low Vision (BLV) users, ordering a meal can mean guessing at portion sizes,
           relearning an interface after every update, and hoping a driver reads the delivery note.
-          This study follows the entire journey, browse, customize, pay, receive to find where
-          accessibility breaks down.
+          This study follows the entire journey to find where accessibility breaks down.
         </p>
       </ResearchTextPanel>
     </div>
