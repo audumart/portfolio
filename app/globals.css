@@ -59,22 +59,32 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hide cursor everywhere by default (covers touch + small screens) */
+/* Hide all pointer indicators on non-desktop (touch + tablet + small screens) */
 html {
   cursor: none !important;
 }
 *, *::before, *::after {
   cursor: none !important;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
+}
+:focus,
+:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-/* Restore cursor only on desktop with a mouse/trackpad */
-@media (min-width: 768px) and (pointer: fine) {
+/* Restore cursor only on true desktop: large screen + fine pointer (mouse/trackpad) */
+@media (min-width: 1024px) and (pointer: fine) {
   html {
     cursor: auto !important;
   }
   *, *::before, *::after {
     cursor: revert !important;
+  }
+  :focus-visible {
+    outline: revert !important;
+    box-shadow: revert !important;
   }
 }
 
