@@ -59,12 +59,13 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px), (pointer: coarse) {
   html {
     cursor: none !important;
   }
   *, *::before, *::after {
     cursor: none !important;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
