@@ -313,7 +313,7 @@ export default function Home() {
   return (
     /* Page container: max 1440px, centered for ultrawide screens.
        Body background (#415a77) fills the remaining width on both sides. */
-    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-x-hidden">
+    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col">
       {/* Grid tiles — absolute within this 1440px container */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <GridTile index={0} left="calc(50% - 0.5px)" />

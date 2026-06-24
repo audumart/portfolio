@@ -120,7 +120,7 @@ function Footer() {
 
 export default function AccessibilityPage() {
   return (
-    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-x-hidden">
+    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map((index) => (
         <GridTile key={index} index={index} left="calc(50% - 0.5px)" />

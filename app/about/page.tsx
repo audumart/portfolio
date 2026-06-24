@@ -240,7 +240,7 @@ function Footer() {
 /* ── Page ──────────────────────────────────────────────────────── */
 export default function AboutPage() {
   return (
-    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col overflow-x-hidden">
+    <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col">
       {/* Grid: tile 1 starts at -25px (centred at 706px top), tile 2 at 703px */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <GridTile index={0} left="calc(50% - 0.5px)" />
