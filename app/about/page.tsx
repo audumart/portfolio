@@ -73,7 +73,7 @@ function Capabilities() {
     </div>
   );
 
-  const resumeHref = "https://drive.google.com/file/d/168ifjGGcVODrNEb_9fRZQduUGCu27xEY/view?usp=sharing";
+  const resumeHref = "https://drive.google.com/file/d/1MDDQoj3S6tR9l0JEXOiTJjlV0dJnMMQ4/view?usp=sharing";
 
   return (
     <>
