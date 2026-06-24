@@ -185,10 +185,10 @@ export default function AccessibilityPage() {
             travel to a store and lets users act as ordinary consumers. Yet many apps fail basic
             accessibility guidelines: unlabelled buttons, inconsistent interaction design, and
             visual-only feedback. The alternative — asking sighted family and friends costs
-            users their independence and the privacy the technology was supposed to provide.
+            users their independence and the privacy the technology is supposed to provide.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            My team of six researchers set out to answer three questions:
+            My team of 3 researchers set out to answer three questions:
           </p>
           <ul className="mt-[12px] space-y-[10px] list-disc list-outside pl-[20px]">
             {[
