@@ -37,6 +37,16 @@ function hexToHsv(hex: string): [number, number, number] {
   return [h, max === 0 ? 0 : d / max, max];
 }
 
+/* ── helpers ──────────────────────────────────────────────────── */
+
+function clientXY(e: MouseEvent | TouchEvent): { x: number; y: number } {
+  if ("touches" in e) {
+    const t = e.touches[0] ?? e.changedTouches[0];
+    return { x: t.clientX, y: t.clientY };
+  }
+  return { x: e.clientX, y: e.clientY };
+}
+
 /* ── component ────────────────────────────────────────────────── */
 
 export default function DesignerSwatch() {
@@ -51,7 +61,7 @@ export default function DesignerSwatch() {
 
   const svRef      = useRef<HTMLDivElement>(null);
   const hueRef     = useRef<HTMLDivElement>(null);
-  const popoverRef = useRef<HTMLDivElement>(null);
+  const popoverRef = useRef<HTMLSpanElement>(null);
   const dragSV  = useRef(false);
   const dragHue = useRef(false);
 
@@ -60,48 +70,61 @@ export default function DesignerSwatch() {
     setHexInput(color.slice(1).toUpperCase());
   }, [color]);
 
-  /* close on outside click */
+  /* close on outside click or touch */
   useEffect(() => {
     if (!open) return;
-    const handler = (e: MouseEvent) => {
-      if (popoverRef.current && !popoverRef.current.contains(e.target as Node))
+    const handler = (e: MouseEvent | TouchEvent) => {
+      const target = "touches" in e ? e.touches[0]?.target : e.target;
+      if (popoverRef.current && !popoverRef.current.contains(target as Node))
         setOpen(false);
     };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
+    document.addEventListener("mousedown", handler as EventListener);
+    document.addEventListener("touchstart", handler as EventListener);
+    return () => {
+      document.removeEventListener("mousedown", handler as EventListener);
+      document.removeEventListener("touchstart", handler as EventListener);
+    };
   }, [open]);
 
-  const pickSV = useCallback((e: MouseEvent | React.MouseEvent) => {
+  const pickSV = useCallback((x: number, y: number) => {
     if (!svRef.current) return;
     const rect = svRef.current.getBoundingClientRect();
-    setSat(Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)));
-    setVal(Math.max(0, Math.min(1, 1 - (e.clientY - rect.top) / rect.height)));
+    setSat(Math.max(0, Math.min(1, (x - rect.left) / rect.width)));
+    setVal(Math.max(0, Math.min(1, 1 - (y - rect.top) / rect.height)));
   }, []);
 
-  const pickHue = useCallback((e: MouseEvent | React.MouseEvent) => {
+  const pickHue = useCallback((x: number) => {
     if (!hueRef.current) return;
     const rect = hueRef.current.getBoundingClientRect();
-    setHue(Math.max(0, Math.min(360, ((e.clientX - rect.left) / rect.width) * 360)));
+    setHue(Math.max(0, Math.min(360, ((x - rect.left) / rect.width) * 360)));
   }, []);
 
+  /* global mouse + touch move / up */
   useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (dragSV.current)  pickSV(e);
-      if (dragHue.current) pickHue(e);
+    const onMove = (e: MouseEvent | TouchEvent) => {
+      if (!dragSV.current && !dragHue.current) return;
+      const { x, y } = clientXY(e);
+      if (dragSV.current)  pickSV(x, y);
+      if (dragHue.current) pickHue(x);
     };
     const onUp = () => { dragSV.current = false; dragHue.current = false; };
+
     window.addEventListener("mousemove", onMove);
-    window.addEventListener("mouseup",   onUp);
+    window.addEventListener("mouseup", onUp);
+    window.addEventListener("touchmove", onMove as EventListener, { passive: true });
+    window.addEventListener("touchend", onUp);
     return () => {
       window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("mouseup",   onUp);
+      window.removeEventListener("mouseup", onUp);
+      window.removeEventListener("touchmove", onMove as EventListener);
+      window.removeEventListener("touchend", onUp);
     };
   }, [pickSV, pickHue]);
 
   return (
     <span
       ref={popoverRef}
-      className="group relative inline-flex cursor-pointer items-center gap-[7px] align-middle"
+      className="group relative inline-flex items-center gap-[7px] align-middle"
       onClick={() => setOpen((o) => !o)}
     >
       {/* ── inline trigger swatch ── */}
@@ -123,20 +146,20 @@ export default function DesignerSwatch() {
         <div
           className="absolute left-0 top-[calc(100%+10px)] z-50 w-[228px] select-none overflow-hidden rounded-[8px] border border-[#404040] bg-[#1e1e1e] shadow-[0_12px_40px_rgba(0,0,0,0.7)]"
           onMouseDown={(e) => e.stopPropagation()}
+          onTouchStart={(e) => e.stopPropagation()}
         >
           {/* Saturation–value gradient */}
           <div
             ref={svRef}
-            className="relative h-[152px] w-full cursor-crosshair"
+            className="relative h-[152px] w-full"
             style={{
-              background: `
-                linear-gradient(to bottom, transparent, #000),
-                linear-gradient(to right, #fff, ${hueColor})
-              `,
+              background: `linear-gradient(to bottom, transparent, #000),
+                           linear-gradient(to right, #fff, ${hueColor})`,
+              touchAction: "none",
             }}
-            onMouseDown={(e) => { dragSV.current = true; pickSV(e); }}
+            onMouseDown={(e) => { dragSV.current = true; pickSV(e.clientX, e.clientY); }}
+            onTouchStart={(e) => { dragSV.current = true; const t = e.touches[0]; pickSV(t.clientX, t.clientY); }}
           >
-            {/* cursor */}
             <div
               className="pointer-events-none absolute h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[2px] border-white shadow-[0_0_0_1px_rgba(0,0,0,0.4)]"
               style={{ left: `${sat * 100}%`, top: `${(1 - val) * 100}%` }}
@@ -148,20 +171,19 @@ export default function DesignerSwatch() {
 
             {/* Preview + hue slider */}
             <div className="flex items-center gap-[8px]">
-              {/* preview chip */}
               <div
                 className="shrink-0 h-[26px] w-[26px] rounded-[4px] border border-white/10"
                 style={{ background: color }}
               />
-              {/* hue bar */}
               <div
                 ref={hueRef}
-                className="relative h-[10px] flex-1 cursor-pointer rounded-full"
+                className="relative h-[10px] flex-1 rounded-full"
                 style={{
-                  background:
-                    "linear-gradient(to right,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00)",
+                  background: "linear-gradient(to right,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00)",
+                  touchAction: "none",
                 }}
-                onMouseDown={(e) => { dragHue.current = true; pickHue(e); }}
+                onMouseDown={(e) => { dragHue.current = true; pickHue(e.clientX); }}
+                onTouchStart={(e) => { dragHue.current = true; pickHue(e.touches[0].clientX); }}
               >
                 <div
                   className="pointer-events-none absolute top-1/2 h-[14px] w-[14px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white shadow-md"
@@ -188,11 +210,10 @@ export default function DesignerSwatch() {
                 }}
                 className="w-full bg-transparent font-mono text-[12px] text-white outline-none"
               />
-              {/* copy button */}
               <button
                 type="button"
                 aria-label="Copy hex"
-                onClick={() => navigator.clipboard?.writeText(color)}
+                onClick={(e) => { e.stopPropagation(); navigator.clipboard?.writeText(color); }}
                 className="shrink-0 text-[#666] hover:text-white transition-colors"
               >
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
@@ -202,7 +223,7 @@ export default function DesignerSwatch() {
               </button>
             </div>
 
-            {/* HSL readout row */}
+            {/* HSB readout row */}
             <div className="flex gap-[6px]">
               {[
                 { label: "H", value: Math.round(hue) },
