@@ -96,10 +96,10 @@ function Footer() {
       className="relative z-10 flex flex-col md:flex-row h-auto md:h-[114px] items-center justify-center md:justify-between gap-[16px] md:gap-0 px-[24px] md:px-[60px] xl:px-[120px] py-[24px] md:py-0"
     >
       <div className="flex items-center gap-[8px]">
-        <div className="h-[36px] w-[33px] shrink-0">
+        <div className="h-[28px] w-[25px] md:h-[36px] md:w-[33px] shrink-0">
           <img src={A.copyright} alt="" className="block size-full" />
         </div>
-        <p className="font-ui text-[16px] font-medium leading-normal text-white whitespace-nowrap">
+        <p className="font-ui text-[13px] md:text-[16px] font-medium leading-normal text-white whitespace-nowrap">
           Martins Audu 2026
         </p>
       </div>
@@ -109,7 +109,7 @@ function Footer() {
         </div>
         <a
           href="mailto:audumart@gmail.com"
-          className="font-ui inline-flex items-center overflow-clip rounded-[30px] bg-white px-[12px] py-[7px] text-[16px] font-medium leading-[20px] tracking-[0.32px] text-[#415a77] whitespace-nowrap transition-opacity hover:opacity-80"
+          className="font-ui inline-flex items-center overflow-clip rounded-[30px] bg-white px-[10px] py-[5px] md:px-[12px] md:py-[7px] text-[13px] md:text-[16px] font-medium leading-[20px] tracking-[0.32px] text-[#415a77] whitespace-nowrap transition-opacity hover:opacity-80"
         >
           audumart@gmail.com
         </a>

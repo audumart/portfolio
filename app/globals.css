@@ -59,7 +59,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 768px) and (pointer: fine) {
+@media (max-width: 767px) {
   html {
     cursor: none !important;
   }
