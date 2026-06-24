@@ -1,6 +1,6 @@
 /* [crate] work page — Design work 3 */
 
-import NavPill from "../components/NavPill";
+import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
 import BackButton from "../components/BackButton";
 
@@ -95,11 +95,7 @@ export default function CratePage() {
       ))}
 
       {/* Nav */}
-      <header className="fixed top-[16px] inset-x-0 z-50 flex justify-center pointer-events-none">
-        <nav aria-label="Primary navigation" className="pointer-events-auto">
-          <NavPill />
-        </nav>
-      </header>
+      <StickyHeader />
 
       <main className="relative z-10 flex-1 pt-[80px] px-[24px] md:px-[40px] xl:px-[80px]">
 

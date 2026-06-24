@@ -1,6 +1,6 @@
 /* About page — Figma node 123-1786 (1440 × 1412) */
 
-import NavPill from "../components/NavPill";
+import StickyHeader from "../components/StickyHeader";
 import BackButton from "../components/BackButton";
 
 const A = {
@@ -246,11 +246,7 @@ export default function AboutPage() {
       <GridTile top={728} left="calc(50% - 0.5px)" />
 
       {/* Nav — ABOUT active */}
-      <header className="fixed top-[16px] inset-x-0 z-50 flex justify-center pointer-events-none">
-        <nav aria-label="Primary navigation" className="pointer-events-auto">
-          <NavPill defaultActive="ABOUT" />
-        </nav>
-      </header>
+      <StickyHeader defaultActive="ABOUT" />
 
       <main className="relative z-10 flex-1 pt-[80px] px-[24px] md:px-[40px] xl:px-[80px]">
 

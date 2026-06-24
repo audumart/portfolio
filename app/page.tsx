@@ -4,7 +4,7 @@
 import Link from "next/link";
 import DesignerSwatch from "./components/DesignerSwatch";
 import ResearcherBubble from "./components/ResearcherBubble";
-import NavPill from "./components/NavPill";
+import StickyHeader from "./components/StickyHeader";
 import Reveal from "./components/Reveal";
 
 /* ── Asset paths ─────────────────────────────────────────────── */
@@ -64,11 +64,7 @@ function GridTile({ top, left }: { top: number; left: string }) {
 /* ── Nav ─────────────────────────────────────────────────────── */
 function Nav() {
   return (
-    <header className="fixed top-[16px] inset-x-0 z-50 flex justify-center pointer-events-none">
-      <nav aria-label="Primary navigation" className="pointer-events-auto">
-        <NavPill />
-      </nav>
-    </header>
+    <StickyHeader />
   );
 }
 
