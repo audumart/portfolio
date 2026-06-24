@@ -21,7 +21,7 @@ function GridTile({ top, left }: { top: number; left: string }) {
     <div
       aria-hidden="true"
       className="pointer-events-none absolute h-[1461px] w-[1513px] -translate-x-1/2 origin-top scale-[0.27] md:scale-[0.53] lg:scale-[0.71] xl:scale-[1]"
-      style={{ top, left, opacity: 0.07 }}
+      style={{ top, left, opacity: 0.11 }}
     >
       <div className="absolute h-[1049px] w-[1440px]" style={{ left: 37, top: 0 }}>
         <img src={A.hline} alt="" className="absolute inset-0 block size-full max-w-none" />
