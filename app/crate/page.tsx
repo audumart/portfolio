@@ -127,7 +127,7 @@ export default function CratePage() {
                 Separate stems. Anywhere, anytime.
               </h2>
               <p className="mt-[12px] font-ui text-[13px] md:text-[14px] leading-[1.6] text-white/60 tracking-[0.13px]">
-                [Crate] is currently in beta testing and is expected to launch in the last
+                [crate] is currently in beta testing and is expected to launch in the last
                 quarter of 2026. This is a preview of what happens when a passion for
                 technology and music comes together.
               </p>
