@@ -59,28 +59,41 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hide all pointer indicators on non-desktop (touch + tablet + small screens) */
-html {
+/* ── Suppress all pointer/tap indicators on touch + tablet ───────
+   Covers: tap highlight, callout popups, focus rings, text I-beam,
+   and the system cursor. Restored only on true desktop below.      */
+html, body {
   cursor: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
 }
 *, *::before, *::after {
   cursor: none !important;
   -webkit-tap-highlight-color: transparent !important;
-  -webkit-touch-callout: none;
+  -webkit-touch-callout: none !important;
+  user-select: none;
+  -webkit-user-select: none;
 }
-:focus,
-:focus-visible {
+/* Allow text selection in inputs/textareas */
+input, textarea, [contenteditable] {
+  user-select: text;
+  -webkit-user-select: text;
+}
+:focus, :focus-visible, :focus-within {
   outline: none !important;
   box-shadow: none !important;
 }
 
-/* Restore cursor only on true desktop: large screen + fine pointer (mouse/trackpad) */
-@media (min-width: 1024px) and (pointer: fine) {
-  html {
+/* Restore ONLY on a true desktop:
+   ≥ 1280px viewport + hover capable + fine pointer (rules out all iPads/tablets) */
+@media (min-width: 1280px) and (hover: hover) and (pointer: fine) {
+  html, body {
     cursor: auto !important;
   }
   *, *::before, *::after {
     cursor: revert !important;
+    user-select: revert;
+    -webkit-user-select: revert;
   }
   :focus-visible {
     outline: revert !important;
