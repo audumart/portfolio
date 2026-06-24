@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Cloud Candy:Regular";
+  src: url("/fonts/CloudCandy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Recoleta:Regular DEMO";
+  src: url("/fonts/Recoleta-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apfel Grotezk";
+  src: url("/fonts/ApfelGrotezk-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apfel Grotezk";
+  src: url("/fonts/ApfelGrotezk-Mittel.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Apfel Grotezk";
+  src: url("/fonts/ApfelGrotezk-Fett.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aspekta";
+  src: url("/fonts/Aspekta-700.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aspekta";
+  src: url("/fonts/Aspekta-500.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display:  "Cloud Candy:Regular", serif;
+  --font-subtitle: "Recoleta:Regular DEMO", serif;
+  --font-ui:       "Apfel Grotezk", sans-serif;
+  --font-heading:  "Aspekta", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html, body {
+  background-color: #415a77;
+  color: #ffffff;
+  font-family: "Apfel Grotezk", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (pointer: fine) {
+  html {
+    cursor: none !important;
+  }
+  *, *::before, *::after {
+    cursor: none !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Page entrance — staggered top-to-bottom ─────────────────── */
+@keyframes section-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.enter-1 { animation: section-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.enter-2 { animation: section-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) 150ms both; }
+.enter-3 { animation: section-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) 300ms both; }
+.enter-4 { animation: section-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) 450ms both; }
+
+/* ── View Transitions — between-page crossfade ───────────────── */
+
+/* Nav pill stays pinned during navigation */
+.nav-pin { view-transition-name: site-nav; }
+::view-transition-group(site-nav) { animation-duration: 0s; z-index: 100; }
+::view-transition-old(site-nav)   { display: none; }
+::view-transition-new(site-nav)   { animation: none; }
+
+/* Fast root crossfade so stagger animations run cleanly after */
+::view-transition-old(root) {
+  animation-duration: 180ms;
+  animation-timing-function: ease-out;
+}
+::view-transition-new(root) {
+  animation-duration: 180ms;
+  animation-timing-function: ease-in;
+}
+
+/* ── Video showcase — ambient breathing animation ────────────── */
+@keyframes showcase-breathe {
+  0%, 100% { transform: scale(1.03) translateX(0); }
+  50%       { transform: scale(1.03) translateX(-1%); }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .enter-1, .enter-2, .enter-3, .enter-4 { animation: none; }
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) { animation-duration: 0s !important; animation-delay: 0s !important; }
 }
