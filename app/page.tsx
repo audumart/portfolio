@@ -1,4 +1,4 @@
-/* Landing page — design node 309-1027 (1440 × 4234)
+/* Landing page, design node 309-1027 (1440 × 4234)
    Values derived 1:1 from Figma Dev Mode MCP design context. */
 
 import Link from "next/link";
@@ -23,7 +23,7 @@ const A = {
   accessibility: "/8a9a6668df0e16ad2011b371781a547d74a5dac5.png",
 };
 
-/* ── Grid tile (1513×1461px) — absolute within body ─────────── */
+/* ── Grid tile (1513×1461px), absolute within body ─────────── */
 function GridTile({ index, left }: { index: number; left: string }) {
   return (
     <div
@@ -48,12 +48,12 @@ function GridTile({ index, left }: { index: number; left: string }) {
         </div>
       </div>
 
-      {/* Diagonal — right edge: 119×385 at left=1394, top=344 */}
+      {/* Diagonal, right edge: 119×385 at left=1394, top=344 */}
       <div className="absolute h-[385px] w-[119px]" style={{ left: 1394, top: 344 }}>
         <img src={A.diagonal} alt="" className="absolute inset-0 block size-full max-w-none" />
       </div>
 
-      {/* Diagonal — left edge: 119×385 at left=0, top=344 */}
+      {/* Diagonal, left edge: 119×385 at left=0, top=344 */}
       <div className="absolute h-[385px] w-[119px]" style={{ left: 0, top: 344 }}>
         <img src={A.diagonal} alt="" className="absolute inset-0 block size-full max-w-none" />
       </div>
@@ -85,7 +85,7 @@ function Hero() {
   );
 }
 
-/* ── Card label (25px Apfel Grotezk Mittel) — sits 8px below card */
+/* ── Card label (25px Apfel Grotezk Mittel), sits 8px below card */
 function CardLabel({ children }: { children: React.ReactNode }) {
   return (
     <p className="mt-[8px] font-ui text-[14px] md:text-[18px] xl:text-[25px] font-medium leading-normal tracking-[0.14px] md:tracking-[0.18px] xl:tracking-[0.25px] text-white whitespace-nowrap">
@@ -255,7 +255,7 @@ function AccessibilityCard() {
           Food delivery apps promise convenience, but that promise isn&apos;t evenly distributed.
           For Blind and Low Vision (BLV) users, ordering a meal can mean guessing at portion sizes,
           relearning an interface after every update, and hoping a driver reads the delivery note.
-          This study follows the entire journey — browse, customize, pay, receive to find where
+          This study follows the entire journey, browse, customize, pay, receive to find where
           accessibility breaks down.
         </p>
       </ResearchTextPanel>
@@ -314,7 +314,7 @@ export default function Home() {
     /* Page container: max 1440px, centered for ultrawide screens.
        Body background (#415a77) fills the remaining width on both sides. */
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col">
-      {/* Grid tiles — absolute within this 1440px container */}
+      {/* Grid tiles, absolute within this 1440px container */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <GridTile index={0} left="calc(50% - 0.5px)" />
       <GridTile index={1} left="calc(50% - 0.5px)" />

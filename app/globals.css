@@ -84,7 +84,7 @@ input, textarea, [contenteditable] {
   box-shadow: none !important;
 }
 
-/* Grid tile step — 1049px is the horizontal-lines height inside each tile,
+/* Grid tile step, 1049px is the horizontal-lines height inside each tile,
    so stepping by exactly that amount makes the grid pattern continuous.
    Scale each breakpoint to match the tile's visual scale factor. */
 :root                        { --tile-step: calc(1049px * 0.27); }
@@ -105,7 +105,7 @@ input, textarea, [contenteditable] {
   }
 }
 
-/* ── Page entrance — staggered top-to-bottom ─────────────────── */
+/* ── Page entrance, staggered top-to-bottom ─────────────────── */
 @keyframes section-enter {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -116,7 +116,7 @@ input, textarea, [contenteditable] {
 .enter-3 { animation: section-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) 300ms both; }
 .enter-4 { animation: section-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) 450ms both; }
 
-/* ── View Transitions — between-page crossfade ───────────────── */
+/* ── View Transitions, between-page crossfade ───────────────── */
 
 /* Nav pill stays pinned during navigation */
 .nav-pin { view-transition-name: site-nav; }
@@ -140,7 +140,7 @@ input, textarea, [contenteditable] {
   to   { opacity: 1; transform: translateY(0)    scale(1); }
 }
 
-/* ── Video showcase — ambient breathing animation ────────────── */
+/* ── Video showcase, ambient breathing animation ────────────── */
 @keyframes showcase-breathe {
   0%, 100% { transform: scale(1.03) translateX(0); }
   50%       { transform: scale(1.03) translateX(-1%); }

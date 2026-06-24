@@ -3,7 +3,7 @@ import "./globals.css";
 import CursorDot from "./components/CursorDot";
 
 export const metadata: Metadata = {
-  title: "Martins Audu — Designer & Researcher",
+  title: "Martins Audu, Designer & Researcher",
   description:
     "Portfolio of Martins Audu, a designer and researcher that strongly believes design is the ideal way to solve complex problems.",
 };

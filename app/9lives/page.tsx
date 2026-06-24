@@ -1,4 +1,4 @@
-/* 9LIVES — work page */
+/* 9LIVES, work page */
 
 import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
@@ -123,7 +123,7 @@ export default function NineLivesPage() {
           </div>
         </section>
 
-        {/* ── Banner — live site ────────────────────────────────── */}
+        {/* ── Banner, live site ────────────────────────────────── */}
         <LiveSiteBanner
           href="https://9lives.store"
           src={A.banner}

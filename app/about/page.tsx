@@ -1,4 +1,4 @@
-/* About page — Figma node 123-1786 (1440 × 1412) */
+/* About page, Figma node 123-1786 (1440 × 1412) */
 
 import StickyHeader from "../components/StickyHeader";
 import BackButton from "../components/BackButton";
@@ -18,7 +18,7 @@ const A = {
   folder:  "/05889087ae0710df25ba5f60ad930700a19483d4.png",
 };
 
-/* ── Grid tile — same component pattern as landing page ────────── */
+/* ── Grid tile, same component pattern as landing page ────────── */
 function GridTile({ index, left }: { index: number; left: string }) {
   return (
     <div
@@ -250,7 +250,7 @@ export default function AboutPage() {
       <GridTile index={4} left="calc(50% - 0.5px)" />
       <GridTile index={5} left="calc(50% - 0.5px)" />
       </div>
-      {/* Nav — ABOUT active */}
+      {/* Nav, ABOUT active */}
       <StickyHeader defaultActive="ABOUT" />
 
       <main className="relative z-10 flex-1 pt-[80px] px-[24px] md:px-[40px] xl:px-[80px]">
@@ -280,7 +280,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* ── Capabilities card — mt to match top=429 from page top ── */}
+        {/* ── Capabilities card, mt to match top=429 from page top ── */}
         {/* nav(109) + mt-72 + bio(168) + mt-80 = 429 → mt-80 */}
         <div className="mt-[40px] xl:mt-[80px] enter-2">
           <Capabilities />
@@ -288,7 +288,7 @@ export default function AboutPage() {
 
       </main>
 
-      {/* ── Footer — mt to match top=1298 from page top ── */}
+      {/* ── Footer, mt to match top=1298 from page top ── */}
       {/* content ends at ~429+767=1196, gap to footer = 1298-1196=102px */}
       <div className="mt-[60px] xl:mt-[102px] enter-3">
         <Footer />

@@ -1,4 +1,4 @@
-/* TSE Studio work page — Figma node 3:11 (1440 × 5678) */
+/* TSE Studio work page, Figma node 3:11 (1440 × 5678) */
 
 import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
@@ -17,7 +17,7 @@ const A = {
   website2:   "/tse-website-2.png",
 };
 
-/* ── Grid tile — identical to landing/about ──────────────────── */
+/* ── Grid tile, identical to landing/about ──────────────────── */
 function GridTile({ index, left }: { index: number; left: string }) {
   return (
     <div
@@ -91,7 +91,7 @@ function Footer() {
 export default function TsePage() {
   return (
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col">
-      {/* Grid background tiles — 7 tiles for 5678px page, top=0 matches landing page */}
+      {/* Grid background tiles, 7 tiles for 5678px page, top=0 matches landing page */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((index) => (
         <GridTile key={index} index={index} left="calc(50% - 0.5px)" />
@@ -107,7 +107,7 @@ export default function TsePage() {
         {/* ── Hero ──────────────────────────────────────────────── */}
         <section aria-label="Project overview" className="enter-1">
 
-          {/* Title row — back button left, h1 centered via flex-1 */}
+          {/* Title row, back button left, h1 centered via flex-1 */}
           <div className="mt-[40px] xl:mt-[60px] flex items-center gap-[16px]">
             <BackButton />
             <h1 className="flex-1 text-center font-ui text-[48px] md:text-[80px] xl:text-[100px] leading-none tracking-[-0.02em] text-white">
@@ -138,7 +138,7 @@ export default function TsePage() {
           </div>
         </section>
 
-        {/* ── Banner — live site card ────────────────────────────── */}
+        {/* ── Banner, live site card ────────────────────────────── */}
         <LiveSiteBanner
           href="https://808sakura.vercel.app/"
           src={A.banner}
@@ -200,7 +200,7 @@ export default function TsePage() {
           </div>
         </Reveal>
 
-        {/* ── Showcase video — autoplay recording of live site ──── */}
+        {/* ── Showcase video, autoplay recording of live site ──── */}
         <div className="mt-[40px] xl:mt-[64px] relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "45.47%" }}>
           <video
             autoPlay
@@ -222,7 +222,7 @@ export default function TsePage() {
           <div className="relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "54.375%" }}>
             <img
               src={A.website1}
-              alt="TSE Studio website — editorial view"
+              alt="TSE Studio website, editorial view"
               className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
             />
           </div>
@@ -232,7 +232,7 @@ export default function TsePage() {
           <div className="relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "54.375%" }}>
             <img
               src={A.website2}
-              alt="TSE Studio website — portfolio view"
+              alt="TSE Studio website, portfolio view"
               className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
             />
           </div>

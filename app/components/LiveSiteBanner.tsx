@@ -21,7 +21,7 @@ export default function LiveSiteBanner({ href, src, alt, ratio, label = "VIEW LI
         <span className="font-ui text-[11px] xl:text-[13px] font-medium tracking-[0.8px] text-[#415a77] uppercase">
           {label}
         </span>
-        {/* go to site icon — inline SVG for responsive scaling */}
+        {/* go to site icon, inline SVG for responsive scaling */}
         <svg
           viewBox="0 0 32 22"
           fill="none"

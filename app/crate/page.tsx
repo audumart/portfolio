@@ -1,4 +1,4 @@
-/* [crate] work page — Design work 3 */
+/* [crate] work page, Design work 3 */
 
 import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
@@ -105,7 +105,7 @@ export default function CratePage() {
         {/* ── Hero ─────────────────────────────────────────────── */}
         <section aria-label="Project overview" className="enter-1">
 
-          {/* Title row — back button left, h1 centered via flex-1 */}
+          {/* Title row, back button left, h1 centered via flex-1 */}
           <div className="mt-[40px] xl:mt-[60px] flex items-center gap-[16px]">
             <BackButton />
             <h1 className="flex-1 text-center font-ui text-[48px] md:text-[80px] xl:text-[100px] leading-none tracking-[-0.02em] text-white">
@@ -135,7 +135,7 @@ export default function CratePage() {
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.6] text-white/80 tracking-[0.16px] xl:max-w-[440px]">
               If you&apos;re looking for a great example of an idea going from 0&gt;1,
               [crate] is a lightweight stem-splitting app that lets anyone import a song
-              and isolate its individual parts — vocals, drums, bass, instrumentals in
+              and isolate its individual parts, vocals, drums, bass, instrumentals in
               just a few taps. It was built in response to the bloat and steep learning
               curves of professional music tools, stripping the experience down to a
               single, focused job: get clean stems, fast.
@@ -195,34 +195,34 @@ export default function CratePage() {
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               [crate] promises accessibility for all. Stem separation has historically
               lived inside dense DAWs and pro audio suites aimed at producers. [crate]
-              reframes it as something anyone can use — a utility, not a workstation.
+              reframes it as something anyone can use, a utility, not a workstation.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Musicians &amp; performers</strong> — Pull a backing track by removing vocals,
+              <strong className="text-white font-medium">For Musicians &amp; performers</strong>, Pull a backing track by removing vocals,
               or isolate a single instrument to learn a part by ear. Great for rehearsing,
               transcribing, or building practice loops.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For DJs &amp; producers</strong> — Source clean acapellas and instrumentals for
+              <strong className="text-white font-medium">For DJs &amp; producers</strong>, Source clean acapellas and instrumentals for
               remixing, mashups, and sampling without hunting down official stems that may
               not exist.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Singers &amp; vocal coaches</strong> — Generate instant karaoke versions of any
+              <strong className="text-white font-medium">For Singers &amp; vocal coaches</strong>, Generate instant karaoke versions of any
               song, or isolate a reference vocal to study phrasing, breath, and technique.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Content creators</strong> — Strip vocals to use instrumentals as
+              <strong className="text-white font-medium">For Content creators</strong>, Strip vocals to use instrumentals as
               royalty-friendlier background beds, or pull specific elements for video edits
               and transitions.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Educators &amp; students</strong> — Break a recording into its components to
+              <strong className="text-white font-medium">For Educators &amp; students</strong>, Break a recording into its components to
               teach arrangement, demonstrate how a mix is layered, or let students focus on
               one instrument at a time.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Curious listeners</strong> — Hear how a favorite track is constructed — what
+              <strong className="text-white font-medium">For Curious listeners</strong>, Hear how a favorite track is constructed, what
               the bassline is really doing, how the vocals sit alone purely for the joy of it.
             </p>
           </div>

@@ -144,7 +144,7 @@ export default function NextHavnPage() {
           </div>
         </section>
 
-        {/* ── Banner — VIEW LIVE SITE ───────────────────────────── */}
+        {/* ── Banner, VIEW LIVE SITE ───────────────────────────── */}
         <LiveSiteBanner
           href="https://nexthavn.com/"
           src={A.banner}
@@ -185,7 +185,7 @@ export default function NextHavnPage() {
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "65.94%" }}>
             <img
               src={A.styleGuide}
-              alt="NextHavn style guide — colours and typography"
+              alt="NextHavn style guide, colours and typography"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
@@ -225,7 +225,7 @@ export default function NextHavnPage() {
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">Verified Creative Network:</strong> A global, vetted database of
               photographers, videographers, editors, crew, and digital artists.
-              Every profile is fully searchable and filterable — by specific
+              Every profile is fully searchable and filterable, by specific
               skill set, location, daily or hourly rate and real-time calendar
               availability making hiring shift from guesswork and referrals to
               deliberate, informed selections.
@@ -239,7 +239,7 @@ export default function NextHavnPage() {
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">Equipment Marketplace:</strong> An upcoming portal built to make
-              professional-grade production gear — cameras, drone rigs, lighting
+              professional-grade production gear, cameras, drone rigs, lighting
               setups accessible anywhere in the world. Standardized rental
               contracts, verified availability and fixed liability structures
               bring predictability to a process that has long run on informal
@@ -272,7 +272,7 @@ export default function NextHavnPage() {
               into one operating system for creative work. It gives independent
               artists genuine local visibility while allowing global brands to
               drop a production anywhere in the world and safely assemble an
-              entire localized team — turning what used to be a logistical
+              entire localized team, turning what used to be a logistical
               nightmare into a single, coherent process.
             </p>
           </div>

@@ -1,4 +1,4 @@
-/* End-to-End Accessibility Barriers — BLV research page */
+/* End-to-End Accessibility Barriers, BLV research page */
 
 import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
@@ -153,7 +153,7 @@ export default function AccessibilityPage() {
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "56.25%" }}>
             <img
               src={A.banner}
-              alt="BLV accessibility research — food ordering on mobile"
+              alt="BLV accessibility research, food ordering on mobile"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
@@ -165,14 +165,14 @@ export default function AccessibilityPage() {
             Food delivery apps promise convenience, but that promise isn&apos;t evenly distributed.
             For Blind and Low Vision (BLV) users, ordering a meal can mean guessing at item
             images, interpreting every update, and hoping a driver reads the delivery note. This
-            study followed the entire journey — browse, customize, pay, receive to find where
+            study followed the entire journey, browse, customize, pay, receive to find where
             accessibility breaks down.
           </Body>
           <div className="mt-[20px]">
             <Body>
               Most prior research had examined single slices of the experience: online shopping,
               restaurant menus, or delivery apps in isolation. We looked at the end-to-end process,
-              because the friction BLV users face isn&apos;t one bad screen — it&apos;s something
+              because the friction BLV users face isn&apos;t one bad screen, it&apos;s something
               that accumulates across the whole flow.
             </Body>
           </div>
@@ -184,7 +184,7 @@ export default function AccessibilityPage() {
             Accessibility is often framed as a feature for independence. It removes the need to
             travel to a store and lets users act as ordinary consumers. Yet many apps fail basic
             accessibility guidelines: unlabelled buttons, inconsistent interaction design, and
-            visual-only feedback. The alternative — asking sighted family and friends costs
+            visual-only feedback. The alternative, asking sighted family and friends costs
             users their independence and the privacy the technology is supposed to provide.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -192,9 +192,9 @@ export default function AccessibilityPage() {
           </p>
           <ul className="mt-[12px] space-y-[10px] list-disc list-outside pl-[20px]">
             {[
-              "P01 — What digital accessibility barriers do BLV users face while browsing, customizing, paying for, and tracking online food orders?",
-              "P02 — How are BLV users communicating with delivery drivers and verifying orders during the pickup/last handoff?",
-              "P03 — What workarounds and strategies do BLV users rely on to get around these barriers?",
+              "P01, What digital accessibility barriers do BLV users face while browsing, customizing, paying for, and tracking online food orders?",
+              "P02, How are BLV users communicating with delivery drivers and verifying orders during the pickup/last handoff?",
+              "P03, What workarounds and strategies do BLV users rely on to get around these barriers?",
             ].map((q) => (
               <li key={q} className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
                 {q}
@@ -206,7 +206,7 @@ export default function AccessibilityPage() {
         {/* ── Method ───────────────────────────────────────────── */}
         <Section label="METHOD">
           <Body>
-            A pre-design exploratory study built on remote, semi-structured interviews — chosen
+            A pre-design exploratory study built on remote, semi-structured interviews, chosen
             to capture lived experience and emotional context, not just task success.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -238,7 +238,7 @@ export default function AccessibilityPage() {
           </Body>
 
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            <strong className="text-white font-semibold">1. Information gaps — missing descriptions and dietary detail:</strong>{" "}
+            <strong className="text-white font-semibold">1. Information gaps, missing descriptions and dietary detail:</strong>{" "}
             All four participants hit menus that showed only a title, a price, and a low-resolution
             image with no meaningful description. The stakes go beyond frustration: P3, who manages
             multiple dietary restrictions, described having to leave an app repeatedly to search
@@ -247,14 +247,14 @@ export default function AccessibilityPage() {
           </p>
         </Section>
 
-        <Img src={A.infoGaps} alt="Information gaps — missing item descriptions in food ordering apps" />
+        <Img src={A.infoGaps} alt="Information gaps, missing item descriptions in food ordering apps" />
 
         {/* ── Finding 2 ────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <div className="mx-auto max-w-[846px]">
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-semibold">2. Platform instability and commercial clutter:</strong>{" "}
-              Frequent app updates introduced accessibility regressions — a default card silently
+              Frequent app updates introduced accessibility regressions, a default card silently
               reverting after an update, an unusable cart button, sudden layout changes forcing
               users to relearn interfaces they&apos;d already mastered. Promotional pop-ups and
               sale banners added noise, and pricing that didn&apos;t reconcile at checkout forced
@@ -271,7 +271,7 @@ export default function AccessibilityPage() {
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-semibold">3. Breakdowns in delivery communication:</strong>{" "}
               The handoff stage exposed persistent human-communication gaps. Written delivery
-              instructions were followed inconsistently — one participant estimated drivers complied
+              instructions were followed inconsistently, one participant estimated drivers complied
               only half the time. Drivers often sent photos for updates or substitutions, which are
               inaccessible to screen reader users, in some cases forcing a participant to disclose
               their blindness just to get a description.
@@ -291,7 +291,7 @@ export default function AccessibilityPage() {
               "Standardization of item information: mandatory serving sizes, clear ingredient lists, and filters for dietary needs.",
               "Strengthen accessibility regression testing so updates stop breaking critical workflows like payment selection and navigation.",
               "Reduce commercial clutter to lower cognitive load for screen reader navigation.",
-              "Build non-visual delivery communication protocols — standardized text updates, alt text or text alternatives to photo-only messages, and a way to ensure written instructions are actually read and acknowledged.",
+              "Build non-visual delivery communication protocols, standardized text updates, alt text or text alternatives to photo-only messages, and a way to ensure written instructions are actually read and acknowledged.",
             ].map((item) => (
               <li key={item} className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
                 {item}
@@ -303,7 +303,7 @@ export default function AccessibilityPage() {
         {/* ── Limitations & Next Steps ──────────────────────────── */}
         <Section label="LIMITATIONS &amp; NEXT STEPS">
           <Body>
-            With N = 4, the study is exploratory by design — appropriate for surfacing patterns,
+            With N = 4, the study is exploratory by design, appropriate for surfacing patterns,
             not for generalizing. All participants were U.S.-based screen reader users, and remote
             interviews couldn&apos;t directly observe the ordering process as it happened. Future
             work could add ethnographic or observational methods, expand the participant pool, and

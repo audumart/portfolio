@@ -8,7 +8,7 @@ export default function CursorDot() {
   const dotRef = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  /* Inject cursor:none at runtime — sits after all static stylesheets,
+  /* Inject cursor:none at runtime, sits after all static stylesheets,
      guaranteed to win the cascade on every browser */
   useEffect(() => {
     const style = document.createElement("style");

@@ -1,4 +1,4 @@
-/* Decision Fatigue for Users in Online Streaming Platforms — research page */
+/* Decision Fatigue for Users in Online Streaming Platforms, research page */
 
 import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
@@ -141,7 +141,7 @@ export default function DecisionFatiguePage() {
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "56.25%" }}>
             <img
               src={A.banner}
-              alt="Streaming platforms — YouTube TV, Netflix, Paramount+, Max, Hulu, Prime, Fubo, Apple TV+, Peacock"
+              alt="Streaming platforms, YouTube TV, Netflix, Paramount+, Max, Hulu, Prime, Fubo, Apple TV+, Peacock"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
@@ -188,14 +188,14 @@ export default function DecisionFatiguePage() {
             stated preference.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            <strong className="text-white font-semibold">Round 1 — Contextual observation (8 participants, ~15 min each):</strong>{" "}
+            <strong className="text-white font-semibold">Round 1, Contextual observation (8 participants, ~15 min each):</strong>{" "}
             Participants demonstrated how they&apos;d recommend a show to a friend, recorded and
             observed in person. I analyzed sessions with the AEIOU framework (Activities,
             Environments, Interactions, Objects, Users) and built sequence/flow models of the
             recommendation process.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            <strong className="text-white font-semibold">Round 2 — Semi-structured interviews (7 participants, 20–30 min each):</strong>{" "}
+            <strong className="text-white font-semibold">Round 2, Semi-structured interviews (7 participants, 20–30 min each):</strong>{" "}
             Conducted in person and over Zoom, focused on decision-making processes, experiences
             with recommendation systems, and streaming habits. Each transcript was descriptively
             coded in Atlas.ti, then reconciled into a shared codebook.
@@ -215,8 +215,8 @@ export default function DecisionFatiguePage() {
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             <strong className="text-white font-semibold">1. Trusted sources beat the algorithm:</strong>{" "}
-            Most participants consulted several sources — friends, critics (Letterboxd, IMDb,
-            Rotten Tomatoes) — before committing to platform-native recommendations, which were
+            Most participants consulted several sources, friends, critics (Letterboxd, IMDb,
+            Rotten Tomatoes), before committing to platform-native recommendations, which were
             treated with distrust. Features like &ldquo;Trending Now&rdquo; were widely ignored
             for being transparent marketing tools.
           </p>
@@ -224,13 +224,13 @@ export default function DecisionFatiguePage() {
             <strong className="text-white font-semibold">2. Abundance triggers avoidance:</strong>{" "}
             Faced with endless rows on the home screen, participants frequently abandoned the
             search, settled for something, or rewatched familiar content. The volume of choice
-            didn&apos;t add value — it compounded the problem.
+            didn&apos;t add value, it compounded the problem.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             <strong className="text-white font-semibold">3. People decide by shortcut:</strong>{" "}
             Decision clustered around three heuristics: favorite actors, current mood/season, and
             seasonal relevance. These mental shortcuts were how users cut a vast catalog down to
-            a selection — yet the platforms gave them almost no way to filter along these lines.
+            a selection, yet the platforms gave them almost no way to filter along these lines.
           </p>
         </Section>
 
@@ -243,14 +243,14 @@ export default function DecisionFatiguePage() {
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "73.38%" }}>
               <img
                 src={A.aidanPersona}
-                alt="Aiden — research persona"
+                alt="Aiden, research persona"
                 className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
               />
             </div>
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "73.14%" }}>
               <img
                 src={A.lindaPersona}
-                alt="Linda — research persona"
+                alt="Linda, research persona"
                 className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
               />
             </div>
@@ -262,7 +262,7 @@ export default function DecisionFatiguePage() {
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "74.38%" }}>
             <img
               src={A.aidanJourney}
-              alt="Aiden — user journey map"
+              alt="Aiden, user journey map"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
@@ -272,7 +272,7 @@ export default function DecisionFatiguePage() {
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "75.62%" }}>
             <img
               src={A.lindaJourney}
-              alt="Linda — user journey map"
+              alt="Linda, user journey map"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
@@ -301,7 +301,7 @@ export default function DecisionFatiguePage() {
             <Body>
               A through-line surfaced in the data: users defaulted to Netflix not for its catalog
               but for its familiarity. Reducing decision fatigue isn&apos;t only about better
-              recommendations — it&apos;s about an interface comfortable enough to lower the cost
+              recommendations, it&apos;s about an interface comfortable enough to lower the cost
               of choosing at all.
             </Body>
           </div>
@@ -326,7 +326,7 @@ export default function DecisionFatiguePage() {
           <Body>
             The small sample limits generalizability. Future work would broaden the participant
             pool, move from implications into a tested prototype, run cross-platform comparison,
-            and probe the social features more deeply — which is the area participants responded
+            and probe the social features more deeply, which is the area participants responded
             to most strongly.
           </Body>
         </Section>
@@ -335,7 +335,7 @@ export default function DecisionFatiguePage() {
         <Section label="TAKEAWAY">
           <Body>
             The instinct in recommendation design is to add intelligence. My research suggested
-            the opposite: the fix for choice overload is often less — fewer options surfaced at
+            the opposite: the fix for choice overload is often less, fewer options surfaced at
             once, clearer reasons behind each suggestion, and controls that map to the shortcuts
             people already use to decide.
           </Body>

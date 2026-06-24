@@ -1,4 +1,4 @@
-/* QR Pay by DiveHQ — work page */
+/* QR Pay by DiveHQ, work page */
 
 import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
@@ -130,11 +130,11 @@ export default function QrPayPage() {
           </div>
         </section>
 
-        {/* ── Banner — interactive prototype ───────────────────── */}
+        {/* ── Banner, interactive prototype ───────────────────── */}
         <LiveSiteBanner
           href="https://www.figma.com/proto/iz5PqJB5gpZ8elpMPqCFYr/DiveHQ?page-id=0%3A1&node-id=1-6532&p=f&viewport=4914%2C17463%2C0.5&t=jjZSZ2UzUHrMZ1I3-1&scaling=min-zoom&content-scaling=responsive&starting-point-node-id=1%3A6532"
           src={A.banner}
-          alt="QR Pay app — view interactive prototype"
+          alt="QR Pay app, view interactive prototype"
           ratio="47.74%"
           label="VIEW INTERACTIVE PROTOTYPE"
           className="mt-[40px] xl:mt-[80px] enter-2"
@@ -203,7 +203,7 @@ export default function QrPayPage() {
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "51.25%" }}>
             <img
               src={A.styleGuide}
-              alt="QR Pay style guide — Nunito typography and colour palette"
+              alt="QR Pay style guide, Nunito typography and colour palette"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
@@ -214,7 +214,7 @@ export default function QrPayPage() {
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "90.39%" }}>
             <img
               src={A.personas}
-              alt="QR Pay user personas — Grace and Timothy"
+              alt="QR Pay user personas, Grace and Timothy"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
