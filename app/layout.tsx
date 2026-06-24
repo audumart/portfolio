@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import CursorDot from "./components/CursorDot";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Martins Audu, Designer & Researcher",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className="overflow-x-hidden">
         <CursorDot />
         {children}
+        <Analytics />
       </body>
     </html>
   );
