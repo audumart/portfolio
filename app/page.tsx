@@ -213,7 +213,7 @@ function DecisionFatigueCard() {
   return (
     <Link href="/decision-fatigue" className="block group">
     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[20px]">
-      <div className="relative h-[200px] md:h-[260px] lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px] transition-opacity group-hover:opacity-90">
+      <div className="relative aspect-[580/326] lg:aspect-auto lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px] transition-opacity group-hover:opacity-90">
         <img
           src={A.accessibility}
           alt="Decision Fatigue"
@@ -241,7 +241,7 @@ function AccessibilityCard() {
   return (
     <Link href="/accessibility" className="block group">
     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[20px]">
-      <div className="relative h-[200px] md:h-[260px] lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px]">
+      <div className="relative aspect-[580/326] lg:aspect-auto lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px]">
         <img
           src={A.decision}
           alt="Accessibility research"
