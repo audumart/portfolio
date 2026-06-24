@@ -124,27 +124,34 @@ export default function DesignerSwatch() {
   return (
     <span
       ref={popoverRef}
-      className="group relative inline-flex items-center gap-[7px] align-middle"
+      className="relative inline-flex items-center align-middle"
       onClick={() => setOpen((o) => !o)}
     >
-      {/* ── inline trigger swatch ── */}
+      {/* ── trigger: dark bar ── */}
       <span
         aria-label="Open colour picker"
         role="button"
         tabIndex={0}
         className={[
-          "inline-block shrink-0 rounded-[3px] border shadow-sm transition-all duration-150",
+          "inline-flex items-center gap-[6px] rounded-[5px] border px-[7px] py-[3px]",
+          "transition-all duration-200 cursor-pointer",
           open
-            ? "scale-110 border-white/70 shadow-[0_0_0_2px_rgba(255,255,255,0.25)]"
-            : "border-white/30 group-hover:scale-110 group-hover:border-white/60 group-hover:shadow-[0_0_8px_rgba(255,255,255,0.2)]",
+            ? "border-[#555] bg-[#1c1c1c] shadow-[0_0_0_1px_rgba(255,255,255,0.08)]"
+            : "border-[#3a3a3a] bg-[#1c1c1c] hover:border-[#555] hover:bg-[#242424]",
         ].join(" ")}
-        style={{ width: 20, height: 20, background: color }}
-      />
+      >
+        <span
+          className="shrink-0 rounded-[3px] border border-white/20"
+          style={{ width: 12, height: 12, background: color }}
+        />
+        <span className="text-[1em] text-white/90 leading-none">designer</span>
+      </span>
 
       {/* ── floating panel ── */}
       {open && (
         <div
           className="absolute left-0 top-[calc(100%+10px)] z-50 w-[228px] select-none overflow-hidden rounded-[8px] border border-[#404040] bg-[#1e1e1e] shadow-[0_12px_40px_rgba(0,0,0,0.7)]"
+          style={{ animation: "picker-in 0.18s ease-out both" }}
           onMouseDown={(e) => e.stopPropagation()}
           onTouchStart={(e) => e.stopPropagation()}
         >
@@ -168,7 +175,6 @@ export default function DesignerSwatch() {
 
           {/* Controls */}
           <div className="flex flex-col gap-[10px] p-[10px]">
-
             {/* Preview + hue slider */}
             <div className="flex items-center gap-[8px]">
               <div
@@ -223,7 +229,7 @@ export default function DesignerSwatch() {
               </button>
             </div>
 
-            {/* HSB readout row */}
+            {/* HSB readout */}
             <div className="flex gap-[6px]">
               {[
                 { label: "H", value: Math.round(hue) },
@@ -242,10 +248,6 @@ export default function DesignerSwatch() {
           </div>
         </div>
       )}
-
-      <span className="underline decoration-white/0 decoration-dotted underline-offset-4 transition-all duration-150 group-hover:decoration-white/60">
-        designer
-      </span>
     </span>
   );
 }
