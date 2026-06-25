@@ -2,6 +2,7 @@
 
 import StickyHeader from "../components/StickyHeader";
 import BackButton from "../components/BackButton";
+import NowPlaying from "../components/NowPlaying";
 
 const A = {
   /* shared with landing page */
@@ -260,38 +261,45 @@ export default function AboutPage() {
           <BackButton />
         </div>
 
-        {/* ── Bio + He/Him icon ── */}
+        {/* ── Bio + He/Him icon + Now Playing ── */}
         <div className="relative mt-[24px] xl:mt-[32px] flex items-start enter-1">
-          <div
-            className="font-subtitle text-[22px] md:text-[30px] xl:text-[40px] leading-[0] text-white tracking-[-0.44px] md:tracking-[-0.6px] xl:tracking-[-0.8px] w-full xl:w-[991px]"
-          >
-            <p className="leading-[1.34]">
-              With 7+ years of design experience my expertise consists of delivering
-              clean visual design via iterative processes and detailed research that
-              turns objectives into solutions.
-            </p>
+          <div className="w-full xl:w-[991px]">
+            <div className="font-subtitle text-[22px] md:text-[30px] xl:text-[40px] leading-[0] text-white tracking-[-0.44px] md:tracking-[-0.6px] xl:tracking-[-0.8px]">
+              <p className="leading-[1.34]">
+                With 7+ years of design experience my expertise consists of delivering
+                clean visual design via iterative processes and detailed research that
+                turns objectives into solutions.
+              </p>
+            </div>
+            <div className="mt-[24px] xl:mt-[32px]">
+              <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
+                My interest in building things started with my first LEGO set. Turning a pile of separate
+                pieces into something that actually worked taught me an instinct I still rely on: understand
+                how the parts fit, then build something coherent. That&apos;s the core of how I approach
+                design, from early sketches to shaping a full product. Constant participation in competitive sports shaped the rest
+                of how I work. They made it clear that good results come from preparation, discipline, and
+                a willingness to push past easy, and I bring that same standard to design. I&apos;m not
+                satisfied with work that just functions. I want it to perform, hold up in real use, and
+                improve on whatever came before it.
+              </p>
+            </div>
+            {/* Mobile: now playing below bio */}
+            <div className="mt-[24px] xl:hidden">
+              <p className="font-ui text-[11px] tracking-[0.5px] uppercase text-white/40 mb-[8px]">currently listening to</p>
+              <NowPlaying />
+            </div>
           </div>
 
-          <div
-            className="absolute shrink-0 hidden xl:block"
-            style={{ left: 1216, top: 0, width: 64, height: 133 }}
-          >
-            <img src={A.heHim} alt="he/him" className="block size-full max-w-none" />
+          {/* Desktop: he/him icon + now playing stacked on the right */}
+          <div className="absolute right-0 top-0 hidden xl:flex xl:flex-col items-end gap-[16px]">
+            <div style={{ width: 64, height: 133 }}>
+              <img src={A.heHim} alt="he/him" className="block size-full max-w-none" />
+            </div>
+            <div className="flex flex-col items-end gap-[6px]">
+              <p className="font-ui text-[11px] tracking-[0.5px] uppercase text-white/40">currently listening to</p>
+              <NowPlaying />
+            </div>
           </div>
-        </div>
-
-        {/* ── Bio body ── */}
-        <div className="mt-[24px] xl:mt-[32px] w-full xl:w-[991px] enter-1">
-          <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            My interest in building things started with my first LEGO set. Turning a pile of separate
-            pieces into something that actually worked taught me an instinct I still rely on: understand
-            how the parts fit, then build something coherent. That&apos;s the core of how I approach
-            design, from early sketches to shaping a full product. Constant participation in competitive sports shaped the rest
-            of how I work. They made it clear that good results come from preparation, discipline, and
-            a willingness to push past easy, and I bring that same standard to design. I&apos;m not
-            satisfied with work that just functions. I want it to perform, hold up in real use, and
-            improve on whatever came before it.
-          </p>
         </div>
 
         {/* ── Capabilities card, mt to match top=429 from page top ── */}
