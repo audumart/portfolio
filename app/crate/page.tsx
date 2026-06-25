@@ -132,13 +132,13 @@ export default function CratePage() {
                 technology and music comes together.
               </p>
             </div>
-            <p className="font-ui text-[16px] md:text-[20px] leading-[1.6] text-white/80 tracking-[0.16px] xl:max-w-[440px]">
+            <p className="font-ui text-[16px] md:text-[20px] leading-[1.6] text-white/80 tracking-[0.16px] xl:max-w-[520px]">
               If you&apos;re looking for a great example of an idea going from 0&gt;1,
               [crate] is a lightweight stem-splitting app that lets anyone import a song
               and isolate its individual parts, vocals, drums, bass, instrumentals in
               just a few taps. It was built in response to the bloat and steep learning
               curves of professional music tools, stripping the experience down to a
-              single, focused job: get clean stems, fast.
+              single, focused job: get clean stems&nbsp;fast.
             </p>
           </div>
         </section>

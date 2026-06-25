@@ -59,6 +59,10 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p, li, h1, h2, h3 {
+  text-wrap: pretty;
+}
+
 /* ── Suppress all pointer/tap indicators on touch + tablet ───────
    Covers: tap highlight, callout popups, focus rings, text I-beam,
    and the system cursor. Restored only on true desktop below.      */
