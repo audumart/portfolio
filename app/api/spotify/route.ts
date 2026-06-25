@@ -26,7 +26,7 @@ export async function GET() {
   const access_token: string | undefined = tokenData.access_token;
 
   if (!access_token) {
-    return NextResponse.json({ error: "token_failed", detail: tokenData }, { status: 500 });
+    return NextResponse.json({ isPlaying: false }, { status: 500 });
   }
 
   const nowPlaying = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
@@ -42,7 +42,7 @@ export async function GET() {
     const track = recent.items?.[0]?.track;
 
     if (!track) {
-      return NextResponse.json({ isPlaying: false, debug: { recentStatus: recentRes.status, recent } });
+      return NextResponse.json({ isPlaying: false });
     }
 
     return NextResponse.json({
@@ -58,7 +58,7 @@ export async function GET() {
   const track = data.item;
 
   if (!track) {
-    return NextResponse.json({ isPlaying: false, debug: { nowPlayingStatus: nowPlaying.status } });
+    return NextResponse.json({ isPlaying: false });
   }
 
   return NextResponse.json({
