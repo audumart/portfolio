@@ -15,7 +15,9 @@ const A = {
   lindaPersona:  "/Linda research persona.png",
   aidanJourney:  "/Journey map aiden.png",
   lindaJourney:  "/Journey map linda.png",
-  priorityMatrix: "/Priority matrix.png",
+  priorityMatrix:   "/Priority matrix.png",
+  codedInterviews:  "/Coded Interviews.png",
+  affinityDiagram:  "/Affinity diagram.png",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
@@ -208,6 +210,28 @@ export default function DecisionFatiguePage() {
           </div>
         </Section>
 
+        {/* ── Coded transcripts ────────────────────────────────── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "108.00%" }}>
+            <img
+              src={A.codedInterviews}
+              alt="Coded interview transcripts in Atlas.ti"
+              className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
+            />
+          </div>
+        </Reveal>
+
+        {/* ── Affinity diagram ─────────────────────────────────── */}
+        <Reveal className="mt-[16px] xl:mt-[24px]">
+          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "68.10%" }}>
+            <img
+              src={A.affinityDiagram}
+              alt="Affinity diagram clustering themes from interview data"
+              className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
+            />
+          </div>
+        </Reveal>
+
         {/* ── What I Discovered ────────────────────────────────── */}
         <Section label="WHAT I DISCOVERED">
           <Body>
@@ -238,6 +262,9 @@ export default function DecisionFatiguePage() {
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[20px] mx-auto max-w-[846px]">
             PERSONAS
+          </p>
+          <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px] mx-auto max-w-[846px] mb-[20px]">
+            Two personas anchored the design thinking and the contrast between them matters because one user wants the system to quantify quality, the other wants it to socialize discovery meaning a single recommendation model serves neither well.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] xl:gap-[24px]">
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "73.38%" }}>
