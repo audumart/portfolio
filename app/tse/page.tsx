@@ -179,6 +179,9 @@ export default function TsePage() {
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
+          <p className="mt-[12px] text-center font-ui text-[14px] text-white/50 tracking-[0.14px]">
+            explored iterations for the site
+          </p>
         </Reveal>
 
         {/* ── Bringing it all together ───────────────────────────── */}
