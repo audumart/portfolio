@@ -285,7 +285,7 @@ export default function AboutPage() {
             </div>
             {/* Mobile: now playing below bio */}
             <div className="mt-[24px] xl:hidden">
-              <p className="font-ui text-[11px] tracking-[0.5px] uppercase text-white/40 mb-[8px]">currently listening to</p>
+              <p className="font-ui text-[11px] tracking-[0.5px] uppercase text-white/40 mb-[8px]">listening to</p>
               <NowPlaying />
             </div>
           </div>
@@ -296,7 +296,7 @@ export default function AboutPage() {
               <img src={A.heHim} alt="he/him" className="block size-full max-w-none" />
             </div>
             <div className="flex flex-col items-end gap-[6px]">
-              <p className="font-ui text-[11px] tracking-[0.5px] uppercase text-white/40">currently listening to</p>
+              <p className="font-ui text-[11px] tracking-[0.5px] uppercase text-white/40">listening to</p>
               <NowPlaying />
             </div>
           </div>
