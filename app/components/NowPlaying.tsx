@@ -55,7 +55,7 @@ export default function NowPlaying() {
             )}
           </span>
           <span className="font-ui text-[11px] text-white/50 tracking-[0.5px] uppercase">
-            {track.isPlaying ? "Now playing" : "Last played"}
+            listening to
           </span>
         </div>
         <p className="font-ui text-[13px] font-medium text-white truncate max-w-[160px]">{track.title}</p>

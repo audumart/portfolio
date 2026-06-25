@@ -3,6 +3,7 @@
 import StickyHeader from "../components/StickyHeader";
 import BackButton from "../components/BackButton";
 import NowPlaying from "../components/NowPlaying";
+import LastWatched from "../components/LastWatched";
 
 const A = {
   /* shared with landing page */
@@ -261,7 +262,7 @@ export default function AboutPage() {
           <BackButton />
         </div>
 
-        {/* ── Bio + He/Him icon + Now Playing ── */}
+        {/* ── Bio + He/Him icon ── */}
         <div className="relative mt-[24px] xl:mt-[32px] flex items-start enter-1">
           <div className="w-full xl:w-[991px]">
             <div className="font-subtitle text-[22px] md:text-[30px] xl:text-[40px] leading-[0] text-white tracking-[-0.44px] md:tracking-[-0.6px] xl:tracking-[-0.8px]">
@@ -283,29 +284,22 @@ export default function AboutPage() {
                 improve on whatever came before it.
               </p>
             </div>
-            {/* Mobile: now playing below bio */}
-            <div className="mt-[24px] xl:hidden">
-              <p className="font-ui text-[11px] tracking-[0.5px] uppercase text-white/40 mb-[8px]">listening to</p>
-              <NowPlaying />
-            </div>
           </div>
 
-          {/* Desktop: he/him icon + now playing stacked on the right */}
-          <div className="absolute right-0 top-0 hidden xl:flex xl:flex-col items-end gap-[16px]">
-            <div style={{ width: 64, height: 133 }}>
-              <img src={A.heHim} alt="he/him" className="block size-full max-w-none" />
-            </div>
-            <div className="flex flex-col items-end gap-[6px]">
-              <p className="font-ui text-[11px] tracking-[0.5px] uppercase text-white/40">listening to</p>
-              <NowPlaying />
-            </div>
+          <div className="absolute shrink-0 hidden xl:block" style={{ left: 1216, top: 0, width: 64, height: 133 }}>
+            <img src={A.heHim} alt="he/him" className="block size-full max-w-none" />
           </div>
         </div>
 
-        {/* ── Capabilities card, mt to match top=429 from page top ── */}
-        {/* nav(109) + mt-72 + bio(168) + mt-80 = 429 → mt-80 */}
+        {/* ── Capabilities card ── */}
         <div className="mt-[40px] xl:mt-[80px] enter-2">
           <Capabilities />
+        </div>
+
+        {/* ── Now playing + Last watched ── */}
+        <div className="mt-[40px] xl:mt-[60px] enter-3 flex flex-wrap gap-[12px]">
+          <NowPlaying />
+          <LastWatched />
         </div>
 
       </main>
