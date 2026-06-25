@@ -280,6 +280,20 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* ── Bio body ── */}
+        <div className="mt-[24px] xl:mt-[32px] w-full xl:w-[991px] enter-1">
+          <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
+            My interest in building things started with my first LEGO set. Turning a pile of separate
+            pieces into something that actually worked taught me an instinct I still rely on: understand
+            how the parts fit, then build something coherent. That&apos;s the core of how I approach
+            design, from early sketches to shaping a full product. Competitive sports shaped the rest
+            of how I work. They made it clear that good results come from preparation, discipline, and
+            a willingness to push past easy, and I bring that same standard to design. I&apos;m not
+            satisfied with work that just functions. I want it to perform, hold up in real use, and
+            improve on whatever came before it.
+          </p>
+        </div>
+
         {/* ── Capabilities card, mt to match top=429 from page top ── */}
         {/* nav(109) + mt-72 + bio(168) + mt-80 = 429 → mt-80 */}
         <div className="mt-[40px] xl:mt-[80px] enter-2">
