@@ -14,6 +14,7 @@ const A = {
   banner:     "/Banner qrpay.png",
   appShots:   "/App shots qrpay.png",
   lofi:       "/Low-fi sketch qrpay.png",
+  figmaShot:  "/DivePay designs in figma.png",
   styleGuide: "/Style guide qrpay.png",
   personas:   "/Personas qrpay.png",
   flowchart:  "/Flowchart qrpay.png",
@@ -193,6 +194,17 @@ export default function QrPayPage() {
             <img
               src={A.lofi}
               alt="QR Pay low-fidelity wireframe sketches"
+              className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
+            />
+          </div>
+        </Reveal>
+
+        {/* ── Figma birds-eye mockups ───────────────────────────── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "51.00%" }}>
+            <img
+              src={A.figmaShot}
+              alt="QR Pay mockups, birds-eye view in Figma"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
