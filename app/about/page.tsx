@@ -286,7 +286,7 @@ export default function AboutPage() {
             My interest in building things started with my first LEGO set. Turning a pile of separate
             pieces into something that actually worked taught me an instinct I still rely on: understand
             how the parts fit, then build something coherent. That&apos;s the core of how I approach
-            design, from early sketches to shaping a full product. Competitive sports shaped the rest
+            design, from early sketches to shaping a full product. Constant participation in competitive sports shaped the rest
             of how I work. They made it clear that good results come from preparation, discipline, and
             a willingness to push past easy, and I bring that same standard to design. I&apos;m not
             satisfied with work that just functions. I want it to perform, hold up in real use, and
