@@ -188,10 +188,40 @@ export default function CratePage() {
 
         {/* ── [crate] in action ────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
-            <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
-              [crate] IN ACTION
-            </p>
+          <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[24px]">
+            [crate] IN ACTION
+          </p>
+
+          {/* Videos immediately below heading */}
+          <div className="relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "56.25%" }}>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 size-full max-w-none object-cover"
+              src={A.video1}
+            />
+          </div>
+
+          <div className="mt-[20px] relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "56.25%" }}>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 size-full max-w-none object-cover"
+              src={A.video2}
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "radial-gradient(ellipse 80% 60% at center, transparent 40%, rgba(0,0,0,0.35) 100%)" }}
+            />
+          </div>
+
+          {/* Text pushed below videos */}
+          <div className="mx-auto max-w-[846px] mt-[48px] xl:mt-[64px]">
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               [crate] promises accessibility for all. Stem separation has historically
               lived inside dense DAWs and pro audio suites aimed at producers. [crate]
@@ -227,37 +257,6 @@ export default function CratePage() {
             </p>
           </div>
         </Reveal>
-
-        {/* ── Iterations video ─────────────────────────────────── */}
-        <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "56.25%" }}>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 size-full max-w-none object-cover"
-              src={A.video1}
-            />
-          </div>
-        </Reveal>
-
-        {/* ── Showcase video ────────────────────────────────────── */}
-        <div className="mt-[40px] xl:mt-[64px] relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "56.25%" }}>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 size-full max-w-none object-cover"
-            src={A.video2}
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: "radial-gradient(ellipse 80% 60% at center, transparent 40%, rgba(0,0,0,0.35) 100%)" }}
-          />
-        </div>
 
       </main>
 
