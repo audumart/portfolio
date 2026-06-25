@@ -77,7 +77,7 @@ function Hero() {
       </h1>
       <div className="mx-auto max-w-[900px] xl:max-w-[1100px] px-[24px] mt-[8px] xl:mt-[12px] leading-[0] font-subtitle text-[18px] md:text-[22px] xl:text-[30px] text-center text-white tracking-[-0.36px] xl:tracking-[-0.6px]">
         <div className="leading-[1.34]">
-          is a <DesignerSwatch /> and a <ResearcherBubble /> that strongly
+          is a <DesignerSwatch /> and a <ResearcherBubble /> who strongly
           believes design is the ideal way to solve complex problems.{" "}
         </div>
       </div>
