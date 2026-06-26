@@ -233,8 +233,7 @@ export default function AccessibilityPage() {
         {/* ── What We Found ────────────────────────────────────── */}
         <Section label="WHAT WE FOUND">
           <Body>
-            Four accessibility challenges recurred across the full ordering process, alongside a
-            fourth theme on the emotional and social costs of these barriers.
+            Three accessibility challenges recurred across the full ordering process.
           </Body>
 
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
