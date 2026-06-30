@@ -161,7 +161,7 @@ export default function CratePage() {
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               When the idea for [crate] surfaced I instantly acknowledged how
               valuable a tool it would be because I am passionate about music and have
-              tried several times to figure out how to make my own music or just try to
+              tried several times to figure out how to make my own music or just
               dissect my favorite songs to understand the multiple steps that go into
               making them.
             </p>
