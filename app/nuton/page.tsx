@@ -264,23 +264,23 @@ export default function NutonPage() {
           </p>
         </Section>
 
-        {/* ── Empty state ───────────────────────────────────────── */}
+        {/* ── Design system ─────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
+          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "90.62%" }}>
             <img
-              src={A.emptyState}
-              alt="Nuton empty state — drop target screen"
+              src={A.designSys}
+              alt="Nuton design system"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
         </Reveal>
 
-        {/* ── Design system ─────────────────────────────────────── */}
+        {/* ── Empty state ───────────────────────────────────────── */}
         <Reveal className="mt-[16px] xl:mt-[24px]">
-          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "90.62%" }}>
+          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
             <img
-              src={A.designSys}
-              alt="Nuton design system"
+              src={A.emptyState}
+              alt="Nuton empty state — drop target screen"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
