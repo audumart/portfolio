@@ -267,7 +267,7 @@ export default function AboutPage() {
           <div className="w-full xl:w-[991px]">
             <div className="font-subtitle text-[22px] md:text-[30px] xl:text-[40px] leading-[0] text-white tracking-[-0.44px] md:tracking-[-0.6px] xl:tracking-[-0.8px]">
               <p className="leading-[1.34]">
-                With 7+ years of design experience my expertise consists of delivering
+                With 6+ years of design experience my expertise consists of delivering
                 clean visual design via iterative processes and detailed research that
                 turns objectives into solutions.
               </p>
