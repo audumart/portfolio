@@ -14,6 +14,7 @@ const A = {
   diagonal: "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright: "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:   "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
+  nuton:     "/nuton landing page new.png",
   library:   "/f7a667d2ab3f74fd6710193750a48b7b7cb92f5b.png",
   tse:       "/90fe7043dc7837d72d57bfcb68935643888d95f9.png",
   nineLives: "/5886ad421872366dda0a22171f4ae2e1d0f9222c.png",
@@ -94,15 +95,31 @@ function CardLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* ── [crate] featured card ────────────────────────────────────── */
+/* ── Nuton featured card ──────────────────────────────────────── */
 function FeaturedCard() {
   return (
-    <Link href="/crate" className="block group mb-[40px] xl:mb-[82px] enter-2">
-      <div className="relative h-[220px] md:h-[520px] xl:h-[915px] overflow-clip rounded-[5px] bg-[#bde0fe] transition-opacity group-hover:opacity-90">
+    <Link href="/nuton" className="block group mb-[40px] xl:mb-[82px] enter-2">
+      <div className="relative h-[220px] md:h-[520px] xl:h-[915px] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
+        <img
+          src={A.nuton}
+          alt="Nuton AI learning tool"
+          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none rounded-[5px]"
+        />
+      </div>
+      <CardLabel>Nuton</CardLabel>
+    </Link>
+  );
+}
+
+/* ── [crate] card (628×393) ───────────────────────────────────── */
+function CrateCard() {
+  return (
+    <Link href="/crate" className="block group">
+      <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#bde0fe] transition-opacity group-hover:opacity-90">
         <img
           src={A.library}
-          alt="[crate] library app"
-          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none rounded-[5px]"
+          alt="[crate] stem-splitting app"
+          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
         />
       </div>
       <CardLabel>[crate]</CardLabel>
@@ -182,14 +199,20 @@ function Projects() {
 
       <Reveal className="mb-[20px] xl:mb-[42px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
+          <CrateCard />
           <TseCard />
+        </div>
+      </Reveal>
+
+      <Reveal className="mb-[20px] xl:mb-[42px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
           <NextHavnCard />
+          <QrPayCard />
         </div>
       </Reveal>
 
       <Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
-          <QrPayCard />
           <NineLivesCard />
         </div>
       </Reveal>
