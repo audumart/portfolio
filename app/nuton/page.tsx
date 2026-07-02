@@ -14,6 +14,7 @@ const A = {
   landingOld:  "/nuton landing page current.png",
   landingNew:  "/nuton landing page new.png",
   emptyState:  "/Empty state structured learning.png",
+  filesLinks:  "/Files and links structured learning.png",
   generate:    "/Generate lesson.png",
   lesson:      "/Structured Learning Lesson.png",
   aiChat:      "/Structured Learning AI Chat.png",
@@ -300,8 +301,19 @@ export default function NutonPage() {
           </Body>
         </Section>
 
-        {/* ── Generate lesson ───────────────────────────────────── */}
+        {/* ── Files and links ───────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
+          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
+            <img
+              src={A.filesLinks}
+              alt="Nuton files and links input screen"
+              className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
+            />
+          </div>
+        </Reveal>
+
+        {/* ── Generate lesson ───────────────────────────────────── */}
+        <Reveal className="mt-[16px] xl:mt-[24px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
             <img
               src={A.generate}
