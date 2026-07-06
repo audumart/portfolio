@@ -167,9 +167,9 @@ export default function NutonPage() {
         {/* ── Live site banner ─────────────────────────────────── */}
         <LiveSiteBanner
           href="https://nuton.app"
-          src={A.landingOld}
+          src={A.landingNew}
           alt="Nuton landing page — view live site"
-          ratio="60.30%"
+          ratio="71.11%"
           className="mt-[40px] xl:mt-[80px] enter-2"
         />
 
