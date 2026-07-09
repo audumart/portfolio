@@ -150,7 +150,7 @@ export default function NutonPage() {
                 Learn it once. Actually remember.
               </h2>
               <p className="mt-[12px] font-ui text-[13px] md:text-[14px] leading-[1.6] text-white/60 tracking-[0.13px]">
-                Since launching Nuton has helped over 2000 students create 13000+
+                Since launching Nuton has helped over 20000 students create 150000+
                 structured learning plans.
               </p>
             </div>
@@ -407,8 +407,8 @@ export default function NutonPage() {
         {/* ── Outcome ───────────────────────────────────────────── */}
         <Section label="OUTCOME">
           <Body>
-            Since launch Nuton has been used by over 2000 learners to generate more
-            than 13000 structured lessons and counting, with lots of positive
+            Since launch Nuton has been used by over 20000 learners to generate more
+            than 150000 structured lessons and counting, with lots of positive
             feedback from users appreciating the simplicity of the platform and
             acknowledging how much of a valuable tool it is in aiding their learning.
             This project was personal to me before it was professional. As a recently
