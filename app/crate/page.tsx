@@ -170,7 +170,9 @@ export default function CratePage() {
               front of my whiteboard to sketch what a potential interface for the
               lightweight desktop app would look like because at its basic level [crate]
               aims to eliminate the complexity that exists in traditional music production
-              software.
+              software. Due to how subtractive I wanted the interface for crate to look like 
+              I was instantly able to go from just sketches to a coding a functional prototype 
+              using Claude Code and React+Vite designing the app by using Apple’s Liquid Glass’ design language. 
             </p>
           </div>
         </Reveal>
