@@ -155,7 +155,7 @@ export default function NutonPage() {
               </p>
             </div>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.6] text-white/80 tracking-[0.16px] xl:max-w-[520px]">
-              Nuton (Newton) is an AI learning tool that turns any source material
+              Nuton (Newton) is an AI powered learning tool that turns any source material
               into a structured course with an adaptive tutor. A learner drops in a
               PDF, slide deck, video, YouTube link, audio file, article, or block of
               text and Nuton generates organized lessons, flashcards, quizzes, a
@@ -169,7 +169,7 @@ export default function NutonPage() {
           href="https://nuton.app"
           src={A.landingNew}
           alt="Nuton landing page — view live site"
-          ratio="71.11%"
+          ratio="53.28%"
           className="mt-[40px] xl:mt-[80px] enter-2"
         />
 

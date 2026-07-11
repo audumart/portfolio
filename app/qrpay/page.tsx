@@ -136,7 +136,7 @@ export default function QrPayPage() {
           href="https://www.figma.com/proto/iz5PqJB5gpZ8elpMPqCFYr/DiveHQ?page-id=0%3A1&node-id=1-6532&p=f&viewport=4914%2C17463%2C0.5&t=jjZSZ2UzUHrMZ1I3-1&scaling=min-zoom&content-scaling=responsive&starting-point-node-id=1%3A6532"
           src={A.banner}
           alt="QR Pay app, view interactive prototype"
-          ratio="47.74%"
+          ratio="53.28%"
           label="VIEW INTERACTIVE PROTOTYPE"
           className="mt-[40px] xl:mt-[80px] enter-2"
         />

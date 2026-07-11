@@ -128,7 +128,7 @@ export default function NineLivesPage() {
           href="https://9lives.store"
           src={A.banner}
           alt="9LIVES e-commerce store"
-          ratio="48.98%"
+          ratio="53.28%"
           className="mt-[40px] xl:mt-[80px] enter-2"
         />
 

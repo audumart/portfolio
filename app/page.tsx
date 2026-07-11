@@ -14,7 +14,7 @@ const A = {
   diagonal: "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright: "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:   "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  nuton:     "/nuton landing page new.png",
+  nuton:     "/Nuton Device mockup.png",
   library:   "/f7a667d2ab3f74fd6710193750a48b7b7cb92f5b.png",
   tse:       "/90fe7043dc7837d72d57bfcb68935643888d95f9.png",
   nineLives: "/5886ad421872366dda0a22171f4ae2e1d0f9222c.png",
@@ -194,20 +194,20 @@ function QrPayCard() {
 /* ── Projects section ─────────────────────────────────────────── */
 function Projects() {
   return (
-    <section id="work" aria-label="Projects" className="relative z-10 mt-[22px] px-[24px] md:px-[40px] xl:px-[80px]">
+    <section id="work" aria-label="Projects" className="relative z-10 mt-[48px] px-[24px] md:px-[40px] xl:px-[80px]">
       <FeaturedCard />
 
       <Reveal className="mb-[20px] xl:mb-[42px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
           <CrateCard />
-          <TseCard />
+          <QrPayCard />
         </div>
       </Reveal>
 
       <Reveal className="mb-[20px] xl:mb-[42px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
+          <TseCard />
           <NextHavnCard />
-          <QrPayCard />
         </div>
       </Reveal>
 

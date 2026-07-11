@@ -149,7 +149,7 @@ export default function NextHavnPage() {
           href="https://nexthavn.com/"
           src={A.banner}
           alt="NextHavn website"
-          ratio="47.74%"
+          ratio="53.28%"
           className="mt-[40px] xl:mt-[80px] enter-2"
         />
 

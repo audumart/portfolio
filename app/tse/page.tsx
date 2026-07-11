@@ -143,7 +143,7 @@ export default function TsePage() {
           href="https://808sakura.vercel.app/"
           src={A.banner}
           alt="TSE Studio website"
-          ratio="38.63%"
+          ratio="53.28%"
           className="mt-[40px] xl:mt-[80px] enter-2"
         />
 
