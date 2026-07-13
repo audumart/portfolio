@@ -185,7 +185,7 @@ function NextHavnCard() {
       </div>
       <CardLabel>NextHavn</CardLabel>
       <CardTags tags={["Product Design", "Marketplace", "Strategy"]} />
-      <CardDesc>Redesign of a creative marketplace where makers and buyers meet — built for discovery, with a browsing experience that gets out of the way.</CardDesc>
+      <CardDesc>End-to-end design of a creative marketplace where makers and buyers meet — built for discovery, with a browsing experience that gets out of the way.</CardDesc>
     </Link>
   );
 }
