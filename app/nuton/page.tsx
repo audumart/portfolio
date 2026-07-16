@@ -275,17 +275,6 @@ export default function NutonPage() {
           </div>
         </Reveal>
 
-        {/* ── Empty state ───────────────────────────────────────── */}
-        <Reveal className="mt-[16px] xl:mt-[24px]">
-          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
-            <img
-              src={A.emptyState}
-              alt="Nuton empty state — drop target screen"
-              className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
-            />
-          </div>
-        </Reveal>
-
         {/* ── Designing the input experience ───────────────────── */}
         <Section label="DESIGNING THE INPUT EXPERIENCE">
           <Body>
@@ -300,6 +289,17 @@ export default function NutonPage() {
             a sense that the source was actively being read and organized.
           </Body>
         </Section>
+
+        {/* ── Empty state ───────────────────────────────────────── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
+            <img
+              src={A.emptyState}
+              alt="Nuton empty state — drop target screen"
+              className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
+            />
+          </div>
+        </Reveal>
 
         {/* ── Files and links ───────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
