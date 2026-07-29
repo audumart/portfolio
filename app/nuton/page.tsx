@@ -258,10 +258,7 @@ export default function NutonPage() {
             expressive work, so the interface read as considered and capable rather
             than novel.
           </p>
-          <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            I treated the empty state as the real first impression of the product,
-            since it is the first thing anyone sees before the magic happens.
-          </p>
+          
         </Section>
 
         {/* ── Design system ─────────────────────────────────────── */}
@@ -280,8 +277,9 @@ export default function NutonPage() {
           <Body>
             The input screen had to absorb real variety. PDFs, slide decks, video,
             YouTube links, audio, articles, and plain text, without ever feeling like
-            a settings panel a learner had to study before getting started. I
-            designed around a single, generous drop target as the visual anchor. The
+            a settings panel a learner had to study before getting started. I treated the empty state as the real first impression of the product,
+            since it is the first thing anyone sees before the magic happens while
+            designing around a single, generous drop target as the visual anchor. The
             intent was for the screen to say bring me anything, not ask the learner
             to choose carefully. The loading and generating states needed more
             attention than usual because of the wait built into the product. Rather
