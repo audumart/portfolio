@@ -195,7 +195,7 @@ export default function NutonPage() {
             My role had two distinct parts. On Nuton&apos;s website I led the
             redesign, taking an existing site and reworking it end to end into
             something that better communicated the product&apos;s value and
-            positioning. On the app side, I took the design from zero to something
+            positioning. On the app side, I took the design from zero for both mobile and web experiences to something
             shippable. Drawing from the research direction I knew the design needed
             to achieve the following:
           </Body>
