@@ -24,6 +24,7 @@ const A = {
   podcast:     "/Structured Learning podcast playing.png",
   quiz:        "/Structured Learning quiz multichoice.png",
   setupQuiz:   "/Structured Learning setup quiz.png",
+  typeColor:   "/Type&color.png",
   designSys:   "/Design system shot.png",
 };
 
@@ -253,23 +254,30 @@ export default function NutonPage() {
             makes a bold promise, turning something as dense as a four-hundred-page
             textbook into a usable course in about a minute, and a visual language
             that felt too decorated would undercut that promise before a learner even
-            saw the result. So I leaned towards using generous whitespace, a quiet
-            and limited color palette, and a simple typography system doing the
+            saw the result. So I leaned towards creating and using a simple design system comprising of generous whitespace, a quiet
+            color palette, a few chosen documented components, and simple typography doing the
             expressive work, so the interface read as considered and capable rather
             than novel.
           </p>
           
         </Section>
 
+        {/* ── Type & color ──────────────────────────────────────── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <img
+            src={A.typeColor}
+            alt="Nuton type and color system"
+            className="w-full h-auto rounded-[5px] pointer-events-none"
+          />
+        </Reveal>
+
         {/* ── Design system ─────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "90.62%" }}>
-            <img
-              src={A.designSys}
-              alt="Nuton design system"
-              className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
-            />
-          </div>
+          <img
+            src={A.designSys}
+            alt="Nuton design system"
+            className="w-full h-auto rounded-[5px] pointer-events-none"
+          />
         </Reveal>
 
         {/* ── Designing the input experience ───────────────────── */}
