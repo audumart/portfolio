@@ -254,7 +254,7 @@ export default function NutonPage() {
             makes a bold promise, turning something as dense as a four-hundred-page
             textbook into a usable course in about a minute, and a visual language
             that felt too decorated would undercut that promise before a learner even
-            saw the result. To start I drafted a baseline Information architecture in order to give the platform structure and to also establish some user flows.
+            saw the result. To start I drafted a baseline Information architecture in order to give the platform structure and to also establish a couple of user flows.
             The next step was creating and using a simple design system comprising of generous whitespace, a quiet
             color palette, a few chosen documented components, and simple typography doing the
             expressive work, so the interface read as considered and capable rather
