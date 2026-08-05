@@ -283,7 +283,7 @@ export default function AccessibilityPage() {
         {/* ── Design Implications ───────────────────────────────── */}
         <Section label="DESIGN IMPLICATIONS">
           <Body>
-            Our study points to four directions for more inclusive end-to-end delivery:
+            This study points to four directions for more inclusive end-to-end delivery:
           </Body>
           <ul className="mt-[16px] space-y-[12px] list-disc list-outside pl-[20px]">
             {[
