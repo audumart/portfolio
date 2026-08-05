@@ -225,7 +225,9 @@ export default function CratePage() {
           {/* Text pushed below videos */}
           <div className="mx-auto max-w-[846px] mt-[48px] xl:mt-[64px]">
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              [crate] promises accessibility for all. Stem separation has historically
+            Behind the scenes of dropping in a track [crate] separates stems by using 2 state of the art audio separation models 
+            Demucs and SAM Audio anchored by Pytorch as the default Deep Learning Framework.
+             Stem separation has historically
               lived inside dense DAWs and pro audio suites aimed at producers. [crate]
               reframes it as something anyone can use, a utility, not a workstation.
             </p>
