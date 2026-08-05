@@ -27,6 +27,7 @@ const A = {
   ia:          "/nuton-information-architecture.png",
   userFlow:    "/nuton-user-flow.png",
   typeColor:   "/Type&color.png",
+  mobile:      "/nuton mobile.png",
   designSys:   "/Design system shot.png",
 };
 
@@ -122,7 +123,7 @@ export default function NutonPage() {
   return (
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[0,1,2,3,4,5,6,7,8,9,10,11,12,13].map((i) => (
+        {[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21].map((i) => (
           <GridTile key={i} index={i} left="calc(50% - 0.5px)" />
         ))}
       </div>
@@ -431,6 +432,15 @@ export default function NutonPage() {
               </div>
             ))}
           </div>
+        </Reveal>
+
+        {/* ── Mobile screens ────────────────────────────────────── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <img
+            src={A.mobile}
+            alt="Nuton mobile screens"
+            className="w-full h-auto rounded-[5px] pointer-events-none"
+          />
         </Reveal>
 
         {/* ── Outcome ───────────────────────────────────────────── */}
