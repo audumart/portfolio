@@ -24,6 +24,8 @@ const A = {
   podcast:     "/Structured Learning podcast playing.png",
   quiz:        "/Structured Learning quiz multichoice.png",
   setupQuiz:   "/Structured Learning setup quiz.png",
+  ia:          "/nuton-information-architecture.png",
+  userFlow:    "/nuton-user-flow.png",
   typeColor:   "/Type&color.png",
   designSys:   "/Design system shot.png",
 };
@@ -254,7 +256,9 @@ export default function NutonPage() {
             makes a bold promise, turning something as dense as a four-hundred-page
             textbook into a usable course in about a minute, and a visual language
             that felt too decorated would undercut that promise before a learner even
-            saw the result. To start I drafted a baseline Information architecture in order to give the platform structure and to also establish a couple of user flows.
+            saw the result. To start I drafted a baseline Information architecture in order to give the platform structure because six tools is a lot of surface for one product. 
+            Mapping the architecture was how I checked whether it held together or just accumulated. For the user flow there are two ways in, one loop once you are there. 
+            New learners come with material and need a course built from it. Returning learners want to land back where they stopped. Everything after that is the same cycle of reading a chapter, testing recall, asking the tutor when something does not land, and advancing.
             The next step was creating and using a simple design system comprising of generous whitespace, a quiet
             color palette, a few chosen documented components, and simple typography doing the
             expressive work, so the interface read as considered and capable rather
@@ -262,6 +266,24 @@ export default function NutonPage() {
           </p>
           
         </Section>
+
+        {/* ── IA diagram ────────────────────────────────────────── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <img
+            src={A.ia}
+            alt="Nuton information architecture"
+            className="w-full h-auto rounded-[5px] pointer-events-none"
+          />
+        </Reveal>
+
+        {/* ── User flow diagram ─────────────────────────────────── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <img
+            src={A.userFlow}
+            alt="Nuton user flow"
+            className="w-full h-auto rounded-[5px] pointer-events-none"
+          />
+        </Reveal>
 
         {/* ── Type & color ──────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
