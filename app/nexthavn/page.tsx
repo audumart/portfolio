@@ -22,7 +22,7 @@ const A = {
   screen5: "/Home - Booking request sent successfully.png",
   screen6: "/Home  _ Get Premium.png",
   screen7: "/My bookings - Received Requests.png",
-  screen8: "/My bookings - Received Request (Booking Details).png",
+  screen8: "/My bookings - Received Request - (Booking Details).png",
 };
 
 /* ── Grid tile ───────────────────────────────────────────────── */
