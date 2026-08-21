@@ -15,7 +15,14 @@ const A = {
   styleGuide: "/Style guide nexthavn.png",
   imac:       "/iMac shot.png",
   ipad:       "/iPad shot.png",
-  appShots:   "/Nexthavn app screenshots.png",
+  screen1: "/Home overview.png",
+  screen2: "/Home - Filters.png",
+  screen3: "/Home _ Book client _ Avaialable now.png",
+  screen4: "/Home _ Book gear _ Avaialable now.png",
+  screen5: "/Home - Booking request sent successfully.png",
+  screen6: "/Home  _ Get Premium.png",
+  screen7: "/My bookings - Received Requests.png",
+  screen8: "/My bookings - Received Request (Booking Details).png",
 };
 
 /* ── Grid tile ───────────────────────────────────────────────── */
@@ -250,12 +257,24 @@ export default function NextHavnPage() {
 
         {/* ── App screenshots ───────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "70.70%" }}>
-            <img
-              src={A.appShots}
-              alt="NextHavn app interface screens"
-              className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] xl:gap-[24px]">
+            {[
+              { src: A.screen1, alt: "NextHavn home overview" },
+              { src: A.screen2, alt: "NextHavn home filters" },
+              { src: A.screen3, alt: "NextHavn book a client — available now" },
+              { src: A.screen4, alt: "NextHavn book gear — available now" },
+              { src: A.screen5, alt: "NextHavn booking request sent successfully" },
+              { src: A.screen6, alt: "NextHavn get premium" },
+              { src: A.screen7, alt: "NextHavn my bookings — received requests" },
+              { src: A.screen8, alt: "NextHavn my bookings — received request booking details" },
+            ].map(({ src, alt }) => (
+              <img
+                key={alt}
+                src={src}
+                alt={alt}
+                className="w-full h-auto rounded-[5px] pointer-events-none"
+              />
+            ))}
           </div>
         </Reveal>
 
