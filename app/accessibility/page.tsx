@@ -48,7 +48,7 @@ function GridTile({ index, left }: { index: number; left: string }) {
 
 function WorkTag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-[10px] border border-white/30 bg-white/10 px-[14px] py-[6px] font-ui text-[12px] md:text-[13px] font-medium tracking-[0.5px] text-white whitespace-nowrap">
+    <span className="inline-flex items-center rounded-[10px] border border-white/30 bg-white/10 pl-[14px] pr-[13.5px] pt-[7px] pb-[5px] font-ui text-[12px] md:text-[13px] leading-none font-medium tracking-[0.5px] text-white whitespace-nowrap">
       {children}
     </span>
   );
