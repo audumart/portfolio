@@ -260,11 +260,11 @@ export default function NextHavnPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] xl:gap-[24px]">
             {[
               { src: A.screen1, alt: "NextHavn home overview" },
+              { src: A.screen6, alt: "NextHavn get premium" },
               { src: A.screen2, alt: "NextHavn home filters" },
               { src: A.screen3, alt: "NextHavn book a client — available now" },
               { src: A.screen4, alt: "NextHavn book gear — available now" },
               { src: A.screen5, alt: "NextHavn booking request sent successfully" },
-              { src: A.screen6, alt: "NextHavn get premium" },
               { src: A.screen7, alt: "NextHavn my bookings — received requests" },
               { src: A.screen8, alt: "NextHavn my bookings — received request booking details" },
             ].map(({ src, alt }) => (
