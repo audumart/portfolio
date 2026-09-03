@@ -364,6 +364,18 @@ export default function NutonPage() {
             with confident, distinct chapter titles, quieter section labels beneath
             them, and comfortable, readable body text, so the eye could move from
             the shape of the whole course down into any single lesson without effort.
+            The honest constraint behind this screen is that the model is only as good as what gets fed to it. 
+            A clean textbook chapter produces a plan with real structure. A rambling lecture recording or a badly scanned PDF produces something thinner, and the model has no way of telling you that. 
+            It generates with the same confidence either way. I wasn't working on the pipeline, so I couldn't make weak output stronger. What I could do was stop the interface from overselling it.
+
+          The clearest version of this was chapter weight. Generation doesn't distribute evenly, so one chapter arrives with genuine depth and the next is a single idea stretched to fill a slot. 
+          Uniform row treatment makes both look equally authoritative, which is the kind of small dishonesty that costs you the user the first time they click into the weak one. 
+          The metadata line under each section title carries that work. Reading time, card count, quiz count, all describing what actually got generated rather than promising something up front. 
+          A section that reads "14 min read, 3 cards, 1 quiz" is describing itself accurately, and a thin section looks thin before you open it instead of after.
+
+          The other decision was treating the plan as a draft rather than a verdict. Generation isn't deterministic. Run the same source twice and you get two defensible structures, neither of which the learner can verify as correct. 
+          So rather than defend the output, the screen gives them room to move through it on their own terms: start anywhere, skip a chapter that isn't landing, go to the tutor when a lesson comes up short. 
+          The failure I was designing against was a learner studying a potentially bad chapter and deciding to abandon the generated study plan because it does not hold up logically. 
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             Spacing carried a lot of the essence of my efforts here. Instead of
