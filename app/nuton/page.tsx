@@ -372,7 +372,7 @@ export default function NutonPage() {
             The clearest version of this was chapter weight. Generation doesn&apos;t distribute evenly, so one chapter arrives with genuine depth and the next is a single idea stretched to fill a slot.
             Uniform row treatment makes both look equally authoritative, which is the kind of small dishonesty that costs you the user the first time they click into the weak one.
             The metadata line under each section title carries that work. Reading time, card count, quiz count, all describing what actually got generated rather than promising something up front.
-            A section that reads &ldquo;14 min read, 3 cards, 1 quiz&rdquo; is describing itself accurately, and a thin section looks thin before you open it instead of after.
+            A section that shows &ldquo;14 min read, 3 cards, 1 quiz&rdquo; is describing itself accurately which gives the learner an accurate measure of the volume quality based on the generated content
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             The other decision was treating the plan as a draft rather than a verdict. Generation isn&apos;t deterministic. Run the same source twice and you get two defensible structures, neither of which the learner can verify as correct.
