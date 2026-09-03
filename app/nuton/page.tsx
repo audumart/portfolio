@@ -366,7 +366,7 @@ export default function NutonPage() {
             the shape of the whole course down into any single lesson without effort.
             The honest constraint behind this screen is that the model is only as good as what gets fed to it. 
             A clean textbook chapter produces a plan with real structure. A rambling lecture recording or a badly scanned PDF produces something thinner, and the model has no way of telling you that. 
-            It generates with the same confidence either way. I wasn't working on the pipeline, so I couldn't make weak output stronger. What I could do was stop the interface from overselling it.
+            It generates with the same confidence either way. I wasn't working on the generation pipeline, so I couldn't make weak output stronger. What I was able to do was stop the interface from overselling it.
 
           The clearest version of this was chapter weight. Generation doesn't distribute evenly, so one chapter arrives with genuine depth and the next is a single idea stretched to fill a slot. 
           Uniform row treatment makes both look equally authoritative, which is the kind of small dishonesty that costs you the user the first time they click into the weak one. 
