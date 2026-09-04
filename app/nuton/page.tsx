@@ -260,10 +260,8 @@ export default function NutonPage() {
             saw the result. To start I drafted a baseline Information architecture in order to give the platform structure because six tools is a lot of surface for one product. 
             Mapping the architecture was how I checked whether it held together or just accumulated. For the user flow there are two ways in, one loop once you are there. 
             New learners come with material and need a course built from it. Returning learners want to land back where they stopped. Everything after that is the same cycle of reading a chapter, testing recall, asking the tutor when something does not land, and advancing.
-            The next step was creating and using a simple design system comprising of generous whitespace, a quiet
-            color palette, a few chosen documented components, and simple typography doing the
-            expressive work, so the interface read as considered and capable rather
-            than novel.
+            For the design system, I defined the tokens and variables, pulled the common components from an existing UI kit, and designed the product-specific ones myself. 
+            Generous whitespace, a quiet color palette, a small documented component set, and typography doing the expressive work, so the interface read as considered and capable rather than novel.
           </p>
           
         </Section>
