@@ -103,21 +103,6 @@ function CardDesc({ children }: { children: React.ReactNode }) {
   );
 }
 
-function CardTags({ tags }: { tags: string[] }) {
-  return (
-    <div className="mt-[8px] flex flex-wrap gap-[6px]">
-      {tags.map((tag) => (
-        <span
-          key={tag}
-          className="inline-flex items-center rounded-[6px] border border-white/20 bg-white/8 px-[8px] py-[3px] font-ui text-[10px] md:text-[11px] font-medium tracking-[0.5px] text-white/60 uppercase"
-        >
-          {tag}
-        </span>
-      ))}
-    </div>
-  );
-}
-
 /* ── Nuton featured card ──────────────────────────────────────── */
 function FeaturedCard() {
   return (
@@ -130,7 +115,6 @@ function FeaturedCard() {
         />
       </div>
       <CardLabel>Nuton</CardLabel>
-      <CardTags tags={["Product Design", "Strategy", "AI"]} />
       <CardDesc>AI tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
     </Link>
   );
@@ -148,7 +132,6 @@ function CrateCard() {
         />
       </div>
       <CardLabel>[crate]</CardLabel>
-      <CardTags tags={["Product Design", "Desktop", "Audio"]} />
       <CardDesc>A stem-splitting app that isolates vocals, drums, bass, and instrumentals from any song in a few taps.</CardDesc>
     </Link>
   );
@@ -166,7 +149,6 @@ function TseCard() {
         />
       </div>
       <CardLabel>TSE Studio</CardLabel>
-      <CardTags tags={["Web Design", "Branding", "Photography"]} />
       <CardDesc>Website redesign for a photography studio, translating a bold creative identity into a clean editorial web presence.</CardDesc>
     </Link>
   );
@@ -184,7 +166,6 @@ function NextHavnCard() {
         />
       </div>
       <CardLabel>NextHavn</CardLabel>
-      <CardTags tags={["Product Design", "Marketplace", "Strategy"]} />
       <CardDesc>End-to-end design of a creative marketplace where makers and buyers meet — built for discovery, with a browsing experience that gets out of the way.</CardDesc>
     </Link>
   );
@@ -218,7 +199,6 @@ function QrPayCard() {
         />
       </div>
       <CardLabel>QR Pay by DIVE HQ</CardLabel>
-      <CardTags tags={["Product Design", "Fintech", "Mobile"]} />
       <CardDesc>A mobile payment app built around Scan to Pay, with bank transfers, Dive Tags, and bill-splitting in one place.</CardDesc>
     </Link>
   );
