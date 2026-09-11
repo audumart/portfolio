@@ -424,27 +424,23 @@ export default function NutonPage() {
           </p>
         </Section>
 
-        {/* ── Tool screenshots grid ─────────────────────────────── */}
-        <Reveal className="mt-[40px] xl:mt-[64px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] xl:gap-[24px]">
-            {[
-              { src: A.aiChat,     alt: "Nuton AI tutor chat" },
-              { src: A.podcast,    alt: "Nuton podcast mode" },
-              { src: A.flashcards, alt: "Nuton flashcards" },
-              { src: A.setupQuiz,    alt: "Nuton quiz setup" },
-              { src: A.quiz,         alt: "Nuton quiz multiple choice" },
-              { src: A.notesWritten, alt: "Nuton notes written" },
-            ].map(({ src, alt }) => (
-              <div key={alt} className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
-                <img
-                  src={src}
-                  alt={alt}
-                  className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
-                />
-              </div>
-            ))}
-          </div>
-        </Reveal>
+        {/* ── Tool screenshots ──────────────────────────────────── */}
+        {[
+          { src: A.aiChat,      alt: "Nuton AI tutor chat" },
+          { src: A.podcast,     alt: "Nuton podcast mode" },
+          { src: A.flashcards,  alt: "Nuton flashcards" },
+          { src: A.setupQuiz,   alt: "Nuton quiz setup" },
+          { src: A.quiz,        alt: "Nuton quiz multiple choice" },
+          { src: A.notesWritten, alt: "Nuton notes written" },
+        ].map(({ src, alt }) => (
+          <Reveal key={alt} className="mt-[16px] xl:mt-[24px]">
+            <img
+              src={src}
+              alt={alt}
+              className="w-full h-auto rounded-[5px] pointer-events-none"
+            />
+          </Reveal>
+        ))}
 
         {/* ── Mobile screens ────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">

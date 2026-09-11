@@ -20,6 +20,7 @@ const A = {
   nineLives: "/5886ad421872366dda0a22171f4ae2e1d0f9222c.png",
   qrPay:     "/5d183971d6ba060bdca6dc2f89622c5fa941b93b.png",
   nextHavn:  "/ccbcfdbc1bf93c62740275332ce5e07d07322a3f.png",
+  assay:     "/assay screens/assay hero image.png",
   decision:      "/d1c91116a8ea2b156cb4f56aca4dc4784ec92ea1.png",
   accessibility: "/8a9a6668df0e16ad2011b371781a547d74a5dac5.png",
 };
@@ -103,15 +104,32 @@ function CardDesc({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* ── Nuton featured card ──────────────────────────────────────── */
+/* ── Assay featured card ──────────────────────────────────────── */
 function FeaturedCard() {
   return (
-    <Link href="/nuton" className="block group mb-[40px] xl:mb-[82px] enter-2">
-      <div className="relative h-[220px] md:h-[520px] xl:h-[915px] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
+    <Link href="/assay" className="block group mb-[40px] xl:mb-[82px] enter-2">
+      <div className="relative h-[220px] md:h-[520px] xl:h-[915px] overflow-clip rounded-[5px] bg-[#e8ddd5] transition-opacity group-hover:opacity-90">
+        <img
+          src={A.assay}
+          alt="Assay AI evaluation tool"
+          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none rounded-[5px]"
+        />
+      </div>
+      <CardLabel>Assay</CardLabel>
+      <CardDesc>Evidence-anchored scoring tool for AI agent trajectories. Tracks reviewer agreement, routes disputes and gates dataset release.</CardDesc>
+    </Link>
+  );
+}
+
+/* ── Nuton card (628×393) ─────────────────────────────────────── */
+function NutonCard() {
+  return (
+    <Link href="/nuton" className="block group">
+      <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
         <img
           src={A.nuton}
           alt="Nuton AI learning tool"
-          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none rounded-[5px]"
+          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
         />
       </div>
       <CardLabel>Nuton</CardLabel>
@@ -212,14 +230,20 @@ function Projects() {
 
       <Reveal className="mb-[20px] xl:mb-[42px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
+          <NutonCard />
           <CrateCard />
-          <QrPayCard />
         </div>
       </Reveal>
 
       <Reveal className="mb-[20px] xl:mb-[42px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
+          <QrPayCard />
           <TseCard />
+        </div>
+      </Reveal>
+
+      <Reveal className="mb-[20px] xl:mb-[42px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
           <NextHavnCard />
         </div>
       </Reveal>
