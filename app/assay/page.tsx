@@ -415,7 +415,7 @@ export default function AssayPage() {
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             Any company running an agent inside its own product has the same problem in a different
-            shape — it could be a bank triaging disputes, a helpdesk
+            shape: it could be a bank triaging disputes, a helpdesk
             resolving tickets. Someone internally has to answer whether the agent is behaving and
             without an evaluation instrument that answer tends to be a sample read by one person, which
             can&apos;t be compared across prompt changes or across months.
@@ -424,7 +424,7 @@ export default function AssayPage() {
             Most of Assay applies unchanged and the qualification problem shrinks because the
             reviewers are already the domain experts. Two things differ. The batch becomes a
             continuous sampling policy rather than a fixed set. And the release gate becomes a
-            deployment gate — the same checks, reading the same agreement numbers, deciding whether a
+            deployment gate: the same checks, reading the same agreement numbers, deciding whether a
             new prompt or model version reaches production instead of whether a dataset ships.
           </p>
         </Section>
