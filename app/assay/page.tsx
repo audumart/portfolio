@@ -353,7 +353,7 @@ export default function AssayPage() {
           <div className="mb-[12px]">
             <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">09 · Adjudicator</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Adjudication</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Two reviewers scored recovery quality 2 and 5. Only one attached evidence.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Two reviewers scored recovery quality 2 and 5 on the same item. Only one attached evidence.</p>
           </div>
           <img src={A.s9} alt="Adjudication" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
