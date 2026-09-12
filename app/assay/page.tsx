@@ -219,23 +219,23 @@ export default function AssayPage() {
             {[
               {
                 lead: "Deterministic checks run before a human sees the item.",
-                body: "The reviewer opens an item with failed checks already pinned to the steps that caused them and spends their attention on what a machine can't settle: did the agent carry its constraints forward, ground accuracy and accountability to a goal and actually take the right options it had? Checks and criteria stay separate in code. A failed check is a violation and blocks release. A low score is a judgment and doesn't.",
+                body: "Machine-settleable violations are settled by a machine. The reviewer opens an item with the failed checks already pinned to the steps that caused them and spends their attention on what a machine can't settle: did the agent carry its constraints forward?, should it have escalated?, was this a good recovery given the options it had?. Checks and criteria stay separate objects. A failed check is a violation and blocks release. A low score is a judgment and doesn't.",
               },
               {
                 lead: "Evidence first, score second.",
-                body: "The reviewer attaches steps to criteria then scores. Not the reverse. Adjudication stops being a chore because the attachment is the justification. Two people can compare what they looked at and where they differed on what they considered and the detail closes it. Attached evidence also shows reviewers the right moment because they had to attach a step that didn't apply.",
+                body: "The reviewer attaches steps to criteria, then scores. Not the reverse. Justification stops being a chore because the attachment is the justification. Adjudication becomes concrete, because two people can compare what they looked at rather than what they concluded and the dataset gets richer with step-level evidence that beats a single integer downstream. It also slows reviewers down at the right moment because they cannot can't attach a step they didn't open.",
               },
               {
                 lead: "Failures are traced to their cause not just their location.",
-                body: "A failure line in a trajectory is usually caused by something early: a constraint that arrived and was never carried forward. Linking them means the evidence records what went wrong rather than where it surfaced.",
+                body: "A failure late in a trajectory is usually caused by something early like a constraint that arrived and was never carried forward. Linking them means the evidence records what went wrong rather than where it surfaced.",
               },
               {
                 lead: "The rubric is treated as a thing that can be wrong.",
-                body: "Most tools treat the rubric as fixed and the reviewers as the variable. As agreement becomes a training problem Assay assumes the opposite is often true. The rubric screen shows a criterion's anchors alongside the agreement spread. A criterion that never says what a 3 means asks people to invent one privately then measures how much their private definitions differ.",
+                body: "Most tools treat the rubric as fixed and the reviewer as the variable, so low agreement becomes a training problem. Assay assumes the opposite is often true. The rubric screen shows a criterion's anchors alongside where scores actually land. One criterion has anchors written at 1 and 5, nothing at 2, 3 or 4, and 78% of real scores fall in those blanks. A criterion that never says what a 3 means asks people to invent one privately, then measures how much their private definitions differ.",
               },
               {
                 lead: "Reviewers can dispute a check not just a score.",
-                body: "A check can be disputed from inside the task carrying the item and the evidence so far. A reviewer argues a check is firing wrongly on a step, attaches the step to the disputed check and the check gets amended. A reviewer who can't push back on a bad instrument will end up gaming it or leave. Providing a dispute path does not remove the need for clear criteria but it makes the instrument repairable.",
+                body: "Any check can be disputed from inside the task, carrying the item and the evidence so far. In the flow, a reviewer argues a check is firing wrongly on a class of cases the author didn't anticipate which is right and the check gets amended. A reviewer who can't push back on a bad instrument will guess or leave. Guessing is worse.",
               },
               {
                 lead: "Data can't leave without passing a gate.",
