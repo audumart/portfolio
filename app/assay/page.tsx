@@ -118,7 +118,7 @@ export default function AssayPage() {
   return (
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19].map((i) => (
+        {[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34].map((i) => (
           <GridTile key={i} index={i} left="calc(50% - 0.5px)" />
         ))}
       </div>
@@ -278,51 +278,111 @@ export default function AssayPage() {
 
         {/* ── Screens ───────────────────────────────────────────── */}
         <Reveal className="mt-[16px] xl:mt-[24px]">
-          <img src={A.s1} alt="Assay reviewer queue and calibration panel" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">01 · Program Lead</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Batch setup</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Warned about unresolved disputes on the check suite for the batch. Launches anyway.</p>
+          </div>
+          <img src={A.s1} alt="Batch setup" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s2} alt="Assay batch briefing — what you are judging" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">02 · Reviewer</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Review queue</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Views the batch. Calibration shown against other reviewers in the cohort, never as a score.</p>
+          </div>
+          <img src={A.s2} alt="Review queue" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s3} alt="Assay trajectory view with automatic checks" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">03 · Reviewer</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Rubric briefing</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">First time on this rubric. Four criteria, each with its anchors.</p>
+          </div>
+          <img src={A.s3} alt="Rubric briefing" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s4} alt="Assay trajectory view with evidence attached" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">04 · Reviewer</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Trajectory</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Opens item 7. Two checks have already failed, pinned to steps 1 and 5.</p>
+          </div>
+          <img src={A.s4} alt="Trajectory" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s5} alt="Assay dispute a check modal" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">05 · Reviewer</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Attaching evidence</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Attaches step 5 to a criterion. Three of four scored, one still ghost.</p>
+          </div>
+          <img src={A.s5} alt="Attaching evidence" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s6} alt="Assay checks view with rule detail and disputes" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">06 · Reviewer</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dispute a check</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">The cold chain check fires wrongly on continuation legs. The dispute carries the evidence.</p>
+          </div>
+          <img src={A.s6} alt="Dispute a check" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s7} alt="Assay check version diff v3.0 vs v3.1 draft" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">07 · Program Lead</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Check suite builder</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Reads all disputes on one check and amends the rule.</p>
+          </div>
+          <img src={A.s7} alt="Check suite builder" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s8} alt="Assay adjudication view" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">08 · Program Lead</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Version diff</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">What v3.1 changes, and what it costs the 60 items already scored under v3.0.</p>
+          </div>
+          <img src={A.s8} alt="Version diff" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s9} alt="Assay quality dashboard" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">09 · Adjudicator</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Adjudication</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Two reviewers scored recovery quality 2 and 5. Only one attached evidence.</p>
+          </div>
+          <img src={A.s9} alt="Adjudication" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s10} alt="Assay rubrics view with anchor breakdown" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">10 · Program Lead</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Quality dashboard</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60"> Sees overview of scoring on the batch. Recovery quality sits at 0.44 agreement against a floor of 0.70.</p>
+          </div>
+          <img src={A.s10} alt="Quality dashboard" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s11} alt="Assay release dataset with gate cleared manifest" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">11 · Program Lead</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Rubric criterion</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Anchors written at 1 and 5 only. 78% of real scores land in the blanks.</p>
+          </div>
+          <img src={A.s11} alt="Rubric criterion" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img src={A.s12} alt="Assay batch overview" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <div className="mb-[12px]">
+            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">12 · Program Lead</p>
+            <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dataset release</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">The gate blocked on exactly the criterion the first screen warned about. They release scoped: 51 items ship, 9 held back, one check still amber.</p>
+          </div>
+          <img src={A.s12} alt="Dataset release" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         {/* ── One platform any domain ───────────────────────────── */}
