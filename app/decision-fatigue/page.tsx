@@ -172,13 +172,13 @@ export default function DecisionFatiguePage() {
           </Body>
           <Body>
             The research literature framed my hypothesis: more options produce more
-            decision-making stress, and AI recommendations can lower satisfaction when they
+            decision-making stress and AI recommendations can lower satisfaction when they
             override user autonomy. I wanted to see how this played out in real selection
             behavior, not just self-report.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             <strong className="text-white font-semibold">The research question:</strong> How do
-            users experience decision fatigue when choosing what to watch, and how might
+            users experience decision fatigue when choosing what to watch and how might
             personalized, context-aware recommendations reduce it?
           </p>
         </Section>
@@ -199,7 +199,7 @@ export default function DecisionFatiguePage() {
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             <strong className="text-white font-semibold">Round 2, Semi-structured interviews (7 participants, 20–30 min each):</strong>{" "}
             Conducted in person and over Zoom, focused on decision-making processes, experiences
-            with recommendation systems, and streaming habits. Each transcript was descriptively
+            with recommendation systems and streaming habits. Each transcript was descriptively
             coded in Atlas.ti, then reconciled into a shared codebook.
           </p>
           <div className="mt-[20px]">
@@ -252,7 +252,7 @@ export default function DecisionFatiguePage() {
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             <strong className="text-white font-semibold">3. People decide by shortcut:</strong>{" "}
-            Decision clustered around three heuristics: favorite actors, current mood/season, and
+            Decision clustered around three heuristics: favorite actors, current mood/season and
             seasonal relevance. These mental shortcuts were how users cut a vast catalog down to
             a selection, yet the platforms gave them almost no way to filter along these lines.
           </p>
@@ -315,7 +315,7 @@ export default function DecisionFatiguePage() {
               "Context-aware recommendations driven by real-time inputs (mood, genre, actor) rather than viewing history alone.",
               "Balance familiarity and discovery: a lane for comfort rewatches alongside curated, approachable new content.",
               "Filtering that matches how people actually decide: sort by actor, season, release window, or emotional tone.",
-              "Social proof built in: friend-based recommendations, collaborative lists, and links to the external reviews users already trust.",
+              "Social proof built in: friend-based recommendations, collaborative lists and links to the external reviews users already trust.",
               "Mood-based browsing: let users pick an emotional state and get recommendations tuned to it.",
               "Personalized “trending”: relevance scoped to a user’s social circle instead of platform-wide noise.",
             ].map((item) => (
@@ -363,7 +363,7 @@ export default function DecisionFatiguePage() {
           <Body>
             The instinct in recommendation design is to add intelligence. My research suggested
             the opposite: the fix for choice overload is often less, fewer options surfaced at
-            once, clearer reasons behind each suggestion, and controls that map to the shortcuts
+            once, clearer reasons behind each suggestion and controls that map to the shortcuts
             people already use to decide.
           </Body>
         </Section>

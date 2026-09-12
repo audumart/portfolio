@@ -182,7 +182,7 @@ export default function NextHavnPage() {
               to bring real creatives into the research process, using it to
               source participants and gather early signal on the product&apos;s
               viability. The survey doubled as a validation tool, surfacing how
-              creatives actually source work, book spaces, and manage gear.
+              creatives actually source work, book spaces and manage gear.
             </p>
           </div>
         </Reveal>
@@ -231,7 +231,7 @@ export default function NextHavnPage() {
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">Verified Creative Network:</strong> A global, vetted database of
-              photographers, videographers, editors, crew, and digital artists.
+              photographers, videographers, editors, crew and digital artists.
               Every profile is fully searchable and filterable, by specific
               skill set, location, daily or hourly rate and real-time calendar
               availability making hiring shift from guesswork and referrals to
@@ -239,7 +239,7 @@ export default function NextHavnPage() {
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">On-Demand Bookings:</strong> A direct-to-studio marketplace where users
-              can browse, compare, and instantly reserve photography, film, and
+              can browse, compare and instantly reserve photography, film and
               audio recording spaces. Transparent pricing and automated calendar
               management remove the back-and-forth that normally sits between
               needing a space and securing one.
@@ -286,7 +286,7 @@ export default function NextHavnPage() {
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               Today, producing a single project can mean stitching together
-              messaging apps, invoicing tools, portfolio hosts, and a patchwork
+              messaging apps, invoicing tools, portfolio hosts and a patchwork
               of regional rental agencies. NextHavn collapses that fragmentation
               into one operating system for creative work. It gives independent
               artists genuine local visibility while allowing global brands to

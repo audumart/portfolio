@@ -181,12 +181,12 @@ export default function NutonPage() {
         <Section label="THE PROBLEM">
           <Body>
             Learners today are not short on material. They have lecture recordings,
-            hundred-page readings, slide decks, and endless articles. What they lack
+            hundred-page readings, slide decks and endless articles. What they lack
             is a way to move through it. Sitting through a two-hour lecture hands you
             everything at once and a path through none of it, so learners resort to
             skimming through unfinished reading and miss more than they take in.
             Existing tools widen the gap instead of closing it: note-taking and
-            flashcard apps each tackle one piece of the puzzle, and the learner still
+            flashcard apps each tackle one piece of the puzzle and the learner still
             has to assemble them. They are left to structure the material themselves,
             and most do not. The path through the content becomes a job of its own, a
             job that gets in the way of actually learning.
@@ -207,7 +207,7 @@ export default function NutonPage() {
             {[
               "Make the input step feel effortless for any source type: PDF, video, link, audio, or plain text.",
               "Make the generated plan feel trustworthy and worth starting.",
-              "Keep the learning tools — lessons, tutor, flashcards, podcast, notes, quizzes — unified under one visual language.",
+              "Keep the learning tools (lessons, tutor, flashcards, podcast, notes, quizzes) unified under one visual language.",
               "Keep the time to first value short enough that the product felt like a tool, not a course.",
             ].map((item) => (
               <li key={item} className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -244,7 +244,7 @@ export default function NutonPage() {
         <Section label="TRANSLATING RESEARCH INTO A VISUAL DIRECTION">
           <Body>
             The research gave me a clear spine to design around: a learner drops in
-            a source, waits briefly, and gets back a structured course. My task was
+            a source, waits briefly and gets back a structured course. My task was
             to give that spine a face that could carry the product across very
             different moments, from a blank upload screen to a finished six-chapter
             course. I started by pulling references from outside the ed-tech
@@ -255,13 +255,13 @@ export default function NutonPage() {
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             The direction I landed on was shaped by one central tension: the product
             makes a bold promise, turning something as dense as a four-hundred-page
-            textbook into a usable course in about a minute, and a visual language
+            textbook into a usable course in about a minute and a visual language
             that felt too decorated would undercut that promise before a learner even
             saw the result. To start I drafted a baseline Information architecture in order to give the platform structure because six tools is a lot of surface for one product. 
             Mapping the architecture was how I checked whether it held together or just accumulated. For the user flow there are two ways in, one loop once you are there. 
-            New learners come with material and need a course built from it. Returning learners want to land back where they stopped. Everything after that is the same cycle of reading a chapter, testing recall, asking the tutor when something does not land, and advancing.
-            For the design system, I defined the tokens and variables, pulled the common components from an existing UI kit, and designed the product-specific ones myself. 
-            Generous whitespace, a quiet color palette, a small documented component set, and typography doing the expressive work, so the interface read as considered and capable rather than novel.
+            New learners come with material and need a course built from it. Returning learners want to land back where they stopped. Everything after that is the same cycle of reading a chapter, testing recall, asking the tutor when something does not land and advancing.
+            For the design system, I defined the tokens and variables, pulled the common components from an existing UI kit and designed the product-specific ones myself.
+            Generous whitespace, a quiet color palette, a small documented component set and typography doing the expressive work, so the interface read as considered and capable rather than novel.
           </p>
           
         </Section>
@@ -306,7 +306,7 @@ export default function NutonPage() {
         <Section label="DESIGNING THE INPUT EXPERIENCE">
           <Body>
             The input screen had to absorb real variety. PDFs, slide decks, video,
-            YouTube links, audio, articles, and plain text, without ever feeling like
+            YouTube links, audio, articles and plain text, without ever feeling like
             a settings panel a learner had to study before getting started. I treated the empty state as the real first impression of the product,
             since it is the first thing anyone sees before the magic happens while
             designing around a single, generous drop target as the visual anchor. The
@@ -363,7 +363,7 @@ export default function NutonPage() {
             them, and comfortable, readable body text, so the eye could move from
             the shape of the whole course down into any single lesson without effort.
             The major constraint behind this step is that the model is only as good as what gets fed to it.
-            A clean textbook chapter produces a plan with real structure. A rambling lecture recording or a badly scanned PDF produces something thinner, and the model has no way of telling you that.
+            A clean textbook chapter produces a plan with real structure. A rambling lecture recording or a badly scanned PDF produces something thinner and the model has no way of telling you that.
             It generates with the same confidence either way. I wasn&apos;t working on the generation pipeline, so I couldn&apos;t make weak output stronger. What I was able to do was stop the interface from overselling it.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -400,11 +400,11 @@ export default function NutonPage() {
         <Section label="A COHESIVE LANGUAGE ACROSS DIFFERENT TOOLS">
           <Body>
             Six distinct tools: structured lessons, an AI tutor, flashcards, a
-            podcast mode, quizzes, and notes, is exactly where a product like this
+            podcast mode, quizzes and notes, is exactly where a product like this
             tends to fall apart visually, with each feature drifting into its own
             look as it gets built. I treated all six as one system from the outset
             rather than as separate features to skin individually. A shared component
-            set, the same cards, buttons, headers, and containers reused everywhere,
+            set, the same cards, buttons, headers and containers reused everywhere,
             meant a flashcard and a quiz question were visibly built from the same
             family of parts, even though they served different moments in the
             learning flow. The AI tutor was the hardest piece to place. It needed to
@@ -460,10 +460,10 @@ export default function NutonPage() {
             acknowledging how much of a valuable tool it is in aiding their learning.
             This project was personal to me before it was professional. As a recently
             graduated master&apos;s student, I knew the feeling of falling behind
-            firsthand, and I kept hearing the same thing from people around me:
+            firsthand and I kept hearing the same thing from people around me:
             classmates buried under reading they could not get through, struggling to
             turn dense material into something they could actually keep up with. The
-            problem Nuton was taking on was one I was living, and that is what pulled
+            problem Nuton was taking on was one I was living and that is what pulled
             me towards it. I wanted to help build something I needed and recognized
             the value of leading efforts to ship such a project. The goal for Nuton
             is to have millions of students all over the world use it as a learning

@@ -234,25 +234,25 @@ export default function CratePage() {
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">For Musicians &amp; performers</strong>, Pull a backing track by removing vocals,
               or isolate a single instrument to learn a part by ear. Great for rehearsing,
-              transcribing, or building practice loops.
+              transcribing or building practice loops.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">For DJs &amp; producers</strong>, Source clean acapellas and instrumentals for
-              remixing, mashups, and sampling without hunting down official stems that may
+              remixing, mashups and sampling without hunting down official stems that may
               not exist.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">For Singers &amp; vocal coaches</strong>, Generate instant karaoke versions of any
-              song, or isolate a reference vocal to study phrasing, breath, and technique.
+              song or isolate a reference vocal to study phrasing, breath and technique.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">For Content creators</strong>, Strip vocals to use instrumentals as
-              royalty-friendlier background beds, or pull specific elements for video edits
+              royalty-friendlier background beds or pull specific elements for video edits
               and transitions.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">For Educators &amp; students</strong>, Break a recording into its components to
-              teach arrangement, demonstrate how a mix is layered, or let students focus on
+              teach arrangement, demonstrate how a mix is layered or let students focus on
               one instrument at a time.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">

@@ -152,7 +152,7 @@ export default function QrPayPage() {
               payment experience centered on Scan to Pay functionality, enabling
               near-instant transactions. The app extends beyond scanning to
               include direct bank transfers, customizable Dive Tags for
-              simplified payments, and effortless bill-splitting, consolidating
+              simplified payments and effortless bill-splitting, consolidating
               essential payment functions into a single, cohesive platform.
             </p>
           </div>
@@ -178,9 +178,9 @@ export default function QrPayPage() {
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               As the lead designer and researcher on QR Pay, I owned the entire
               user experience end to end. From conducting the user research,
-              developing personas spanning DiveHQ&apos;s full audience, and
+              developing personas spanning DiveHQ&apos;s full audience and
               translated those insights into the product&apos;s direction. From
-              there, I defined the user flows, created the wireframes, and built
+              there, I defined the user flows, created the wireframes and built
               out the visual identity and full interface across both light and
               dark modes keeping the experience simple, consistent, and
               user-centered throughout.
@@ -254,7 +254,7 @@ export default function QrPayPage() {
               adaptability. This project reinforced a central lesson: in
               fintech, user-centric design is not a finishing touch but the
               foundation of a successful product. By staying responsive to real
-              user needs, validating decisions through personas and flows, and
+              user needs, validating decisions through personas and flows and
               consistently prioritizing simplicity over complexity; delivering
               an experience that feels effortless and trustworthy is easy.
             </p>

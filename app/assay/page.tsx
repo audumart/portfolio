@@ -231,7 +231,7 @@ export default function AssayPage() {
               },
               {
                 lead: "The rubric is treated as a thing that can be wrong.",
-                body: "Most tools treat the rubric as fixed and the reviewer as the variable, so low agreement becomes a training problem. Assay assumes the opposite is often true. The rubric screen shows a criterion's anchors alongside where scores actually land. One criterion has anchors written at 1 and 5, nothing at 2, 3 or 4, and 78% of real scores fall in those blanks. A criterion that never says what a 3 means asks people to invent one privately and also measures how much their private definitions differ.",
+                body: "Most tools treat the rubric as fixed and the reviewer as the variable, so low agreement becomes a training problem. Assay assumes the opposite is often true. The rubric screen shows a criterion's anchors alongside where scores actually land. One criterion has anchors written at 1 and 5, nothing at 2, 3 or 4 and 78% of real scores fall in those blanks. A criterion that never says what a 3 means asks people to invent one privately and also measures how much their private definitions differ.",
               },
               {
                 lead: "Reviewers can dispute a check not just a score.",
@@ -335,7 +335,7 @@ export default function AssayPage() {
           <div className="mb-[12px]">
             <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">07 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Check suite builder</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Reads all disputes on one check and amends the rule.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Reads all disputes on one check and proceeds to amend the rule.</p>
           </div>
           <img src={A.s7} alt="Check suite builder" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
@@ -344,7 +344,7 @@ export default function AssayPage() {
           <div className="mb-[12px]">
             <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">08 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Version diff</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">What the rewritten check in v3.1 changes, and what it costs the 60 items already scored under v3.0.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">What the rewritten check in v3.1 changes and what it costs the 60 items already scored under v3.0.</p>
           </div>
           <img src={A.s8} alt="Version diff" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
@@ -392,11 +392,11 @@ export default function AssayPage() {
             doesn&apos;t.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            The thing being evaluated changes completely between domains. What a reviewer has to do doesn't.
-          Agent failures have similar patterns wherever they happen. A constraint arrives early, gets dropped somewhere in the middle, and the consequence lands several steps later. 
-          The same structure holds whether the agent is handling a financial reconciliation, a clinical intake or a support escalation.
-          So only three things swap between domains; the tool registry, the check suite and the rubric. The interface doesn't move. 
-          A domain expert in one field and a domain expert in another are learning the same tool, and a program running several isn't maintaining several of everything.
+            Agent failures have the same shape wherever they happen. A constraint arrives early, gets
+            dropped somewhere in the middle and the consequence lands several steps later. Rotterdam is a
+            cold chain requirement retrieved at step 1 and ignored at step 5. The same structure holds
+            whether the agent is handling a financial reconciliation, a clinical intake or a support
+            escalation.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             So only three things swap between domains: the tool registry, the check suite and the rubric.
