@@ -24,6 +24,7 @@ const A = {
   s10:       "/assay screens/10.png",
   s11:       "/assay screens/11.png",
   s12:       "/assay screens/12.png",
+  s13:       "/assay screens/13.png",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
@@ -405,6 +406,37 @@ export default function AssayPage() {
             everything.
           </p>
         </Section>
+
+        {/* ── The same problem outside a lab ────────────────────── */}
+        <Section label="The same problem outside a lab">
+          <Body>
+            Labs evaluating models before release are the obvious user, but they aren&apos;t the only
+            one.
+          </Body>
+          <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
+            Any company running an agent inside its own product has the same problem in a different
+            shape — it could be a bank triaging disputes, a helpdesk
+            resolving tickets. Someone internally has to answer whether the agent is behaving and
+            without an evaluation instrument that answer tends to be a sample read by one person, which
+            can&apos;t be compared across prompt changes or across months.
+          </p>
+          <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
+            Most of Assay applies unchanged and the qualification problem shrinks because the
+            reviewers are already the domain experts. Two things differ. The batch becomes a
+            continuous sampling policy rather than a fixed set. And the release gate becomes a
+            deployment gate — the same checks, reading the same agreement numbers, deciding whether a
+            new prompt or model version reaches production instead of whether a dataset ships.
+          </p>
+        </Section>
+
+        {/* ── The same problem outside a lab screen ─────────────── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <img
+            src={A.s13}
+            alt="The same problem outside a lab"
+            className="w-full h-auto rounded-[5px] pointer-events-none"
+          />
+        </Reveal>
 
         {/* ── What I would and would not validate ───────────────── */}
         <Section label="WHAT I WOULD AND WOULD NOT VALIDATE">
