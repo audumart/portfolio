@@ -223,7 +223,7 @@ export default function AssayPage() {
               },
               {
                 lead: "Evidence first, score second.",
-                body: "The reviewer attaches steps to criteria, then scores. Not the reverse. Justification stops being a chore because the attachment is the justification. Adjudication becomes concrete, because two people can compare what they looked at rather than what they concluded and the dataset gets richer with step-level evidence that beats a single integer downstream. It also slows reviewers down at the right moment because they cannot can't attach a step they didn't open.",
+                body: "The reviewer attaches steps to criteria, then scores. Not the reverse. Justification stops being a chore because the attachment is the justification. Adjudication becomes concrete, because two people can compare what they looked at rather than what they concluded and the dataset gets richer with step-level evidence that beats a single integer downstream. It also slows reviewers down at the right moment because attaching evidence means finding the specific step and clicking it, so a reviewer has to have read the trajectory closely enough to know which step matters.",
               },
               {
                 lead: "Failures are traced to their cause not just their location.",
