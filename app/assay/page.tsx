@@ -197,7 +197,7 @@ export default function AssayPage() {
         <Section label="THE PROBLEM">
           <Body>
             Evaluation data is the input to every decision a lab makes about whether a model ships.
-            Noisy scores mean everything downstream inherits the noise and nobody finds out for months.
+            Unreliable scores are indistinguishable from reliable ones until the model trained on them starts behaving oddly.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             Four causes, all of them design problems. Rubrics are ambiguous on first contact with no
