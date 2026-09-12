@@ -183,7 +183,6 @@ export default function AssayPage() {
           <ul className="space-y-[12px] list-disc list-outside pl-[20px]">
             {[
               "Reviewers: not to be slowed down and not to be blamed for an unclear instrument.",
-              "Program leads: same work, narrower scope, holds a queue and surfaces agreement with reviewers.",
               "Adjudicators: needs to see what each reviewer looked at not just where they landed.",
               "Program leads: throughput and quality at once, decided weeks before seeing the result.",
             ].map((item) => (
