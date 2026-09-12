@@ -101,7 +101,7 @@ export default function NextHavnPage() {
     <div className="relative mx-auto flex min-h-screen max-w-[1440px] flex-col">
       {/* Grid tiles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((index) => (
+        {Array.from({length: 60}, (_, i) => i).map((index) => (
         <GridTile key={index} index={index} left="calc(50% - 0.5px)" />
       ))}
       </div>
