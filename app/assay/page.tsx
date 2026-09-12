@@ -231,7 +231,7 @@ export default function AssayPage() {
               },
               {
                 lead: "The rubric is treated as a thing that can be wrong.",
-                body: "Most tools treat the rubric as fixed and the reviewer as the variable, so low agreement becomes a training problem. Assay assumes the opposite is often true. The rubric screen shows a criterion's anchors alongside where scores actually land. One criterion has anchors written at 1 and 5, nothing at 2, 3 or 4, and 78% of real scores fall in those blanks. A criterion that never says what a 3 means asks people to invent one privately, then measures how much their private definitions differ.",
+                body: "Most tools treat the rubric as fixed and the reviewer as the variable, so low agreement becomes a training problem. Assay assumes the opposite is often true. The rubric screen shows a criterion's anchors alongside where scores actually land. One criterion has anchors written at 1 and 5, nothing at 2, 3 or 4, and 78% of real scores fall in those blanks. A criterion that never says what a 3 means asks people to invent one privately and also measures how much their private definitions differ.",
               },
               {
                 lead: "Reviewers can dispute a check not just a score.",
