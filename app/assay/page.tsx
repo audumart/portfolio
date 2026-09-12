@@ -235,7 +235,7 @@ export default function AssayPage() {
               },
               {
                 lead: "Reviewers can dispute a check not just a score.",
-                body: "Any check can be disputed from inside the task, carrying the item and the evidence so far. In the flow, a reviewer argues a check is firing wrongly on a class of cases the author didn't anticipate which is right and the check gets amended. A reviewer who can't push back on a bad instrument will guess or leave. Guessing is worse.",
+                body: "Any check can be disputed from inside the task, carrying the item and the evidence so far. In the flow, a reviewer argues a check is firing wrongly on a class of cases the author didn't anticipate which is right and the check gets amended. A reviewer who can't push back on a bad instrument will guess or leave.",
               },
               {
                 lead: "Data can't leave without passing a gate.",
