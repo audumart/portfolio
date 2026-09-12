@@ -239,7 +239,7 @@ export default function AssayPage() {
               },
               {
                 lead: "Data can't leave without passing a gate.",
-                body: "Agreement per criterion, unresolved disputes and version pinning. When the numbers don't hold release is blocked. Overriding requires a written reason that lands in a manifest travelling with the data. Anyone training on it in six months sees what was excluded and why.",
+                body: "Agreement per criterion, unadjudicated items, unresolved disputes, version pinning. When the numbers don't hold, release is blocked. Override requires a written reason that lands in a manifest travelling with the data. Anyone training on it in six months sees what was excluded and why.",
               },
             ].map(({ lead, body }) => (
               <li key={lead} className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
