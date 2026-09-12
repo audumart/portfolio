@@ -140,7 +140,7 @@ export default function AssayPage() {
           <div className="mt-[20px] xl:mt-[24px] flex flex-wrap items-center justify-center gap-[8px] xl:gap-[12px]">
             <WorkTag>PRODUCT DESIGN</WorkTag>
             <WorkTag>PROTOTYPING</WorkTag>
-            <WorkTag>AI EVALUATION</WorkTag>
+            <WorkTag>AGENT EVALUATION</WorkTag>
           </div>
 
           <div className="mt-[40px] xl:mt-[50px] flex flex-col lg:flex-row lg:justify-center gap-[24px] xl:gap-[16px]">
@@ -183,7 +183,7 @@ export default function AssayPage() {
           <ul className="space-y-[12px] list-disc list-outside pl-[20px]">
             {[
               "Reviewers: not to be slowed down and not to be blamed for an unclear instrument.",
-              "Operations: same work, narrower scope, holds a queue and surfaces agreement with reviewers.",
+              "Program leads: same work, narrower scope, holds a queue and surfaces agreement with reviewers.",
               "Adjudicators: needs to see what each reviewer looked at not just where they landed.",
               "Program leads: throughput and quality at once, decided weeks before seeing the result.",
             ].map((item) => (
@@ -253,7 +253,7 @@ export default function AssayPage() {
         {/* ── Designing Assay ───────────────────────────────────── */}
         <Section label="DESIGNING ASSAY">
           <Body>
-            In order to get the screens designed I built 80 components with variants across nine groups,
+            In order to get the screens designed I built 50+ components with variants across nine groups,
             84 typography variations and a tiered token system cutting across brand, alias, mapped and
             responsive collections. It was either this or having to use 80 slightly different unbound
             grays for the screens.
