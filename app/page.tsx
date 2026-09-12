@@ -133,7 +133,7 @@ function NutonCard() {
         />
       </div>
       <CardLabel>Nuton</CardLabel>
-      <CardDesc>AI tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
+      <CardDesc>AI powered learning tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
     </Link>
   );
 }
