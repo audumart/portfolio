@@ -332,11 +332,11 @@ export default function AssayPage() {
             doesn&apos;t.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            Agent failures have the same shape wherever they happen. A constraint arrives early, gets
-            dropped somewhere in the middle and the consequence lands several steps later. Rotterdam is a
-            cold chain requirement retrieved at step 1 and ignored at step 5. The same structure holds
-            whether the agent is handling a financial reconciliation, a clinical intake or a support
-            escalation.
+            The thing being evaluated changes completely between domains. What a reviewer has to do doesn't.
+          Agent failures have similar patterns wherever they happen. A constraint arrives early, gets dropped somewhere in the middle, and the consequence lands several steps later. 
+          The same structure holds whether the agent is handling a financial reconciliation, a clinical intake or a support escalation.
+          So only three things swap between domains; the tool registry, the check suite and the rubric. The interface doesn't move. 
+          A domain expert in one field and a domain expert in another are learning the same tool, and a program running several isn't maintaining several of everything.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             So only three things swap between domains: the tool registry, the check suite and the rubric.
