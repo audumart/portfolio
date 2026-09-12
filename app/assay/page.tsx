@@ -202,7 +202,7 @@ export default function AssayPage() {
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             Four causes, all of them design problems. Rubrics are ambiguous on first contact with no
             way to say so. The person who wrote the criterion knows what they mean. The person applying
-            it hours later doesn&apos;t. There is rarely a shared back. Scores drift without anyone lying.
+            it hours later doesn&apos;t. Scores drift without anyone lying.
             Disagreements go unresolved because there is nowhere to put them. And the rubric itself
             never gets updated because nobody can prove it is the rubric that is wrong.
           </p>
@@ -214,7 +214,7 @@ export default function AssayPage() {
         </Section>
 
         {/* ── Six decisions ─────────────────────────────────────── */}
-        <Section label="SIX DECISIONS">
+        <Section label="SIX DESIGN DECISIONS">
           <ul className="space-y-[24px] list-disc list-outside pl-[20px]">
             {[
               {
