@@ -317,7 +317,7 @@ export default function AssayPage() {
           <div className="mb-[12px]">
             <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">05 · Reviewer</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Attaching evidence</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Attaches step 5 to a criterion. Three of four scored, one still ghost.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Attaches step 5 to a criterion. Three of four scored, one still unscored.</p>
           </div>
           <img src={A.s5} alt="Attaching evidence" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
