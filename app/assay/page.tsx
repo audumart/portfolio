@@ -447,21 +447,19 @@ export default function AssayPage() {
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             Do reviewers use cause links or attach and move on? This is my most distinctive decision and
             the one I&apos;m least sure of. It asks a reviewer to form a theory about causation, not just
-            notice a failure. That&apos;s real cognitive work and it may be work nobody wants to do.
+            notice a failure. That&apos;s real cognitive work nobody wants to do.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             Is ambient calibration reassuring or is it surveillance? Showing a reviewer they&apos;re
             scoring one criterion harder than their cohort could read as useful or as a performance
-            metric with a friendly face. The answer depends almost entirely on who runs the program does
+            metric with a friendly face. The answer depends almost entirely on what who runs the program does
             with the number.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            Will a program lead accept that the rubric is the problem? Decision 4 assumes a lead looking
-            at 0.44 agreement will consider that the criterion is broken rather than that the reviewers
-            are. That&apos;s a claim about organisational behaviour, not about interface.
+            Will a program lead accept that the rubric is the problem? That&apos;s a claim about organisational behaviour and not about the interface.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            What I wouldn&apos;t test: The release gate. Whether data should be blocked from leaving
+            The release gate. Whether data should be blocked from leaving
             without passing quality thresholds isn&apos;t a usability question but a position and testing
             it would only tell me whether people under deadline find it inconvenient.
           </p>
