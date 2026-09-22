@@ -230,8 +230,8 @@ function Projects() {
 
       <Reveal className="mb-[20px] xl:mb-[42px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
-          <CrateCard />
           <AssayCard />
+          <CrateCard />
         </div>
       </Reveal>
 
