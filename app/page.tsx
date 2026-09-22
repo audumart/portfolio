@@ -104,36 +104,36 @@ function CardDesc({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* ── Assay featured card ──────────────────────────────────────── */
+/* ── Nuton featured card ──────────────────────────────────────── */
 function FeaturedCard() {
   return (
-    <Link href="/assay" className="block group mb-[40px] xl:mb-[82px] enter-2">
-      <div className="relative h-[220px] md:h-[520px] xl:h-[915px] overflow-clip rounded-[5px] bg-[#e8ddd5] transition-opacity group-hover:opacity-90">
-        <img
-          src={A.assay}
-          alt="Assay AI evaluation tool"
-          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none rounded-[5px]"
-        />
-      </div>
-      <CardLabel>Assay</CardLabel>
-      <CardDesc>Evidence-anchored scoring tool for AI agent trajectories. Tracks reviewer agreement, routes disputes and gates dataset release.</CardDesc>
-    </Link>
-  );
-}
-
-/* ── Nuton card (628×393) ─────────────────────────────────────── */
-function NutonCard() {
-  return (
-    <Link href="/nuton" className="block group">
-      <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
+    <Link href="/nuton" className="block group mb-[40px] xl:mb-[82px] enter-2">
+      <div className="relative h-[220px] md:h-[520px] xl:h-[915px] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
         <img
           src={A.nuton}
           alt="Nuton AI learning tool"
-          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
+          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none rounded-[5px]"
         />
       </div>
       <CardLabel>Nuton</CardLabel>
       <CardDesc>AI powered learning tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
+    </Link>
+  );
+}
+
+/* ── Assay card (628×393) ─────────────────────────────────────── */
+function AssayCard() {
+  return (
+    <Link href="/assay" className="block group">
+      <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#e8ddd5] transition-opacity group-hover:opacity-90">
+        <img
+          src={A.assay}
+          alt="Assay AI evaluation tool"
+          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
+        />
+      </div>
+      <CardLabel>Assay</CardLabel>
+      <CardDesc>Evidence-anchored scoring tool for AI agent trajectories. Tracks reviewer agreement, routes disputes and gates dataset release.</CardDesc>
     </Link>
   );
 }
@@ -230,7 +230,7 @@ function Projects() {
 
       <Reveal className="mb-[20px] xl:mb-[42px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
-          <NutonCard />
+          <AssayCard />
           <CrateCard />
         </div>
       </Reveal>
