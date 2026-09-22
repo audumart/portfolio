@@ -160,11 +160,13 @@ export default function AssayPage() {
 
         {/* ── Hero image ───────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[80px] enter-2">
-          <img
-            src={A.hero}
-            alt="Assay evaluation tool"
-            className="w-full h-auto rounded-[5px] pointer-events-none"
-          />
+          <div className="relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "53.28%" }}>
+            <img
+              src={A.hero}
+              alt="Assay evaluation tool"
+              className="absolute inset-0 size-full max-w-none object-contain object-top pointer-events-none"
+            />
+          </div>
         </Reveal>
 
         {/* ── Why I designed it ─────────────────────────────────── */}
@@ -220,11 +222,11 @@ export default function AssayPage() {
             {[
               {
                 lead: "Deterministic checks run before a human sees the item.",
-                body: "Machine-settleable violations are settled by a machine. The reviewer opens an item with the failed checks already pinned to the steps that caused them and spends their attention on what a machine can't settle: did the agent carry its constraints forward?, should it have escalated?, was this a good recovery given the options it had?. Checks and criteria stay separate objects. A failed check is a violation and blocks release. A low score is a judgment and doesn't.",
+                body: "Machine-settleable violations are settled by a machine.",
               },
               {
                 lead: "Evidence first, score second.",
-                body: "The reviewer attaches steps to criteria, then scores. Not the reverse. Justification stops being a chore because the attachment is the justification. Adjudication becomes concrete, because two people can compare what they looked at rather than what they concluded and the dataset gets richer with step-level evidence that beats a single integer downstream. It also slows reviewers down at the right moment because attaching evidence means finding the specific step and clicking it, so a reviewer has to have read the trajectory closely enough to know which step matters..",
+                body: "The reviewer attaches steps to criteria, then scores. Not the reverse. Justification stops being a chore because the attachment is the justification and Adjudication becomes concrete",
               },
               {
                 lead: "Failures are traced to their cause not just their location.",
@@ -232,15 +234,15 @@ export default function AssayPage() {
               },
               {
                 lead: "The rubric is treated as a thing that can be wrong.",
-                body: "Most tools treat the rubric as fixed and the reviewer as the variable, so low agreement becomes a training problem. Assay assumes the opposite is often true. The rubric screen shows a criterion's anchors alongside where scores actually land. One criterion has anchors written at 1 and 5, nothing at 2, 3 or 4 and 78% of real scores fall in those blanks. A criterion that never says what a 3 means asks people to invent one privately and also measures how much their private definitions differ.",
+                body: "Most tools treat the rubric as fixed and the reviewer as the variable, so low agreement becomes a training problem. Assay assumes the opposite is often true.",
               },
               {
                 lead: "Reviewers can dispute a check not just a score.",
-                body: "Any check can be disputed from inside the task, carrying the item and the evidence so far. In the flow, a reviewer argues a check is firing wrongly on a class of cases the author didn't anticipate which is right and the check gets amended. A reviewer who can't push back on a bad instrument will guess or leave.",
+                body: "Any check can be disputed from inside the task, carrying the item and the evidence so far. A reviewer who can't push back on a bad instrument will guess or leave.",
               },
               {
                 lead: "Data can't leave without passing a gate.",
-                body: "Agreement per criterion, unadjudicated items, unresolved disputes, version pinning. When the numbers don't hold, release is blocked. Override requires a written reason that lands in a manifest travelling with the data. Anyone training on it in six months sees what was excluded and why.",
+                body: "Agreement per criterion, unadjudicated items, unresolved disputes, version pinning. When the numbers don't hold, release is blocked.",
               },
             ].map(({ lead, body }) => (
               <li key={lead} className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
