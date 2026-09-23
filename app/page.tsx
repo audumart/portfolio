@@ -91,7 +91,7 @@ function Hero() {
 /* ── Card label (25px Apfel Grotezk Mittel), sits 8px below card */
 function CardLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mt-[8px] font-ui text-[14px] md:text-[18px] xl:text-[25px] font-medium leading-normal tracking-[0.14px] md:tracking-[0.18px] xl:tracking-[0.25px] text-white whitespace-nowrap">
+    <p className="mt-[8px] font-ui text-[14px] md:text-[18px] xl:hidden font-medium leading-normal tracking-[0.14px] md:tracking-[0.18px] text-white whitespace-nowrap">
       {children}
     </p>
   );
@@ -99,9 +99,19 @@ function CardLabel({ children }: { children: React.ReactNode }) {
 
 function CardDesc({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mt-[4px] font-ui text-[12px] md:text-[14px] xl:text-[16px] leading-[1.5] tracking-[0.12px] text-white/50">
+    <p className="mt-[4px] font-ui text-[12px] md:text-[14px] xl:hidden leading-[1.5] tracking-[0.12px] text-white/50">
       {children}
     </p>
+  );
+}
+
+/* ── Desktop-only hover overlay: name + short summary on the image ── */
+function CardOverlay({ name, desc }: { name: string; desc: string }) {
+  return (
+    <div className="pointer-events-none absolute left-[16px] bottom-[16px] hidden max-w-[calc(100%-32px)] items-baseline gap-[8px] rounded-[10px] bg-white px-[14px] py-[10px] opacity-0 shadow-[0_6px_16px_rgba(0,0,0,0.18)] transition-opacity duration-300 xl:flex group-hover:opacity-100">
+      <span className="font-ui text-[14px] font-semibold text-[#1a1a1a] whitespace-nowrap">{name}</span>
+      <span className="font-ui text-[13px] text-[#1a1a1a]/60 truncate">{desc}</span>
+    </div>
   );
 }
 
@@ -115,6 +125,7 @@ function FeaturedCard() {
           alt="Nuton AI learning tool"
           className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none rounded-[5px]"
         />
+        <CardOverlay name="Nuton" desc="Learn it once. Actually remember." />
       </div>
       <CardLabel>Nuton</CardLabel>
       <CardDesc>AI powered learning tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
@@ -132,6 +143,7 @@ function WysemarketCard() {
           alt="Wysemarket"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
         />
+        <CardOverlay name="Wysemarket" desc="Prediction markets for real-world outcomes" />
       </div>
       <CardLabel>Wysemarket</CardLabel>
       <CardDesc>A prediction market app for real-world outcomes with markets that settle automatically from verified public results.</CardDesc>
@@ -149,6 +161,7 @@ function AssayCard() {
           alt="Assay AI evaluation tool"
           className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
         />
+        <CardOverlay name="Assay" desc="Evidence-anchored scoring for AI agents" />
       </div>
       <CardLabel>Assay</CardLabel>
       <CardDesc>Evidence-anchored scoring tool for AI agent trajectories. Tracks reviewer agreement, routes disputes and gates dataset release.</CardDesc>
@@ -166,6 +179,7 @@ function CrateCard() {
           alt="[crate] stem-splitting app"
           className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
         />
+        <CardOverlay name="[crate]" desc="Separate stems. Anywhere, anytime." />
       </div>
       <CardLabel>[crate]</CardLabel>
       <CardDesc>A stem-splitting app that isolates vocals, drums, bass, and instrumentals from any song in a few taps.</CardDesc>
@@ -183,6 +197,7 @@ function TseCard() {
           alt="TSE Studio"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
         />
+        <CardOverlay name="TSE Studio" desc="Breaking creative boundaries one shot at a time" />
       </div>
       <CardLabel>TSE Studio</CardLabel>
       <CardDesc>Website redesign for a photography studio, translating a bold creative identity into a clean editorial web presence.</CardDesc>
@@ -200,6 +215,7 @@ function NextHavnCard() {
           alt="NextHavn"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
         />
+        <CardOverlay name="NextHavn" desc="The creative industry's next operating system" />
       </div>
       <CardLabel>NextHavn</CardLabel>
       <CardDesc>End-to-end design of a creative marketplace where makers and buyers meet — built for discovery, with a browsing experience that gets out of the way.</CardDesc>
@@ -233,6 +249,7 @@ function QrPayCard() {
           alt="QR Pay by DIVE HQ"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
         />
+        <CardOverlay name="QR Pay by DIVE HQ" desc="Dive into effortless transactions." />
       </div>
       <CardLabel>QR Pay by DIVE HQ</CardLabel>
       <CardDesc>A mobile payment app built around Scan to Pay, with bank transfers, Dive Tags, and bill-splitting in one place.</CardDesc>
