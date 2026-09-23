@@ -15,6 +15,7 @@ const A = {
   copyright: "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:   "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
   nuton:     "/Nuton Device mockup.png",
+  wysemarket: "/Wysemarket mockup.png",
   library:   "/f7a667d2ab3f74fd6710193750a48b7b7cb92f5b.png",
   tse:       "/90fe7043dc7837d72d57bfcb68935643888d95f9.png",
   nineLives: "/5886ad421872366dda0a22171f4ae2e1d0f9222c.png",
@@ -118,6 +119,23 @@ function FeaturedCard() {
       <CardLabel>Nuton</CardLabel>
       <CardDesc>AI powered learning tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
     </Link>
+  );
+}
+
+/* ── Wysemarket card (628×393) ───────────────────────────────── */
+function WysemarketCard() {
+  return (
+    <a href="https://wysemarket.com" target="_blank" rel="noopener noreferrer" className="block group">
+      <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
+        <img
+          src={A.wysemarket}
+          alt="Wysemarket"
+          className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
+        />
+      </div>
+      <CardLabel>Wysemarket</CardLabel>
+      <CardDesc>A prediction market app for real-world outcomes with markets that settle automatically from verified public results.</CardDesc>
+    </a>
   );
 }
 
@@ -244,6 +262,7 @@ function Projects() {
 
       <Reveal className="mb-[20px] xl:mb-[42px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
+          <WysemarketCard />
           <NextHavnCard />
         </div>
       </Reveal>
