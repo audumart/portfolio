@@ -3,6 +3,7 @@ import "./globals.css";
 import CursorDot from "./components/CursorDot";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Agentation } from "agentation";
 
 export const metadata: Metadata = {
   title: "Martins Audu, Designer & Researcher",
@@ -22,6 +23,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
+        {process.env.NODE_ENV === "development" && <Agentation endpoint="http://localhost:4747" />}
       </body>
     </html>
   );

@@ -5,6 +5,10 @@ import { useState } from "react";
 
 const links = [
   { label: "WORK",    href: "/",                      internal: true  },
+  // Gallery is hidden in production until it's ready
+  ...(process.env.NODE_ENV === "development"
+    ? [{ label: "GALLERY", href: "/gallery", internal: true }]
+    : []),
   { label: "ABOUT",   href: "/about",                 internal: true  },
   { label: "CONTACT", href: "mailto:audumart@gmail.com", internal: false },
 ];
