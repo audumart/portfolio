@@ -160,11 +160,13 @@ export default function AssayPage() {
 
         {/* ── Hero image ───────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[80px] enter-2">
-          <div className="relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "53.28%" }}>
+          <div className="relative w-full overflow-hidden rounded-[5px] bg-black">
             <img
               src={A.hero}
               alt="Assay evaluation tool"
-              className="absolute inset-0 size-full max-w-none object-contain object-top pointer-events-none"
+              width={7880}
+              height={4416}
+              className="block w-full h-auto pointer-events-none"
             />
           </div>
         </Reveal>
