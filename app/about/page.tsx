@@ -20,6 +20,44 @@ const A = {
   folder:  "/05889087ae0710df25ba5f60ad930700a19483d4.png",
 };
 
+/* ── Tooling logos (Simple Icons + provenbyusers.com / supernova.io favicons) ── */
+const TOOLS = [
+  { name: "Figma",                src: "/logos/figma.svg",              href: "https://www.figma.com" },
+  { name: "Supernova",            src: "/logos/supernova.png",          href: "https://www.supernova.io" },
+  { name: "Adobe Creative Cloud", src: "/logos/adobecreativecloud.svg", href: "https://www.adobe.com/creativecloud.html" },
+  { name: "ProvenByUsers",        src: "/logos/provenbyusers.png",      href: "https://provenbyusers.com" },
+  { name: "Codex",                src: "/logos/openai.svg",             href: "https://openai.com/codex" },
+  { name: "Claude Code & Claude Design", src: "/logos/claude.svg",      href: "https://claude.com" },
+  { name: "Mixpanel",             src: "/logos/mixpanel.svg",           href: "https://mixpanel.com" },
+  { name: "Hotjar",               src: "/logos/hotjar.svg",             href: "https://www.hotjar.com" },
+  { name: "Miro",                 src: "/logos/miro.svg",               href: "https://miro.com" },
+];
+
+/* Logos are drawn as masks so they take the page's ink colour */
+function ToolLogos({ size, className = "" }: { size: number; className?: string }) {
+  return (
+    <ul className={`flex flex-wrap items-center ${className}`}>
+      {TOOLS.map(({ name, src, href }) => (
+        <li key={name}>
+          <a href={href} target="_blank" rel="noopener noreferrer" title={name} aria-label={name}
+            className="block transition-opacity hover:opacity-60">
+            <span
+              aria-hidden
+              className="block bg-[#415a77]"
+              style={{
+                width: size,
+                height: size,
+                mask: `url("${src}") center / contain no-repeat`,
+                WebkitMask: `url("${src}") center / contain no-repeat`,
+              }}
+            />
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 /* ── Grid tile, same component pattern as landing page ────────── */
 function GridTile({ index, left }: { index: number; left: string }) {
   return (
@@ -113,13 +151,7 @@ function Capabilities() {
 
         {/* Tooling */}
         <p className="font-subtitle text-[26px] md:text-[32px] text-[#415a77] tracking-[-0.52px] mb-[10px]">Tooling</p>
-        <div className="font-ui text-[13px] md:text-[14px] text-[#415a77] tracking-[-0.26px] leading-[1.6] mb-[32px]">
-          <p>FIGMA</p>
-          <p>ADOBE CC</p>
-          <p>PROVENBYUSERS / CODEX, CLAUDE CODE &amp; DESIGN</p>
-          <p>MIXPANEL / HOTJAR</p>
-          <p>MIRO</p>
-        </div>
+        <ToolLogos size={28} className="gap-[20px] mb-[32px]" />
         <hr className="border-[#415a77]/20 mb-[32px]" />
 
         {/* CTA */}
@@ -183,13 +215,10 @@ function Capabilities() {
           <p className="leading-[1.34] mb-0">DATA ANALYSIS</p>
           <p className="leading-[1.34]">INFORMATION ARCHITECTURE</p>
         </Skills>
-        <Skills top={385}>
-          <p className="leading-[1.34] mb-0">FIGMA</p>
-          <p className="leading-[1.34] mb-0">ADOBE CC</p>
-          <p className="leading-[1.34] mb-0">PROVENBYUSERS<br aria-hidden />CODEX, CLAUDE CODE &amp; DESIGN</p>
-          <p className="leading-[1.34] mb-0">MIXPANEL<br aria-hidden />HOTJAR</p>
-          <p className="leading-[1.34]">MIRO</p>
-        </Skills>
+        {/* vertically centred on the "Tooling" label */}
+        <div className="absolute" style={{ right: 48, top: 479 }}>
+          <ToolLogos size={36} className="justify-end gap-[28px]" />
+        </div>
 
         <p className="absolute w-[469px] text-center font-subtitle text-[40px] leading-[1.34] text-[#415a77] tracking-[-0.8px]"
           style={{ left: "50%", top: 602, transform: "translateX(-50%)" }}>
@@ -277,12 +306,7 @@ export default function AboutPage() {
                 My interest in building things started with my first LEGO set. Turning a pile of separate
                 pieces into something that actually worked taught me an instinct I still rely on: understand
                 how the parts fit, then build something coherent. That&apos;s the core of how I approach
-                design, from early sketches to shaping a full product. I still compete in
-                sports and always have, and it shapes how I work. Individual effort only goes
-                so far. The results that actually matter come from preparation, holding your
-                role, and making the people around you better. I carry that into every project.
-                I&apos;m not satisfied with work that just functions. I want it to perform,
-                hold up in real use, and improve on whatever came before it.
+                design, from early sketches to shaping a full product. 
               </p>
             </div>
           </div>
