@@ -29,7 +29,7 @@ const TOOLS = [
   { name: "Codex",                src: "/logos/openai.svg",             href: "https://openai.com/codex" },
   { name: "Claude Code & Claude Design", src: "/logos/claude.svg",      href: "https://claude.com" },
   { name: "Mixpanel",             src: "/logos/mixpanel.svg",           href: "https://mixpanel.com" },
-  { name: "Hotjar",               src: "/logos/hotjar.svg",             href: "https://www.hotjar.com" },
+  { name: "Cursor",               src: "/logos/cursor.svg",             href: "https://cursor.com" },
   { name: "Miro",                 src: "/logos/miro.svg",               href: "https://miro.com" },
 ];
 
