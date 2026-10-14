@@ -3,7 +3,7 @@
 import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
 import BackButton from "../components/BackButton";
-import LiveSiteBanner from "../components/LiveSiteBanner";
+import LiveSiteBanner, { LiveSiteLink } from "../components/LiveSiteBanner";
 
 const A = {
   hline:       "/ecb27c82bc7b69aa0e749a8df55fe8a8009a4306.svg",
@@ -246,22 +246,28 @@ export default function NutonPage() {
             The research gave me a clear spine to design around: a learner drops in
             a source, waits briefly and gets back a structured course. My task was
             to give that spine a face that could carry the product across very
-            different moments, from a blank upload screen to a finished six-chapter
+            different moments, from a blank upload screen to a finished multi-chapter
             course. I started by pulling references from outside the ed-tech
             category, leaning toward editorial layouts and reading-focused apps that
             handle density gracefully rather than similar products that tend to lean
             playful or gamified.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            The direction I landed on was shaped by one central tension: the product
+            The direction I decided on was shaped by a central tension: the product
             makes a bold promise, turning something as dense as a four-hundred-page
             textbook into a usable course in about a minute and a visual language
             that felt too decorated would undercut that promise before a learner even
-            saw the result. To start I drafted a baseline Information architecture in order to give the platform structure because six tools is a lot of surface for one product. 
-            Mapping the architecture was how I checked whether it held together or just accumulated. For the user flow there are two ways in, one loop once you are there. 
-            New learners come with material and need a course built from it. Returning learners want to land back where they stopped. Everything after that is the same cycle of reading a chapter, testing recall, asking the tutor when something does not land and advancing.
-            For the design system, I defined the tokens and variables, pulled the common components from an existing UI kit and designed the product-specific ones myself.
-            Generous whitespace, a quiet color palette, a small documented component set and typography doing the expressive work, so the interface read as considered and capable rather than novel.
+            saw the result. 
+          </p>
+          <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
+           I drafted a baseline Information architecture in order to give the platform structure because six tools is a lot of surface for one product.
+            Mapping the architecture was how I checked the viablity of certain design decisions I planned to make. For the user flow there are two ways in, one loop once you are there.
+            New learners come with material and need a course built from it. Returning learners want to pick up where they stopped. Everything after that is the same cycle of reading a chapter, testing recall, asking the tutor when something is unclear.
+          </p>
+          <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
+            For the design system, I started with the foundations (color, type, spacing, radius, elevation and motion), all defined as tokens so that no raw values ever reach the interface.
+            On top of that I built more than thirty components, from buttons and inputs to the pieces only Nuton needs, like the flashcard, quiz, podcast player, block editor and AI tutor chat. Figma stays the source of truth, the tokens are generated from it into code, and every component is accessible to WCAG 2.2 AA by default.
+            The whole system is documented on its own site, rendered from the real component package rather than copies made for the docs.
           </p>
           
         </Section>
@@ -286,6 +292,11 @@ export default function NutonPage() {
 
         {/* ── Type & color ──────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
+          <LiveSiteLink
+            href="https://nuton-design-system.vercel.app/"
+            label="VIEW DESIGN SYSTEM"
+            className="pb-[10px] xl:pb-[13px]"
+          />
           <img
             src={A.typeColor}
             alt="Nuton type and color system"
