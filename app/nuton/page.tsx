@@ -265,7 +265,7 @@ export default function NutonPage() {
             New learners come with material and need a course built from it. Returning learners want to pick up where they stopped. Everything after that is the same cycle of reading a chapter, testing recall, asking the tutor when something is unclear.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            For the design system, I started with the foundations (color, type, spacing, radius, elevation and motion), all defined as tokens so that no raw values ever reach the interface.
+            For the design system, I started with the foundations all defined as tokens so that no raw values ever reach the interface.
             On top of that I built more than thirty components, from buttons and inputs to the pieces only Nuton needs, like the flashcard, quiz, podcast player, block editor and AI tutor chat. Figma stays the source of truth, the tokens are generated from it into code, and every component is accessible to WCAG 2.2 AA by default.
             The whole system is documented on its own site, rendered from the real component package rather than copies made for the docs.
           </p>

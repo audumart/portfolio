@@ -205,15 +205,13 @@ export default function AssayPage() {
             Unreliable scores are indistinguishable from reliable ones until the model trained on them starts behaving oddly.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            Four causes, all of them design problems. Rubrics are ambiguous on first contact with no
-            way to say so. The person who wrote the criterion knows what they mean. The person applying
-            it hours later doesn&apos;t. Scores drift without anyone lying.
+            Few causes, all of them design problems. Rubrics are ambiguous on first contact with no
+            way to say so. Scores drift without anyone lying.
             Disagreements go unresolved because there is nowhere to put them. And the rubric itself
-            never gets updated because nobody can prove it is the rubric that is wrong.
+            never gets updated because nobody can prove there's a possibility the rubric might be wrong.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            There is a real tension that comes with all four. Throughput matters, there are cold hours
-            against deadlines and a tool that makes careful work slow makes careful work not happen.
+            There is a real tension that comes with these issues. Throughput matters, there are deadlines and a tool that makes careful work slow makes careful work not happen.
             Care matters more because unreliable labels are identical to reliable ones until much later.
           </p>
         </Section>
