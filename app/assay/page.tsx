@@ -396,8 +396,7 @@ export default function AssayPage() {
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             Agent failures have the same shape wherever they happen. A constraint arrives early, gets
-            dropped somewhere in the middle and the consequence lands several steps later. Rotterdam is a
-            cold chain requirement retrieved at step 1 and ignored at step 5. The same structure holds
+            dropped somewhere in the middle and the consequence happens several steps later.  The same structure holds
             whether the agent is handling a financial reconciliation, a clinical intake or a support
             escalation.
           </p>
