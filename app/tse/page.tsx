@@ -11,10 +11,10 @@ const A = {
   diagonal:   "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright:  "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:    "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  banner:     "/tse landing page.png",
-  iterations: "/tse-iterations.png",
-  website1:   "/tse-website-1.png",
-  website2:   "/tse-website-2.png",
+  banner:     "/tse landing page.webp",
+  iterations: "/tse-iterations.webp",
+  website1:   "/tse-website-1.webp",
+  website2:   "/tse-website-2.webp",
 };
 
 /* ── Grid tile, identical to landing/about ──────────────────── */
@@ -211,7 +211,7 @@ export default function TsePage() {
             muted
             playsInline
             className="absolute inset-0 size-full max-w-none object-cover"
-            src="/TSE site interaction.mp4"
+            src="/TSE site interaction-1080.mp4"
           />
           <div
             aria-hidden="true"
@@ -223,7 +223,7 @@ export default function TsePage() {
         {/* ── Website screenshots ────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "54.375%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.website1}
               alt="TSE Studio website, editorial view"
               className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
@@ -233,7 +233,7 @@ export default function TsePage() {
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px] bg-black" style={{ paddingTop: "54.375%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.website2}
               alt="TSE Studio website, portfolio view"
               className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"

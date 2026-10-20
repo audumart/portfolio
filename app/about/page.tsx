@@ -16,8 +16,8 @@ const A = {
   heHim:   "/9b23a1478147f6057d98936c209529d659e88236.svg",
   line1:   "/006d0ea029c91815a91219e47203cebf282ec35c.svg",
   line2:   "/88e443b62b15bf8c46c5a5e58acb0d27c30cc6d9.svg",
-  capsule: "/d630a5c0c34e595550b70190eef3e6542708e04a.png",
-  folder:  "/05889087ae0710df25ba5f60ad930700a19483d4.png",
+  capsule: "/d630a5c0c34e595550b70190eef3e6542708e04a.webp",
+  folder:  "/05889087ae0710df25ba5f60ad930700a19483d4.webp",
 };
 
 /* ── Tooling logos (Simple Icons + provenbyusers.com / supernova.io favicons) ── */
@@ -179,7 +179,7 @@ function Capabilities() {
           CAPABILITIES
         </p>
         <div className="absolute" style={{ left: 1200, top: 24, width: 32, height: 32 }}>
-          <img src={A.folder} alt="" className="absolute inset-0 block size-full max-w-none object-cover pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.folder} alt="" className="absolute inset-0 block size-full max-w-none object-cover pointer-events-none" />
         </div>
         <a href={resumeHref} target="_blank" rel="noopener noreferrer"
           className="absolute font-ui text-[18px] font-medium leading-[1.34] text-[#415a77] tracking-[-0.36px] underline whitespace-nowrap"
@@ -226,7 +226,7 @@ function Capabilities() {
         </p>
         <div className="absolute" style={{ left: "50%", top: 664, width: 230, height: 71, transform: "translateX(-50%)" }}>
           <div className="absolute" style={{ left: 0, top: -4, width: 230, height: 76 }}>
-            <img src={A.capsule} alt="" className="absolute inset-0 block size-full max-w-none object-cover pointer-events-none" />
+            <img loading="lazy" decoding="async" src={A.capsule} alt="" className="absolute inset-0 block size-full max-w-none object-cover pointer-events-none" />
           </div>
           <a href="mailto:audumart@gmail.com"
             className="relative flex h-full w-full items-center justify-center font-ui text-[25px] font-medium leading-[1.34] tracking-[-0.25px] text-white whitespace-nowrap">

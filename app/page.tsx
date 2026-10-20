@@ -14,16 +14,16 @@ const A = {
   diagonal: "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright: "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:   "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  nuton:     "/Nuton Device mockup.png",
-  wysemarket: "/Wysemarket mockup.png",
-  library:   "/f7a667d2ab3f74fd6710193750a48b7b7cb92f5b.png",
-  tse:       "/90fe7043dc7837d72d57bfcb68935643888d95f9.png",
-  nineLives: "/5886ad421872366dda0a22171f4ae2e1d0f9222c.png",
-  qrPay:     "/5d183971d6ba060bdca6dc2f89622c5fa941b93b.png",
-  nextHavn:  "/ccbcfdbc1bf93c62740275332ce5e07d07322a3f.png",
-  assay:     "/assay screens/assay hero image.png",
-  decision:      "/d1c91116a8ea2b156cb4f56aca4dc4784ec92ea1.png",
-  accessibility: "/8a9a6668df0e16ad2011b371781a547d74a5dac5.png",
+  nuton:     "/Nuton Device mockup.webp",
+  wysemarket: "/Wysemarket mockup.webp",
+  library:   "/f7a667d2ab3f74fd6710193750a48b7b7cb92f5b.webp",
+  tse:       "/90fe7043dc7837d72d57bfcb68935643888d95f9.webp",
+  nineLives: "/5886ad421872366dda0a22171f4ae2e1d0f9222c.webp",
+  qrPay:     "/5d183971d6ba060bdca6dc2f89622c5fa941b93b.webp",
+  nextHavn:  "/ccbcfdbc1bf93c62740275332ce5e07d07322a3f.webp",
+  assay:     "/assay screens/assay hero image.webp",
+  decision:      "/d1c91116a8ea2b156cb4f56aca4dc4784ec92ea1.webp",
+  accessibility: "/8a9a6668df0e16ad2011b371781a547d74a5dac5.webp",
 };
 
 /* ── Grid tile (1513×1461px), absolute within body ─────────── */
@@ -138,7 +138,7 @@ function WysemarketCard() {
   return (
     <a href="https://wysemarket.com" target="_blank" rel="noopener noreferrer" className="block group">
       <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.wysemarket}
           alt="Wysemarket"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
@@ -156,7 +156,7 @@ function AssayCard() {
   return (
     <Link href="/assay" className="block group">
       <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#e8ddd5] transition-opacity group-hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.assay}
           alt="Assay AI evaluation tool"
           className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -174,7 +174,7 @@ function CrateCard() {
   return (
     <Link href="/crate" className="block group">
       <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#bde0fe] transition-opacity group-hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.library}
           alt="[crate] stem-splitting app"
           className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -192,7 +192,7 @@ function TseCard() {
   return (
     <Link href="/tse" className="block group">
       <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-white transition-opacity group-hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.tse}
           alt="TSE Studio"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
@@ -210,7 +210,7 @@ function NextHavnCard() {
   return (
     <Link href="/nexthavn" className="block group">
       <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-white transition-opacity group-hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.nextHavn}
           alt="NextHavn"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
@@ -228,7 +228,7 @@ function NineLivesCard() {
   return (
     <Link href="/9lives" className="block group">
       <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-white transition-opacity group-hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.nineLives}
           alt="9LIVES"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
@@ -244,7 +244,7 @@ function QrPayCard() {
   return (
     <Link href="/qrpay" className="block group">
       <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-white transition-opacity group-hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.qrPay}
           alt="QR Pay by DIVE HQ"
           className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
@@ -304,7 +304,7 @@ function DecisionFatigueCard() {
   return (
     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[20px]">
       <Link href="/decision-fatigue" className="relative block aspect-[580/326] lg:aspect-auto lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px] transition-opacity hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.accessibility}
           alt="Decision Fatigue"
           className="absolute inset-0 size-full max-w-none object-cover pointer-events-none rounded-[5px]"
@@ -330,7 +330,7 @@ function AccessibilityCard() {
   return (
     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[20px]">
       <Link href="/accessibility" className="relative block aspect-[580/326] lg:aspect-auto lg:h-[326px] w-full lg:w-[580px] shrink-0 rounded-[5px] transition-opacity hover:opacity-90">
-        <img
+        <img loading="lazy" decoding="async"
           src={A.decision}
           alt="Accessibility research"
           className="absolute inset-0 size-full max-w-none object-cover pointer-events-none rounded-[5px]"

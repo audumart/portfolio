@@ -10,14 +10,14 @@ const A = {
   diagonal:   "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright:  "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:    "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  banner:     "/streaming services banner.png",
-  aidanPersona:  "/Aiden research persona.png",
-  lindaPersona:  "/Linda research persona.png",
-  aidanJourney:  "/Journey map aiden.png",
-  lindaJourney:  "/Journey map linda.png",
-  priorityMatrix:   "/Priority matrix.png",
-  codedInterviews:  "/Coded Interviews.png",
-  affinityDiagram:  "/Affinity diagram.png",
+  banner:     "/streaming services banner.webp",
+  aidanPersona:  "/Aiden research persona.webp",
+  lindaPersona:  "/Linda research persona.webp",
+  aidanJourney:  "/Journey map aiden.webp",
+  lindaJourney:  "/Journey map linda.webp",
+  priorityMatrix:   "/Priority matrix.webp",
+  codedInterviews:  "/Coded Interviews.webp",
+  affinityDiagram:  "/Affinity diagram.webp",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
@@ -213,7 +213,7 @@ export default function DecisionFatiguePage() {
         {/* ── Coded transcripts ────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "108.00%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.codedInterviews}
               alt="Coded interview transcripts in Atlas.ti"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -224,7 +224,7 @@ export default function DecisionFatiguePage() {
         {/* ── Affinity diagram ─────────────────────────────────── */}
         <Reveal className="mt-[16px] xl:mt-[24px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "68.10%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.affinityDiagram}
               alt="Affinity diagram clustering themes from interview data"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -268,14 +268,14 @@ export default function DecisionFatiguePage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] xl:gap-[24px]">
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "73.38%" }}>
-              <img
+              <img loading="lazy" decoding="async"
                 src={A.aidanPersona}
                 alt="Aiden, research persona"
                 className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
               />
             </div>
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "73.14%" }}>
-              <img
+              <img loading="lazy" decoding="async"
                 src={A.lindaPersona}
                 alt="Linda, research persona"
                 className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -287,7 +287,7 @@ export default function DecisionFatiguePage() {
         {/* ── Journey maps ─────────────────────────────────────── */}
         <Reveal className="mt-[16px] xl:mt-[24px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "74.38%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.aidanJourney}
               alt="Aiden, user journey map"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -297,7 +297,7 @@ export default function DecisionFatiguePage() {
 
         <Reveal className="mt-[16px] xl:mt-[24px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "75.62%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.lindaJourney}
               alt="Linda, user journey map"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -337,7 +337,7 @@ export default function DecisionFatiguePage() {
         {/* ── Priority matrix ───────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "45.71%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.priorityMatrix}
               alt="Proposed features plotted by impact against development feasibility"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"

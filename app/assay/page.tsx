@@ -10,21 +10,21 @@ const A = {
   diagonal:  "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright: "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:   "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  hero:      "/assay screens/assay hero image.png",
-  designSys: "/assay screens/assay design system.png",
-  s1:        "/assay screens/1.png",
-  s2:        "/assay screens/2.png",
-  s3:        "/assay screens/3.png",
-  s4:        "/assay screens/4.png",
-  s5:        "/assay screens/5.png",
-  s6:        "/assay screens/6.png",
-  s7:        "/assay screens/7.png",
-  s8:        "/assay screens/8.png",
-  s9:        "/assay screens/9.png",
-  s10:       "/assay screens/10.png",
-  s11:       "/assay screens/11.png",
-  s12:       "/assay screens/12.png",
-  s13:       "/assay screens/13.png",
+  hero:      "/assay screens/assay hero image.webp",
+  designSys: "/assay screens/assay design system.webp",
+  s1:        "/assay screens/1.webp",
+  s2:        "/assay screens/2.webp",
+  s3:        "/assay screens/3.webp",
+  s4:        "/assay screens/4.webp",
+  s5:        "/assay screens/5.webp",
+  s6:        "/assay screens/6.webp",
+  s7:        "/assay screens/7.webp",
+  s8:        "/assay screens/8.webp",
+  s9:        "/assay screens/9.webp",
+  s10:       "/assay screens/10.webp",
+  s11:       "/assay screens/11.webp",
+  s12:       "/assay screens/12.webp",
+  s13:       "/assay screens/13.webp",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
@@ -264,7 +264,7 @@ export default function AssayPage() {
 
         {/* ── Design system ─────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img
+          <img loading="lazy" decoding="async"
             src={A.designSys}
             alt="Assay design system"
             className="w-full h-auto rounded-[5px] pointer-events-none"
@@ -286,7 +286,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Batch setup</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Warned about unresolved disputes on the check suite for the batch. Launches anyway.</p>
           </div>
-          <img src={A.s1} alt="Batch setup" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s1} alt="Batch setup" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -295,7 +295,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Review queue</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Views the batch. Calibration shown against other reviewers in the cohort, never as a score.</p>
           </div>
-          <img src={A.s2} alt="Review queue" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s2} alt="Review queue" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -304,7 +304,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Rubric briefing</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">First time on this rubric. Four criteria, each with its anchors.</p>
           </div>
-          <img src={A.s3} alt="Rubric briefing" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s3} alt="Rubric briefing" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -313,7 +313,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Trajectory</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Opens item 7. Two checks have already failed, pinned to steps 1 and 5.</p>
           </div>
-          <img src={A.s4} alt="Trajectory" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s4} alt="Trajectory" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -322,7 +322,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Attaching evidence</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Attaches step 5 to a criterion. Three of four scored, one still unscored.</p>
           </div>
-          <img src={A.s5} alt="Attaching evidence" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s5} alt="Attaching evidence" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -331,7 +331,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dispute a check</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">The cold chain check fires wrongly on continuation legs. The dispute carries the evidence.</p>
           </div>
-          <img src={A.s6} alt="Dispute a check" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s6} alt="Dispute a check" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -340,7 +340,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Check suite builder</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Reads all disputes on one check and proceeds to amend the rule.</p>
           </div>
-          <img src={A.s7} alt="Check suite builder" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s7} alt="Check suite builder" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -349,7 +349,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Version diff</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">What the rewritten check in v3.1 changes and what it costs the 60 items already scored under v3.0.</p>
           </div>
-          <img src={A.s8} alt="Version diff" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s8} alt="Version diff" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -358,7 +358,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Adjudication</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Two reviewers scored recovery quality 2 and 5 on the same item. Only one attached evidence.</p>
           </div>
-          <img src={A.s9} alt="Adjudication" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s9} alt="Adjudication" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -367,7 +367,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Quality dashboard</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60"> Sees overview of scoring on the batch. Recovery quality sits at 0.44 agreement against a floor of 0.70.</p>
           </div>
-          <img src={A.s10} alt="Quality dashboard" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s10} alt="Quality dashboard" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -376,7 +376,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Rubric criterion</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Anchors written at 1 and 5 only. 78% of real scores land in the blanks.</p>
           </div>
-          <img src={A.s11} alt="Rubric criterion" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s11} alt="Rubric criterion" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -385,7 +385,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dataset release</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">The gate blocked on exactly the criterion the first screen warned about. They release scoped: 51 items ship, 9 held back, one check still amber.</p>
           </div>
-          <img src={A.s12} alt="Dataset release" className="w-full h-auto rounded-[5px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s12} alt="Dataset release" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         {/* ── One platform any domain ───────────────────────────── */}
@@ -432,7 +432,7 @@ export default function AssayPage() {
 
         {/* ── The same problem outside a lab screen ─────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img
+          <img loading="lazy" decoding="async"
             src={A.s13}
             alt="The same problem outside a lab"
             className="w-full h-auto rounded-[5px] pointer-events-none"

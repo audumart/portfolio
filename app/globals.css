@@ -2,43 +2,43 @@
 
 @font-face {
   font-family: "Cloud Candy:Regular";
-  src: url("/fonts/CloudCandy-Regular.ttf") format("truetype");
+  src: url("/fonts/CloudCandy-Regular.woff2") format("woff2"), url("/fonts/CloudCandy-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Recoleta:Regular DEMO";
-  src: url("/fonts/Recoleta-Regular.otf") format("opentype");
+  src: url("/fonts/Recoleta-Regular.woff2") format("woff2"), url("/fonts/Recoleta-Regular.otf") format("opentype");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Apfel Grotezk";
-  src: url("/fonts/ApfelGrotezk-Regular.otf") format("opentype");
+  src: url("/fonts/ApfelGrotezk-Regular.woff2") format("woff2"), url("/fonts/ApfelGrotezk-Regular.otf") format("opentype");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Apfel Grotezk";
-  src: url("/fonts/ApfelGrotezk-Mittel.otf") format("opentype");
+  src: url("/fonts/ApfelGrotezk-Mittel.woff2") format("woff2"), url("/fonts/ApfelGrotezk-Mittel.otf") format("opentype");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Apfel Grotezk";
-  src: url("/fonts/ApfelGrotezk-Fett.otf") format("opentype");
+  src: url("/fonts/ApfelGrotezk-Fett.woff2") format("woff2"), url("/fonts/ApfelGrotezk-Fett.otf") format("opentype");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Aspekta";
-  src: url("/fonts/Aspekta-700.ttf") format("truetype");
+  src: url("/fonts/Aspekta-700.woff2") format("woff2"), url("/fonts/Aspekta-700.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Aspekta";
-  src: url("/fonts/Aspekta-500.ttf") format("truetype");
+  src: url("/fonts/Aspekta-500.woff2") format("woff2"), url("/fonts/Aspekta-500.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
 }
