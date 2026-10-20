@@ -11,24 +11,24 @@ const A = {
   diagonal:    "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright:   "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:     "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  landingOld:  "/nuton landing page current.png",
-  landingNew:  "/nuton landing page new.png",
+  landingOld:  "/nuton landing page current.webp",
+  landingNew:  "/nuton landing page new.webp",
   emptyState:  "/Empty state structured learning.png",
-  filesLinks:  "/Files and links structured learning.png",
+  filesLinks:  "/Files and links structured learning.webp",
   generate:    "/Generate lesson.png",
-  lesson:      "/Structured Learning Lesson.png",
-  aiChat:      "/Structured Learning AI Chat.png",
+  lesson:      "/Structured Learning Lesson.webp",
+  aiChat:      "/Structured Learning AI Chat.webp",
   flashcards:  "/Structured Learning flashcards.png",
   notes:        "/Structured Learning Notes.png",
-  notesWritten: "/Structured Learning notes written.png",
-  podcast:     "/Structured Learning podcast playing.png",
-  quiz:        "/Structured Learning quiz multichoice.png",
-  setupQuiz:   "/Structured Learning setup quiz.png",
-  ia:          "/nuton-information-architecture.png",
-  userFlow:    "/nuton-user-flow.png",
-  typeColor:   "/Type&color.png",
-  mobile:      "/nuton mobile.png",
-  designSys:   "/Design system shot.png",
+  notesWritten: "/Structured Learning notes written.webp",
+  podcast:     "/Structured Learning podcast playing.webp",
+  quiz:        "/Structured Learning quiz multichoice.webp",
+  setupQuiz:   "/Structured Learning setup quiz.webp",
+  ia:          "/nuton-information-architecture.webp",
+  userFlow:    "/nuton-user-flow.webp",
+  typeColor:   "/Type&color.webp",
+  mobile:      "/nuton mobile.webp",
+  designSys:   "/Design system shot.webp",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
@@ -228,7 +228,7 @@ export default function NutonPage() {
               />
             </div>
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "60.30%" }}>
-              <img
+              <img loading="lazy" decoding="async"
                 src={A.landingNew}
                 alt="Nuton redesigned landing page"
                 className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -274,7 +274,7 @@ export default function NutonPage() {
 
         {/* ── IA diagram ────────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img
+          <img loading="lazy" decoding="async"
             src={A.ia}
             alt="Nuton information architecture"
             className="w-full h-auto rounded-[5px] pointer-events-none"
@@ -283,7 +283,7 @@ export default function NutonPage() {
 
         {/* ── User flow diagram ─────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img
+          <img loading="lazy" decoding="async"
             src={A.userFlow}
             alt="Nuton user flow"
             className="w-full h-auto rounded-[5px] pointer-events-none"
@@ -297,7 +297,7 @@ export default function NutonPage() {
             label="VIEW DESIGN SYSTEM"
             className="pb-[10px] xl:pb-[13px]"
           />
-          <img
+          <img loading="lazy" decoding="async"
             src={A.typeColor}
             alt="Nuton type and color system"
             className="w-full h-auto rounded-[5px] pointer-events-none"
@@ -306,7 +306,7 @@ export default function NutonPage() {
 
         {/* ── Design system ─────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img
+          <img loading="lazy" decoding="async"
             src={A.designSys}
             alt="Nuton design system"
             className="w-full h-auto rounded-[5px] pointer-events-none"
@@ -332,7 +332,7 @@ export default function NutonPage() {
         {/* ── Empty state ───────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.emptyState}
               alt="Nuton empty state — drop target screen"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -343,7 +343,7 @@ export default function NutonPage() {
         {/* ── Files and links ───────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.filesLinks}
               alt="Nuton files and links input screen"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -354,7 +354,7 @@ export default function NutonPage() {
         {/* ── Generate lesson ───────────────────────────────────── */}
         <Reveal className="mt-[16px] xl:mt-[24px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.generate}
               alt="Nuton generating a lesson from uploaded source"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -399,7 +399,7 @@ export default function NutonPage() {
         {/* ── Lesson screen ─────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "71.11%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.lesson}
               alt="Nuton structured lesson view"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -455,7 +455,7 @@ export default function NutonPage() {
 
         {/* ── Mobile screens ────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <img
+          <img loading="lazy" decoding="async"
             src={A.mobile}
             alt="Nuton mobile screens"
             className="w-full h-auto rounded-[5px] pointer-events-none"

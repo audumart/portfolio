@@ -10,9 +10,9 @@ const A = {
   diagonal:  "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright: "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:   "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  banner:    "/img-crate.png",
+  banner:    "/img-crate.webp",
   video1:    "/intro - adding a stem v2.mp4",
-  video2:    "/5445651c33b563dc5ed72a2c518d2d9e.mp4",
+  video2:    "/5445651c33b563dc5ed72a2c518d2d9e-1080.mp4",
 };
 
 /* ── Grid tile ───────────────────────────────────────────────── */
@@ -180,8 +180,8 @@ export default function CratePage() {
         {/* ── Sketches / design iterations ─────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "62.27%" }}>
-            <img
-              src="/crate sketches container.png"
+            <img loading="lazy" decoding="async"
+              src="/crate sketches container.webp"
               alt="[crate] early whiteboard sketches"
               className="absolute inset-0 size-full max-w-none object-cover pointer-events-none"
             />

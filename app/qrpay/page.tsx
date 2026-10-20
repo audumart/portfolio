@@ -11,13 +11,13 @@ const A = {
   diagonal:   "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright:  "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:    "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  banner:     "/Banner qrpay.png",
-  appShots:   "/App shots qrpay.png",
-  lofi:       "/Low-fi sketch qrpay.png",
-  figmaShot:  "/DivePay designs in figma.png",
+  banner:     "/Banner qrpay.webp",
+  appShots:   "/App shots qrpay.webp",
+  lofi:       "/Low-fi sketch qrpay.webp",
+  figmaShot:  "/DivePay designs in figma.webp",
   styleGuide: "/Style guide qrpay.png",
-  personas:   "/Personas qrpay.png",
-  flowchart:  "/Flowchart qrpay.png",
+  personas:   "/Personas qrpay.webp",
+  flowchart:  "/Flowchart qrpay.webp",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
@@ -191,7 +191,7 @@ export default function QrPayPage() {
         {/* ── Low-fi sketches ──────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "61.72%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.lofi}
               alt="QR Pay low-fidelity wireframe sketches"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -202,7 +202,7 @@ export default function QrPayPage() {
         {/* ── Figma birds-eye mockups ───────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "51.00%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.figmaShot}
               alt="QR Pay mockups, birds-eye view in Figma"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -213,7 +213,7 @@ export default function QrPayPage() {
         {/* ── Style guide ──────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "51.25%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.styleGuide}
               alt="QR Pay style guide, Nunito typography and colour palette"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -224,7 +224,7 @@ export default function QrPayPage() {
         {/* ── Personas ─────────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "90.39%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.personas}
               alt="QR Pay user personas, Grace and Timothy"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
@@ -235,7 +235,7 @@ export default function QrPayPage() {
         {/* ── Flowchart ────────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "115.63%" }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={A.flowchart}
               alt="QR Pay user flow diagram"
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"

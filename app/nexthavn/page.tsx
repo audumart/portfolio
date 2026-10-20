@@ -11,18 +11,18 @@ const A = {
   diagonal:   "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright:  "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:    "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  banner:     "/nexthavn landing screenshot.png",
-  styleGuide: "/Style guide nexthavn.png",
-  imac:       "/iMac shot.png",
-  ipad:       "/iPad shot.png",
-  screen1: "/Home overview.png",
-  screen2: "/Home - Filters.png",
-  screen3: "/Home _ Book client _ Avaialable now.png",
-  screen4: "/Home _ Book gear _ Avaialable now.png",
-  screen5: "/Home - Booking request sent successfully.png",
-  screen6: "/Home  _ Get Premium.png",
-  screen7: "/My bookings - Received Requests.png",
-  screen8: "/My bookings - Received Request - (Booking Details).png",
+  banner:     "/nexthavn landing screenshot.webp",
+  styleGuide: "/Style guide nexthavn.webp",
+  imac:       "/iMac shot.webp",
+  ipad:       "/iPad shot.webp",
+  screen1: "/Home overview.webp",
+  screen2: "/Home - Filters.webp",
+  screen3: "/Home _ Book client _ Avaialable now.webp",
+  screen4: "/Home _ Book gear _ Avaialable now.webp",
+  screen5: "/Home - Booking request sent successfully.webp",
+  screen6: "/Home  _ Get Premium.webp",
+  screen7: "/My bookings - Received Requests.webp",
+  screen8: "/My bookings - Received Request - (Booking Details).webp",
 };
 
 /* ── Grid tile ───────────────────────────────────────────────── */
@@ -202,14 +202,14 @@ export default function NextHavnPage() {
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] xl:gap-[24px]">
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "77.51%" }}>
-              <img
+              <img loading="lazy" decoding="async"
                 src={A.imac}
                 alt="NextHavn on iMac"
                 className="absolute inset-0 size-full max-w-none object-cover pointer-events-none"
               />
             </div>
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "74.80%" }}>
-              <img
+              <img loading="lazy" decoding="async"
                 src={A.ipad}
                 alt="NextHavn on iPad"
                 className="absolute inset-0 size-full max-w-none object-cover pointer-events-none"

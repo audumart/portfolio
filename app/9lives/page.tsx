@@ -11,7 +11,7 @@ const A = {
   diagonal:   "/99f347d68ecb22371b4cf07b6ad91ec4637bc039.svg",
   copyright:  "/599aa8318660d6a08ab1b899232480042e2c5941.svg",
   connect:    "/de604e076b24d31525748bbec7e36bb8086719f9.svg",
-  banner:     "/9lives store.png",
+  banner:     "/9lives store.webp",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
