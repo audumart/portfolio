@@ -123,10 +123,10 @@ export default function QrPayPage() {
               Dive into effortless transactions.
             </h2>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.6] text-white/80 tracking-[0.16px] xl:max-w-[440px]">
-              Traditional payment methods often involve unnecessary steps and
-              friction, creating barriers to fast, secure transactions. DiveHQ
-              identified this gap and set out to address it through a
-              comprehensive mobile payment application.
+              Paying someone in person still takes too many steps: card
+              readers, account numbers typed by hand, transfers that stall.
+              DiveHQ wanted a mobile app that made paying as fast as pointing
+              a camera.
             </p>
           </div>
         </section>
@@ -143,17 +143,15 @@ export default function QrPayPage() {
 
         {/* ── The solution ─────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               THE SOLUTION
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              QR Pay addresses these challenges through a streamlined mobile
-              payment experience centered on Scan to Pay functionality, enabling
-              near-instant transactions. The app extends beyond scanning to
-              include direct bank transfers, customizable Dive Tags for
-              simplified payments and effortless bill-splitting, consolidating
-              essential payment functions into a single, cohesive platform.
+              QR Pay is built around Scan to Pay, so most payments take a
+              scan and a confirm. Around it sit direct bank transfers, Dive
+              Tags (custom handles people can pay instead of typing account
+              details) and bill-splitting, all in one app.
             </p>
           </div>
         </Reveal>
@@ -171,19 +169,16 @@ export default function QrPayPage() {
 
         {/* ── Role ─────────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               ROLE
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              As the lead designer and researcher on QR Pay, I owned the entire
-              user experience end to end. From conducting the user research,
-              developing personas spanning DiveHQ&apos;s full audience and
-              translated those insights into the product&apos;s direction. From
-              there, I defined the user flows, created the wireframes and built
-              out the visual identity and full interface across both light and
-              dark modes keeping the experience simple, consistent, and
-              user-centered throughout.
+              I was the lead designer and researcher on QR Pay. I ran the user
+              research, built personas covering DiveHQ&apos;s audience and used
+              them to set the product&apos;s direction. Then I mapped the user
+              flows, sketched wireframes and designed the visual identity and
+              the full interface in both light and dark mode.
             </p>
           </div>
         </Reveal>
@@ -245,18 +240,16 @@ export default function QrPayPage() {
 
         {/* ── Wrapping up ──────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               WRAPPING UP
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              At its core, QR Pay reflects the principles of simplicity and
-              adaptability. This project reinforced a central lesson: in
-              fintech, user-centric design is not a finishing touch but the
-              foundation of a successful product. By staying responsive to real
-              user needs, validating decisions through personas and flows and
-              consistently prioritizing simplicity over complexity; delivering
-              an experience that feels effortless and trustworthy is easy.
+              The lesson I took from QR Pay is that in fintech, trust comes
+              from the design. People hand over their money only when every
+              step is predictable, so I checked each decision against the
+              personas and flows and cut anything that added a step without
+              adding certainty.
             </p>
           </div>
         </Reveal>

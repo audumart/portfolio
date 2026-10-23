@@ -68,7 +68,7 @@ function WorkTag({ children }: { children: React.ReactNode }) {
 function Section({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <Reveal className="mt-[48px] xl:mt-[64px]">
-      <div className="mx-auto max-w-[846px]">
+      <div className="mx-auto max-w-[760px]">
         <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
           {label}
         </p>
@@ -174,12 +174,12 @@ export default function AssayPage() {
         {/* ── Why I designed it ─────────────────────────────────── */}
         <Section label="WHY I DESIGNED IT">
           <Body>
-            I have previously evaluated model outputs against rubrics and most of what exists is
-            repurposed annotation software built for labeling images. It treats scoring as data
-            entry when it is judgment. Agent evaluation is different. The sequence is not a label
-            you read or an image you see but a trajectory: a sequence of calls where the failure
-            at step 5 is a consequence of step 1 and no interface built for labeling text spans
-            or images will show you that.
+            I&apos;ve evaluated model outputs against rubrics before, and most of the tooling is
+            repurposed annotation software built for labeling images. It treats scoring as data entry
+            when it&apos;s really judgment. Agent evaluation is different again. What you&apos;re
+            scoring isn&apos;t a label or an image but a trajectory, a sequence of calls where a failure
+            at step 5 is a consequence of step 1, and no interface built for labeling text spans or
+            images will show you that.
           </Body>
         </Section>
 
@@ -205,10 +205,10 @@ export default function AssayPage() {
             Unreliable scores are indistinguishable from reliable ones until the model trained on them starts behaving oddly.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            Few causes, all of them design problems. Rubrics are ambiguous on first contact with no
-            way to say so. Scores drift without anyone lying.
-            Disagreements go unresolved because there is nowhere to put them. And the rubric itself
-            never gets updated because nobody can prove there's a possibility the rubric might be wrong.
+            There are only a few causes, and all of them are design problems. Rubrics turn out to be
+            ambiguous on first contact, with no way to say so. Scores drift without anyone lying.
+            Disagreements go unresolved because there&apos;s nowhere to put them. And the rubric itself
+            never gets updated, because nobody can prove it might be wrong.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             There is a real tension that comes with these issues. Throughput matters, there are deadlines and a tool that makes careful work slow makes careful work not happen.
@@ -274,7 +274,8 @@ export default function AssayPage() {
         {/* ── Screens & use case ───────────────────────────────── */}
         <Section label="SCREENS &amp; USE CASE EXAMPLE">
           <Body>
-            The screens below shows what happens in a batch from setup to a dataset release across three different roles on the platform. A program lead, reviewer and adjudicator.
+            The screens below follow one batch from setup to dataset release, across the platform&apos;s
+            three roles: a program lead, a reviewer and an adjudicator.
           </Body>
           
         </Section>
@@ -282,108 +283,108 @@ export default function AssayPage() {
         {/* ── Screens ───────────────────────────────────────────── */}
         <Reveal className="mt-[16px] xl:mt-[24px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">01 · Program Lead</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">01 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Batch setup</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Warned about unresolved disputes on the check suite for the batch. Launches anyway.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Warned about unresolved disputes on the check suite for the batch. Launches anyway.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s1} alt="Batch setup" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">02 · Reviewer</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">02 · Reviewer</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Review queue</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Views the batch. Calibration shown against other reviewers in the cohort, never as a score.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Views the batch. Calibration shown against other reviewers in the cohort, never as a score.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s2} alt="Review queue" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">03 · Reviewer</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">03 · Reviewer</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Rubric briefing</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">First time on this rubric. Four criteria, each with its anchors.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">First time on this rubric. Four criteria, each with its anchors.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s3} alt="Rubric briefing" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">04 · Reviewer</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">04 · Reviewer</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Trajectory</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Opens item 7. Two checks have already failed, pinned to steps 1 and 5.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Opens item 7. Two checks have already failed, pinned to steps 1 and 5.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s4} alt="Trajectory" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">05 · Reviewer</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">05 · Reviewer</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Attaching evidence</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Attaches step 5 to a criterion. Three of four scored, one still unscored.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Attaches step 5 to a criterion. Three of four scored, one still unscored.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s5} alt="Attaching evidence" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">06 · Reviewer</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">06 · Reviewer</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dispute a check</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">The cold chain check fires wrongly on continuation legs. The dispute carries the evidence.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">The cold chain check fires wrongly on continuation legs. The dispute carries the evidence.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s6} alt="Dispute a check" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">07 · Program Lead</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">07 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Check suite builder</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Reads all disputes on one check and proceeds to amend the rule.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Reads all disputes on one check and proceeds to amend the rule.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s7} alt="Check suite builder" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">08 · Program Lead</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">08 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Version diff</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">What the rewritten check in v3.1 changes and what it costs the 60 items already scored under v3.0.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">What the rewritten check in v3.1 changes and what it costs the 60 items already scored under v3.0.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s8} alt="Version diff" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">09 · Adjudicator</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">09 · Adjudicator</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Adjudication</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Two reviewers scored recovery quality 2 and 5 on the same item. Only one attached evidence.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Two reviewers scored recovery quality 2 and 5 on the same item. Only one attached evidence.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s9} alt="Adjudication" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">10 · Program Lead</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">10 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Quality dashboard</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60"> Sees overview of scoring on the batch. Recovery quality sits at 0.44 agreement against a floor of 0.70.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75"> Sees overview of scoring on the batch. Recovery quality sits at 0.44 agreement against a floor of 0.70.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s10} alt="Quality dashboard" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">11 · Program Lead</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">11 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Rubric criterion</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">Anchors written at 1 and 5 only. 78% of real scores land in the blanks.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Anchors written at 1 and 5 only. 78% of real scores land in the blanks.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s11} alt="Rubric criterion" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
           <div className="mb-[12px]">
-            <p className="font-ui text-[11px] tracking-[1.5px] uppercase text-white/40 mb-[4px]">12 · Program Lead</p>
+            <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">12 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dataset release</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/60">The gate blocked on exactly the criterion the first screen warned about. They release scoped: 51 items ship, 9 held back, one check still amber.</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">The gate blocked on exactly the criterion the first screen warned about. They release scoped: 51 items ship, 9 held back, one check still amber.</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s12} alt="Dataset release" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
@@ -453,7 +454,7 @@ export default function AssayPage() {
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
             Is ambient calibration reassuring or is it surveillance? Showing a reviewer they&apos;re
             scoring one criterion harder than their cohort could read as useful or as a performance
-            metric with a friendly face. The answer depends almost entirely on what who runs the program does
+            metric with a friendly face. The answer depends almost entirely on what whoever runs the program does
             with the number.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -465,7 +466,7 @@ export default function AssayPage() {
             it would only tell me whether people under deadline find it inconvenient.
           </p>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            Additionally I would also keep my eyes on three numbers:
+            I&apos;d also watch three numbers:
           </p>
           <ul className="mt-[12px] space-y-[12px] list-disc list-outside pl-[20px]">
             <li className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">

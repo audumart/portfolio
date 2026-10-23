@@ -13,7 +13,7 @@ export default function VideoShowcase({ src, alt = "", className = "" }: VideoSh
         <img
           src={src}
           alt={alt}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="showcase-breathe absolute inset-0 w-full h-full object-cover"
           style={{
             animation: "showcase-breathe 12s ease-in-out infinite",
             transformOrigin: "center center",

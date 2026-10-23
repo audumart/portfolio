@@ -130,10 +130,9 @@ export default function TsePage() {
               Breaking creative boundaries with the click of a camera button
             </h2>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.6] text-white/80 tracking-[0.16px] xl:max-w-[440px]">
-              For TSE&apos;s photo portfolio website he had just a singular request: &quot;I want the site
-              to do something that&apos;s not the usual experience when people view this site&quot;. A
-              challenge I fully embraced in order to deliver a delightful and visual interactive
-              experience.
+              TSE had one request for his photography portfolio: &quot;I want the site to do something
+              that&apos;s not the usual experience when people view this site.&quot; I took that line as
+              the whole brief.
             </p>
           </div>
         </section>
@@ -149,23 +148,19 @@ export default function TsePage() {
 
         {/* ── Role + Process ────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               ROLE
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              My challenge was to deliver an experience that was uncommon for traditional photo
-              portfolio websites while being something that still possessed the same essence and
-              purpose. I worked on several iterations to come up with different layouts and device
-              breakpoints in order to understand what would work and what wouldn&apos;t. Working with TSE
-              and the most experienced web developer (shoutout to director tetsuo) I know we tested
-              several of the iterations until we were able to arrive at the final version of the
-              site. The images below give a general overview of most of the iterations that were
-              explored. Photographs at their most fundamental level represent stillness, a piece of
-              time where nothing seems to be moving and throughout this entire process one thing that
-              kept recurring was how to add elements that wouldn&apos;t take away the main essence of
-              these photographs but to mimic the several moving parts that go on outside of the lens
-              needed to produce these photographs.
+              The job was to make something unusual for a photo portfolio without losing what a portfolio
+              is for, which is showing the photos. I worked through several layouts across device
+              breakpoints to find out what held up and what didn&apos;t, then tested the strongest ones
+              with TSE and Director Tetsuo (the most experienced web developer I know) until we landed on
+              the final version. The images below cover most of those iterations. One question kept coming
+              back the whole way through: a photograph is a still moment, but a lot moves around the
+              camera to make one, so how do you hint at that motion without pulling attention away from
+              the picture?
             </p>
           </div>
         </Reveal>
@@ -179,26 +174,23 @@ export default function TsePage() {
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
-          <p className="mt-[12px] text-center font-ui text-[14px] text-white/50 tracking-[0.14px]">
+          <p className="mt-[12px] text-center font-ui text-[14px] text-white/70 tracking-[0.14px]">
             explored iterations for the site
           </p>
         </Reveal>
 
         {/* ── Bringing it all together ───────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               BRINGING IT ALL TOGETHER
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              Based on the several iterations worked on I was eventually able to arrive at the ideal
-              version of the vision TSE had for his portfolio when he reached out to me. With minimal
-              complexity but unconventional and providing a matching visual experience for his photos
-              the final iteration of the site draws from smooth scrolling transitions adapted from
-              current web design trends to deliver an ideal visually immersive viewing experience. To
-              fully immerse yourself make sure to visit the live site with the link at the top. To be
-              able to bring to life the vision for this website is one of the most challenging
-              endeavors I have been a part of.
+              The final site keeps its structure simple and puts the unconventional part in the motion,
+              with smooth scroll transitions drawn from current web design doing most of the work. It was
+              one of the hardest briefs I&apos;ve taken on, mostly because &quot;not the usual&quot; is
+              easy to say and hard to pin down. The live site, linked at the top, shows it better than
+              screenshots can.
             </p>
           </div>
         </Reveal>

@@ -109,6 +109,12 @@ input, textarea, [contenteditable] {
   }
 }
 
+/* ── Motion tokens ──────────────────────────────────────────── */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
 /* ── Page entrance, staggered top-to-bottom ─────────────────── */
 @keyframes section-enter {
   from { opacity: 0; transform: translateY(18px); }
@@ -135,8 +141,15 @@ input, textarea, [contenteditable] {
 }
 ::view-transition-new(root) {
   animation-duration: 180ms;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-out;
 }
+
+/* ── Hero glow: CSS fallback shows until WebGL draws, and again if it fails ── */
+.hero-glow-fallback {
+  background: radial-gradient(ellipse 45% 55% at 50% 38%, rgba(224, 225, 221, 0.16), rgba(119, 141, 169, 0.1) 45%, transparent 75%);
+  transition: opacity 400ms ease;
+}
+.hero-glow[data-gl="on"] .hero-glow-fallback { opacity: 0; }
 
 /* ── Colour picker panel entrance ───────────────────────────── */
 @keyframes picker-in {
@@ -153,6 +166,9 @@ input, textarea, [contenteditable] {
 /* Respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
   .enter-1, .enter-2, .enter-3, .enter-4 { animation: none; }
+  .showcase-breathe { animation: none !important; }
+  /* Keep the fade, drop the slide */
+  .reveal { transform: none !important; }
   ::view-transition-old(*),
   ::view-transition-new(*),
   ::view-transition-group(*) { animation-duration: 0s !important; animation-delay: 0s !important; }

@@ -27,7 +27,7 @@ export default function LastWatched() {
       href={film.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-center gap-[10px] rounded-[8px] border border-white/15 bg-white/8 px-[12px] py-[10px] transition-all duration-200 hover:border-white/30 hover:bg-white/15"
+      className="group inline-flex items-center gap-[10px] rounded-[8px] border border-white/15 bg-white/8 px-[12px] py-[10px] transition-[border-color,background-color,scale] duration-200 ease-out hover:border-white/30 hover:bg-white/15 active:scale-[0.98]"
       style={{ backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)" }}
     >
       {film.poster && (

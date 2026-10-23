@@ -61,7 +61,7 @@ function WorkTag({ children }: { children: React.ReactNode }) {
 function Section({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <Reveal className="mt-[48px] xl:mt-[64px]">
-      <div className="mx-auto max-w-[846px]">
+      <div className="mx-auto max-w-[760px]">
         <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
           {label}
         </p>
@@ -152,7 +152,7 @@ export default function DecisionFatiguePage() {
         {/* ── Overview ─────────────────────────────────────────── */}
         <Section label="OVERVIEW">
           <Body>
-            Streaming platforms have a paradox at their core: more content, less satisfaction.
+            Streaming platforms run on a paradox: more content, less satisfaction.
             Users open Netflix to relax and instead spend thirty minutes scrolling, abandoning
             the search or defaulting to a rerun. This project set out to understand why choice
             becomes a burden and what design can do about it. For my research I studied decision
@@ -260,11 +260,13 @@ export default function DecisionFatiguePage() {
 
         {/* ── Personas ─────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[20px] mx-auto max-w-[846px]">
+          <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[20px] mx-auto max-w-[760px]">
             PERSONAS
           </p>
-          <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px] mx-auto max-w-[846px] mb-[20px]">
-            Two personas anchored the design thinking and the contrast between them matters because one user wants the system to quantify quality, the other wants it to socialize discovery meaning a single recommendation model serves neither well.
+          <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px] mx-auto max-w-[760px] mb-[20px]">
+            Two personas anchored the design thinking, and the contrast between them matters. One wants
+            the system to measure quality for them; the other wants it to make discovery social. A
+            single recommendation model serves neither well.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] xl:gap-[24px]">
             <div className="relative w-full overflow-hidden rounded-[5px]" style={{ paddingTop: "73.38%" }}>
@@ -343,7 +345,7 @@ export default function DecisionFatiguePage() {
               className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
             />
           </div>
-          <p className="mt-[12px] text-center font-ui text-[14px] text-white/50 tracking-[0.14px]">
+          <p className="mt-[12px] text-center font-ui text-[14px] text-white/70 tracking-[0.14px]">
             Proposed features plotted by impact against development feasibility.
           </p>
         </Reveal>

@@ -134,17 +134,15 @@ export default function NineLivesPage() {
 
         {/* ── Role ─────────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               ROLE
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              For the 9LIVES e-commerce store the process was simple. I used
-              Shopify&apos;s Liquid design framework to implement the designs I
-              created in Figma according to how the 9LIVES Creative Directors
-              specified in the visual plans they laid out for me. No complex
-              decisions or iterations just an efficient transition from design
-              to coding the live website.
+              The 9LIVES store was a straightforward build. The Creative Directors laid out the visual
+              plans, I designed the pages in Figma to match them and then built the store with
+              Shopify&apos;s Liquid templates. No big decisions or rounds of iteration, just a clean
+              handoff from design to the live site.
             </p>
           </div>
         </Reveal>
