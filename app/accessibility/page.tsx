@@ -57,7 +57,7 @@ function WorkTag({ children }: { children: React.ReactNode }) {
 function Section({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <Reveal className="mt-[48px] xl:mt-[64px]">
-      <div className="mx-auto max-w-[846px]">
+      <div className="mx-auto max-w-[760px]">
         <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
           {label}
         </p>
@@ -165,7 +165,7 @@ export default function AccessibilityPage() {
             Food delivery apps promise convenience, but that promise isn&apos;t evenly distributed.
             For Blind and Low Vision (BLV) users, ordering a meal can mean guessing at item
             images, interpreting every update and hoping a driver reads the delivery note. This
-            study followed the entire journey, browse, customize, pay, receive to find where
+            study followed the whole journey (browse, customize, pay, receive) to find where
             accessibility breaks down.
           </Body>
           <div className="mt-[20px]">
@@ -184,7 +184,7 @@ export default function AccessibilityPage() {
             Accessibility is often framed as a feature for independence. It removes the need to
             travel to a store and lets users act as ordinary consumers. Yet many apps fail basic
             accessibility guidelines: unlabelled buttons, inconsistent interaction design and
-            visual-only feedback. The alternative, asking sighted family and friends costs
+            visual-only feedback. The alternative, asking sighted family and friends, costs
             users their independence and the privacy the technology is supposed to provide.
           </Body>
           <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
@@ -250,7 +250,7 @@ export default function AccessibilityPage() {
 
         {/* ── Finding 2 ────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-semibold">2. Platform instability and commercial clutter:</strong>{" "}
               Frequent app updates introduced accessibility regressions, a default card silently
@@ -266,7 +266,7 @@ export default function AccessibilityPage() {
 
         {/* ── Finding 3 ────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-semibold">3. Breakdowns in delivery communication:</strong>{" "}
               The handoff stage exposed persistent human-communication gaps. Written delivery

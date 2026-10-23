@@ -30,7 +30,7 @@ export default function Reveal({ children, className = "" }: RevealProps) {
   return (
     <div
       ref={ref}
-      className={className}
+      className={`reveal ${className}`}
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(22px)",

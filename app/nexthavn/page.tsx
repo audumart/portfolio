@@ -135,18 +135,16 @@ export default function NextHavnPage() {
               <h2 className="font-subtitle text-[22px] md:text-[28px] xl:text-[32px] leading-[1.34] text-white tracking-[-0.44px] xl:tracking-[-0.64px]">
                 The creative industry&apos;s next operating system
               </h2>
-              <p className="mt-[12px] font-ui text-[13px] md:text-[14px] leading-[1.6] text-white/60 tracking-[0.13px]">
+              <p className="mt-[12px] font-ui text-[13px] md:text-[14px] leading-[1.6] text-white/75 tracking-[0.13px]">
                 NextHavn is an active product still in development. This is a
                 condensed look at the thinking and design decisions that have
                 gone into this project rather than a full process breakdown.
               </p>
             </div>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.6] text-white/80 tracking-[0.16px] xl:max-w-[440px]">
-              Talent, studios and gear in one borderless platform is what
-              NextHavn promises. A unified ecosystem for the creative industry
-              and beyond built to eliminate the fragmented nature of modern
-              creative work where job leads are buried in social media DMs,
-              studio availability is hidden and gear relies on personal networks.
+              NextHavn puts talent, studios and gear on one platform that works across borders. Creative
+              work is scattered today: job leads get buried in social media DMs, studio availability is
+              hard to find and renting gear depends on who you know.
             </p>
           </div>
         </section>
@@ -162,20 +160,19 @@ export default function NextHavnPage() {
 
         {/* ── Role ─────────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               ROLE
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              I led the design of NextHavn&apos;s web presence and the foundational
-              experience for its incoming web app turning a broad, multi-sided
-              platform vision into concrete interface and interaction decisions.
+              I led the design of NextHavn&apos;s website and the core experience for its upcoming web
+              app, turning a broad platform with many kinds of users into specific interface and
+              interaction decisions.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              Working across the marketing site and product surfaces, I shaped
-              how the ecosystem&apos;s many parts such as talent discovery, studio
-              booking, gear rental, payments and community could be made legible
-              and navigable within a single coherent experience.
+              Across the marketing site and the product, my job was to make the platform&apos;s many parts
+              (talent discovery, studio booking, gear rental, payments and community) easy to understand
+              and move between.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               Alongside the design work, I created and ran a recruitment survey
@@ -220,22 +217,20 @@ export default function NextHavnPage() {
 
         {/* ── Case pillars ─────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               CORE PILLARS AND FUNCTIONALITY
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              The platform is designed to support the full arc of a production,
-              from pre-production sourcing through post-production delivery. The
-              three pillars anchor this workflow are:
+              The platform follows a production from pre-production sourcing through to post-production
+              delivery. Three pillars hold that workflow up:
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">Verified Creative Network:</strong> A global, vetted database of
               photographers, videographers, editors, crew and digital artists.
-              Every profile is fully searchable and filterable, by specific
-              skill set, location, daily or hourly rate and real-time calendar
-              availability making hiring shift from guesswork and referrals to
-              deliberate, informed selections.
+              Every profile can be searched and filtered by skill, location,
+              daily or hourly rate and live calendar availability, so hiring
+              runs on informed choices instead of guesswork and referrals.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
               <strong className="text-white font-medium">On-Demand Bookings:</strong> A direct-to-studio marketplace where users
@@ -245,11 +240,11 @@ export default function NextHavnPage() {
               needing a space and securing one.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">Equipment Marketplace:</strong> An upcoming portal built to make
-              professional-grade production gear, cameras, drone rigs, lighting
-              setups accessible anywhere in the world. Standardized rental
-              contracts, verified availability and fixed liability structures
-              bring predictability to a process that has long run on informal
+              <strong className="text-white font-medium">Equipment Marketplace:</strong> An upcoming portal for renting
+              professional production gear (cameras, drone rigs, lighting
+              setups) anywhere in the world. Standard rental contracts,
+              verified availability and fixed liability terms bring
+              predictability to a process that has long run on informal
               trust.
             </p>
           </div>
@@ -280,19 +275,16 @@ export default function NextHavnPage() {
 
         {/* ── Why design matters ────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               WHY THE ECOSYSTEM MATTERS
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              Today, producing a single project can mean stitching together
-              messaging apps, invoicing tools, portfolio hosts and a patchwork
-              of regional rental agencies. NextHavn collapses that fragmentation
-              into one operating system for creative work. It gives independent
-              artists genuine local visibility while allowing global brands to
-              drop a production anywhere in the world and safely assemble an
-              entire localized team, turning what used to be a logistical
-              nightmare into a single, coherent process.
+              Right now a single project can mean juggling messaging apps, invoicing tools, portfolio
+              hosts and a patchwork of regional rental agencies. NextHavn pulls all of that into one
+              place. Independent artists get real local visibility, and global brands can start a
+              production anywhere in the world and safely put together a local team without the usual
+              logistical mess.
             </p>
           </div>
         </Reveal>

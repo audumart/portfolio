@@ -13,9 +13,9 @@ export default function ResearcherBubble() {
       onClick={scrollToResearch}
       className={[
         "group relative inline-flex cursor-pointer items-center gap-2 align-middle rounded-full px-3 py-1",
-        "border border-white/25 bg-white/10 transition-all duration-300 ease-out origin-center",
-        "hover:scale-110 hover:border-white/70 hover:bg-white/30 hover:shadow-[0_0_28px_rgba(255,255,255,0.35)]",
-        "active:scale-105",
+        "border border-white/25 bg-white/10 transition-[scale,border-color,background-color,box-shadow] duration-200 ease-[var(--ease-out)] origin-center",
+        "hover:scale-[1.04] hover:border-white/70 hover:bg-white/30 hover:shadow-[0_0_28px_rgba(255,255,255,0.35)]",
+        "active:scale-[0.97]",
       ].join(" ")}
       style={{
         backdropFilter: "blur(10px)",
@@ -29,13 +29,13 @@ export default function ResearcherBubble() {
           viewBox="0 0 13 13"
           fill="none"
           aria-hidden="true"
-          className="transition-transform duration-300 group-hover:scale-110"
+          className="transition-transform duration-200 ease-[var(--ease-out)] group-hover:scale-110"
         >
           <circle cx="5.5" cy="5.5" r="3.8" stroke="rgba(255,255,255,0.9)" strokeWidth="1.3" />
           <line x1="8.4" y1="8.4" x2="11.8" y2="11.8" stroke="rgba(255,255,255,0.9)" strokeWidth="1.3" strokeLinecap="round" />
         </svg>
       </span>
-      <span className="text-white/90 transition-colors duration-300 group-hover:text-white">
+      <span className="text-white/90 transition-colors duration-200 group-hover:text-white">
         researcher
       </span>
     </button>

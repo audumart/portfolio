@@ -296,9 +296,9 @@ export default function AboutPage() {
           <div className="w-full xl:w-[991px]">
             <div className="font-subtitle text-[22px] md:text-[30px] xl:text-[40px] leading-[0] text-white tracking-[-0.44px] md:tracking-[-0.6px] xl:tracking-[-0.8px]">
               <p className="leading-[1.34]">
-                With 6+ years of design experience my expertise consists of delivering
-                clean visual design via iterative processes and detailed research that
-                turns objectives into solutions.
+                I&apos;ve spent 6+ years designing products, using research and
+                fast iteration to turn a team&apos;s goals into clean interfaces
+                that work.
               </p>
             </div>
             <div className="mt-[24px] xl:mt-[32px]">
@@ -306,7 +306,7 @@ export default function AboutPage() {
                 My interest in building things started with my first LEGO set. Turning a pile of separate
                 pieces into something that actually worked taught me an instinct I still rely on: understand
                 how the parts fit, then build something coherent. That&apos;s the core of how I approach
-                design, from early sketches to shaping a full product. 
+                design, from early sketches to shaping a full product.
               </p>
             </div>
           </div>

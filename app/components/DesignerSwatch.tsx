@@ -134,7 +134,7 @@ export default function DesignerSwatch() {
         tabIndex={0}
         className={[
           "inline-flex items-center gap-[6px] rounded-[5px] border px-[7px] py-[3px]",
-          "transition-all duration-200 cursor-pointer",
+          "transition-[border-color,background-color,box-shadow,scale] duration-150 ease-out cursor-pointer active:scale-[0.97]",
           open
             ? "border-[#555] bg-[#1c1c1c] shadow-[0_0_0_1px_rgba(255,255,255,0.08)]"
             : "border-[#3a3a3a] bg-[#1c1c1c] hover:border-[#555] hover:bg-[#242424]",
@@ -151,7 +151,7 @@ export default function DesignerSwatch() {
       {open && (
         <div
           className="absolute left-0 top-[calc(100%+10px)] z-50 w-[228px] select-none overflow-hidden rounded-[8px] border border-[#404040] bg-[#1e1e1e] shadow-[0_12px_40px_rgba(0,0,0,0.7)]"
-          style={{ animation: "picker-in 0.18s ease-out both" }}
+          style={{ animation: "picker-in 0.18s var(--ease-out) both", transformOrigin: "top left" }}
           onMouseDown={(e) => e.stopPropagation()}
           onTouchStart={(e) => e.stopPropagation()}
         >

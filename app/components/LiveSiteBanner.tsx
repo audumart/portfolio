@@ -26,7 +26,7 @@ export default function LiveSiteBanner({ href, src, alt, ratio, label = "VIEW LI
         <img
           src={src}
           alt={alt}
-          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.03]"
         />
       </div>
     </a>

@@ -126,19 +126,16 @@ export default function CratePage() {
               <h2 className="font-subtitle text-[22px] md:text-[28px] xl:text-[32px] leading-[1.34] text-white tracking-[-0.44px] xl:tracking-[-0.64px]">
                 Separate stems. Anywhere, anytime.
               </h2>
-              <p className="mt-[12px] font-ui text-[13px] md:text-[14px] leading-[1.6] text-white/60 tracking-[0.13px]">
-                [crate] is currently in beta testing and is expected to launch in the last
-                quarter of 2026. This is a preview of what happens when a passion for
-                technology and music comes together.
+              <p className="mt-[12px] font-ui text-[13px] md:text-[14px] leading-[1.6] text-white/75 tracking-[0.13px]">
+                [crate] is in beta and set to launch in the last quarter of 2026. It came out of two things
+                I care about, technology and music.
               </p>
             </div>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.6] text-white/80 tracking-[0.16px] xl:max-w-[520px]">
-              If you&apos;re looking for a great example of an idea going from 0&gt;1,
-              [crate] is a lightweight stem-splitting app that lets anyone import a song
-              and isolate its individual parts, vocals, drums, bass, instrumentals in
-              just a few taps. It was built in response to the bloat and steep learning
-              curves of professional music tools, stripping the experience down to a
-              single, focused job: get clean stems&nbsp;fast.
+              [crate] is a lightweight stem-splitting app and a good example of an idea going from 0 to 1.
+              Import a song and pull out its vocals, drums, bass or instrumental in a few taps.
+              Professional music tools are bloated and slow to learn, so [crate] does one job: get clean
+              stems&nbsp;fast.
             </p>
           </div>
         </section>
@@ -154,25 +151,21 @@ export default function CratePage() {
 
         {/* ── Role ─────────────────────────────────────────────── */}
         <Reveal className="mt-[48px] xl:mt-[64px]">
-          <div className="mx-auto max-w-[846px]">
+          <div className="mx-auto max-w-[760px]">
             <p className="font-ui text-[15px] md:text-[23px] font-bold tracking-[1px] text-white uppercase mb-[16px]">
               ROLE
             </p>
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              When the idea for [crate] surfaced I instantly acknowledged how
-              valuable a tool it would be because I am passionate about music and have
-              tried several times to figure out how to make my own music or just
-              dissect my favorite songs to understand the multiple steps that go into
-              making them.
+              I love music, and I&apos;ve tried more than once to make my own or to pull apart favorite
+              songs and see how they were put together. So when the idea for [crate] came up, I knew
+              straight away it was a tool I&apos;d use.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              Having a clear idea of the purpose [crate] would serve I immediately got in
-              front of my whiteboard to sketch what a potential interface for the
-              lightweight desktop app would look like because at its basic level [crate]
-              aims to eliminate the complexity that exists in traditional music production
-              software. Due to how subtractive I wanted the interface for crate to look like 
-              I was instantly able to go from just sketches to a coding a functional prototype 
-              using Claude Code and React+Vite designing the app by using Apple’s Liquid Glass’ design language. 
+              With the purpose clear, I went to my whiteboard and sketched an interface for a lightweight
+              desktop app. The point of [crate] is to remove the complexity of traditional music
+              production software, and the interface I wanted was stripped back enough that I could go
+              from sketches straight to a working prototype. I built it with Claude Code and React + Vite,
+              using Apple&apos;s Liquid Glass design language.
             </p>
           </div>
         </Reveal>
@@ -223,40 +216,39 @@ export default function CratePage() {
           </div>
 
           {/* Text pushed below videos */}
-          <div className="mx-auto max-w-[846px] mt-[48px] xl:mt-[64px]">
+          <div className="mx-auto max-w-[760px] mt-[48px] xl:mt-[64px]">
             <p className="font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            Behind the scenes of dropping in a track [crate] separates stems by using 2 state of the art audio separation models 
-            Demucs and SAM Audio anchored by Pytorch as the default Deep Learning Framework.
-             Stem separation has historically
-              lived inside dense DAWs and pro audio suites aimed at producers. [crate]
-              reframes it as something anyone can use, a utility, not a workstation.
+              When you drop in a track, [crate] splits it with two audio separation models, Demucs and SAM
+              Audio, running on PyTorch. Stem separation has mostly lived inside dense DAWs and pro audio
+              suites built for producers. [crate] treats it as a utility anyone can use, not a
+              workstation.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Musicians &amp; performers</strong>, Pull a backing track by removing vocals,
+              <strong className="text-white font-medium">For Musicians &amp; performers</strong>: Pull a backing track by removing vocals,
               or isolate a single instrument to learn a part by ear. Great for rehearsing,
               transcribing or building practice loops.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For DJs &amp; producers</strong>, Source clean acapellas and instrumentals for
+              <strong className="text-white font-medium">For DJs &amp; producers</strong>: Source clean acapellas and instrumentals for
               remixing, mashups and sampling without hunting down official stems that may
               not exist.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Singers &amp; vocal coaches</strong>, Generate instant karaoke versions of any
+              <strong className="text-white font-medium">For Singers &amp; vocal coaches</strong>: Generate instant karaoke versions of any
               song or isolate a reference vocal to study phrasing, breath and technique.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Content creators</strong>, Strip vocals to use instrumentals as
+              <strong className="text-white font-medium">For Content creators</strong>: Strip vocals to use instrumentals as
               royalty-friendlier background beds or pull specific elements for video edits
               and transitions.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Educators &amp; students</strong>, Break a recording into its components to
+              <strong className="text-white font-medium">For Educators &amp; students</strong>: Break a recording into its components to
               teach arrangement, demonstrate how a mix is layered or let students focus on
               one instrument at a time.
             </p>
             <p className="mt-[20px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-              <strong className="text-white font-medium">For Curious listeners</strong>, Hear how a favorite track is constructed, what
+              <strong className="text-white font-medium">For Curious listeners</strong>: Hear how a favorite track is constructed, what
               the bassline is really doing, how the vocals sit alone purely for the joy of it.
             </p>
           </div>

@@ -6,6 +6,7 @@ import DesignerSwatch from "./components/DesignerSwatch";
 import ResearcherBubble from "./components/ResearcherBubble";
 import StickyHeader from "./components/StickyHeader";
 import Reveal from "./components/Reveal";
+import HeroGlow from "./components/HeroGlow";
 
 /* ── Asset paths ─────────────────────────────────────────────── */
 const A = {
@@ -74,7 +75,8 @@ function Nav() {
 /* ── Hero ─────────────────────────────────────────────────────── */
 function Hero() {
   return (
-    <section aria-label="Introduction" className="relative z-20 pt-[88px] xl:pt-[100px] enter-1">
+    <section aria-label="Introduction" className="relative isolate z-20 pt-[88px] xl:pt-[100px] enter-1">
+      <HeroGlow className="absolute inset-x-0 top-0 -bottom-[60px] -z-10" />
       <h1 className="font-display text-center text-[64px] md:text-[120px] xl:text-[200px] leading-none tracking-[3px] md:tracking-[8px] xl:tracking-[14px] text-white">
         Martins
       </h1>
@@ -99,7 +101,7 @@ function CardLabel({ children }: { children: React.ReactNode }) {
 
 function CardDesc({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mt-[4px] font-ui text-[12px] md:text-[14px] xl:hidden leading-[1.5] tracking-[0.12px] text-white/50">
+    <p className="mt-[4px] font-ui text-[13px] md:text-[14px] xl:hidden leading-[1.5] tracking-[0.12px] text-white/70">
       {children}
     </p>
   );
@@ -128,7 +130,7 @@ function FeaturedCard() {
         <CardOverlay name="Nuton" desc="Learn it once. Actually remember." />
       </div>
       <CardLabel>Nuton</CardLabel>
-      <CardDesc>AI powered learning tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
+      <CardDesc>AI-powered learning tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
     </Link>
   );
 }
@@ -218,7 +220,7 @@ function NextHavnCard() {
         <CardOverlay name="NextHavn" desc="The creative industry's next operating system" />
       </div>
       <CardLabel>NextHavn</CardLabel>
-      <CardDesc>End-to-end design of a creative marketplace where makers and buyers meet — built for discovery, with a browsing experience that gets out of the way.</CardDesc>
+      <CardDesc>End-to-end design of a creative marketplace where makers and buyers meet, built for discovery with browsing that stays out of the way.</CardDesc>
     </Link>
   );
 }
@@ -315,7 +317,7 @@ function DecisionFatigueCard() {
           Decision Fatigue for Users in online streaming platforms
         </Link>
         <p className="font-ui w-full text-[16px] font-normal leading-[1.6] tracking-[0.16px]">
-          Streaming platforms have a paradox at their core: more content, less satisfaction.
+          Streaming platforms run on a paradox: more content, less satisfaction.
           Users open Netflix to relax and instead spend thirty minutes scrolling, abandoning
           the search or defaulting to a rerun. This project sets out to understand why choice
           becomes a burden and what design can do about it.
