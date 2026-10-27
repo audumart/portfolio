@@ -6,7 +6,6 @@ import DesignerSwatch from "./components/DesignerSwatch";
 import ResearcherBubble from "./components/ResearcherBubble";
 import StickyHeader from "./components/StickyHeader";
 import Reveal from "./components/Reveal";
-import HeroGlow from "./components/HeroGlow";
 
 /* ── Asset paths ─────────────────────────────────────────────── */
 const A = {
@@ -75,8 +74,7 @@ function Nav() {
 /* ── Hero ─────────────────────────────────────────────────────── */
 function Hero() {
   return (
-    <section aria-label="Introduction" className="relative isolate z-20 pt-[88px] xl:pt-[100px] enter-1">
-      <HeroGlow className="absolute inset-x-0 top-0 -bottom-[60px] -z-10" />
+    <section aria-label="Introduction" className="relative z-20 pt-[88px] xl:pt-[100px] enter-1">
       <h1 className="font-display text-center text-[64px] md:text-[120px] xl:text-[200px] leading-none tracking-[3px] md:tracking-[8px] xl:tracking-[14px] text-white">
         Martins
       </h1>
@@ -120,8 +118,8 @@ function CardOverlay({ name, desc }: { name: string; desc: string }) {
 /* ── Nuton featured card ──────────────────────────────────────── */
 function FeaturedCard() {
   return (
-    <Link href="/nuton" className="block group mb-[40px] xl:mb-[82px] enter-2">
-      <div className="relative h-[220px] md:h-[520px] xl:h-[915px] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
+    <Link href="/nuton" className="block group">
+      <div className="relative aspect-[628/393] overflow-clip rounded-[5px] bg-[#f0f0ee] transition-opacity group-hover:opacity-90">
         <img
           src={A.nuton}
           alt="Nuton AI learning tool"
@@ -263,28 +261,19 @@ function QrPayCard() {
 function Projects() {
   return (
     <section id="work" aria-label="Projects" className="relative z-10 mt-[48px] px-[24px] md:px-[40px] xl:px-[80px]">
-      <FeaturedCard />
-
-      <Reveal className="mb-[20px] xl:mb-[42px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
-          <AssayCard />
-          <CrateCard />
-        </div>
-      </Reveal>
-
-      <Reveal className="mb-[20px] xl:mb-[42px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
-          <QrPayCard />
-          <TseCard />
-        </div>
-      </Reveal>
-
-      <Reveal className="mb-[20px] xl:mb-[42px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[24px]">
-          <WysemarketCard />
-          <NextHavnCard />
-        </div>
-      </Reveal>
+      {/* Single centred column, one project per row. Past 1440px it breaks out
+          of the page column like the gallery and keeps the same share of the window */}
+      <div className="min-[1440px]:mx-[calc(50%-50vw)]">
+      <div className="mx-auto flex max-w-[1040px] min-[1440px]:max-w-none min-[1440px]:w-[72vw] flex-col gap-[20px] md:gap-[24px] xl:gap-[28px] min-[1440px]:gap-[2vw]">
+        <div className="enter-2"><FeaturedCard /></div>
+        <Reveal><AssayCard /></Reveal>
+        <Reveal><CrateCard /></Reveal>
+        <Reveal><QrPayCard /></Reveal>
+        <Reveal><TseCard /></Reveal>
+        <Reveal><WysemarketCard /></Reveal>
+        <Reveal><NextHavnCard /></Reveal>
+      </div>
+      </div>
 
     </section>
   );

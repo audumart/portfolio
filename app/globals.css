@@ -144,13 +144,6 @@ input, textarea, [contenteditable] {
   animation-timing-function: ease-out;
 }
 
-/* ── Hero glow: CSS fallback shows until WebGL draws, and again if it fails ── */
-.hero-glow-fallback {
-  background: radial-gradient(ellipse 45% 55% at 50% 38%, rgba(224, 225, 221, 0.16), rgba(119, 141, 169, 0.1) 45%, transparent 75%);
-  transition: opacity 400ms ease;
-}
-.hero-glow[data-gl="on"] .hero-glow-fallback { opacity: 0; }
-
 /* ── Colour picker panel entrance ───────────────────────────── */
 @keyframes picker-in {
   from { opacity: 0; transform: translateY(-6px) scale(0.97); }
