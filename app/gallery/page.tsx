@@ -19,6 +19,9 @@ async function getGalleryItems(): Promise<GalleryItem[]> {
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
     .flatMap((file) => {
       const ext = extname(file).toLowerCase();
+      // A PNG/JPG next to a webp of the same name is the full-size source
+      // for scripts/optimize-images.mjs, not a separate gallery item
+      if (ext !== ".webp" && (files as string[]).includes(`${basename(file, extname(file))}.webp`)) return [];
       const kind = IMAGE_EXT.includes(ext) ? "image" : VIDEO_EXT.includes(ext) ? "video" : null;
       if (!kind) return [];
       const alt = basename(file, extname(file)).replace(/^\d+[-_ ]*/, "");

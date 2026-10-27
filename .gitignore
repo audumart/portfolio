@@ -40,5 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Full-size source files kept out of public/
-/originals/
+# Full-size image sources; scripts/optimize-images.mjs turns them into
+# the committed webps
+/public/assay screens/*.png
+/public/gallery/*.png
+/public/gallery/*.jpg
+/public/gallery/*.jpeg
