@@ -3,6 +3,78 @@
 import { useEffect, useRef, useState } from "react";
 
 const DESKTOP_MQ = "(min-width: 1280px) and (pointer: fine) and (hover: hover)";
+const INK = "#415a77";
+const SAMPLE_W = 96;
+const WHITE_LUM = 0.9;
+
+/* Small downscaled copy of each image, so reading the pixel under the
+   pointer is a cheap array lookup instead of a canvas read per move */
+const thumbs = new Map<string, { w: number; h: number; data: Uint8ClampedArray } | null>();
+
+function thumb(img: HTMLImageElement) {
+  const key = img.currentSrc || img.src;
+  if (thumbs.has(key)) return thumbs.get(key)!;
+  if (!img.complete || !img.naturalWidth) return null;
+  const w = SAMPLE_W;
+  const h = Math.max(1, Math.round((SAMPLE_W * img.naturalHeight) / img.naturalWidth));
+  let entry: { w: number; h: number; data: Uint8ClampedArray } | null = null;
+  try {
+    const ctx = document.createElement("canvas").getContext("2d", { willReadFrequently: true });
+    if (ctx) {
+      ctx.canvas.width = w;
+      ctx.canvas.height = h;
+      ctx.drawImage(img, 0, 0, w, h);
+      entry = { w, h, data: ctx.getImageData(0, 0, w, h).data };
+    }
+  } catch {
+    // cross-origin images can't be read; treat them as not white
+  }
+  thumbs.set(key, entry);
+  return entry;
+}
+
+/* One object-position component: a percentage of the free space, or px */
+function offset(token: string, free: number) {
+  return token.endsWith("%") ? (free * parseFloat(token)) / 100 : parseFloat(token) || 0;
+}
+
+/* Is the image pixel under (x, y) near white? Follows object-fit and
+   object-position so cropped and letterboxed images map correctly. */
+function isWhiteAt(img: HTMLImageElement, x: number, y: number) {
+  const t = thumb(img);
+  if (!t) return false;
+  const r = img.getBoundingClientRect();
+  const cs = getComputedStyle(img);
+  const nw = img.naturalWidth, nh = img.naturalHeight;
+  let sx = r.width / nw, sy = r.height / nh;
+  if (cs.objectFit === "cover") sx = sy = Math.max(sx, sy);
+  else if (cs.objectFit === "contain") sx = sy = Math.min(sx, sy);
+  else if (cs.objectFit === "none") sx = sy = 1;
+  const dw = nw * sx, dh = nh * sy;
+  const [px = "50%", py = "50%"] = cs.objectPosition.split(" ");
+  const u = (x - r.left - offset(px, r.width - dw)) / dw;
+  const v = (y - r.top - offset(py, r.height - dh)) / dh;
+  if (u < 0 || u >= 1 || v < 0 || v >= 1) return false;
+  const i = (Math.floor(v * t.h) * t.w + Math.floor(u * t.w)) * 4;
+  if (t.data[i + 3] < 128) return false;
+  const lum = (0.2126 * t.data[i] + 0.7152 * t.data[i + 1] + 0.0722 * t.data[i + 2]) / 255;
+  return lum > WHITE_LUM;
+}
+
+/* Images are often pointer-events: none, so hit-testing skips them. Walk up
+   from whatever was hit and look for an image whose box holds the point. */
+function imageAt(x: number, y: number) {
+  let el = document.elementFromPoint(x, y);
+  for (let depth = 0; el && depth < 4; depth++, el = el.parentElement) {
+    if (el instanceof HTMLImageElement) return el;
+    const imgs = el.querySelectorAll("img");
+    for (let i = imgs.length - 1; i >= 0; i--) {
+      const r = imgs[i].getBoundingClientRect();
+      if (x >= r.left && x < r.right && y >= r.top && y < r.bottom) return imgs[i];
+    }
+  }
+  return null;
+}
 
 export default function CursorDot() {
   const dotRef = useRef<SVGSVGElement>(null);
@@ -29,19 +101,38 @@ export default function CursorDot() {
     if (!isDesktop) return;
     const dot = dotRef.current;
     if (!dot) return;
-    const onMove = (e: MouseEvent) => {
-      // arrow tip sits ~1px in from the top-left corner of the svg
-      dot.style.transform = `translate(${e.clientX - 1}px, ${e.clientY - 1}px)`;
+    let raf = 0;
+    let x = -100, y = -100;
+    const update = () => {
+      raf = 0;
+      // Sample under the body of the arrow rather than its tip
+      const sx = x + 10, sy = y + 8;
+      const img = imageAt(sx, sy);
+      dot.style.stroke = img && isWhiteAt(img, sx, sy) ? INK : "white";
     };
+    const onMove = (e: MouseEvent) => {
+      x = e.clientX;
+      y = e.clientY;
+      // arrow tip sits ~1px in from the top-left corner of the svg
+      dot.style.transform = `translate(${x - 1}px, ${y - 1}px)`;
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    // Content also scrolls under a pointer that isn't moving
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
     window.addEventListener("mousemove", onMove, { passive: true });
-    return () => window.removeEventListener("mousemove", onMove);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, [isDesktop]);
 
   if (!isDesktop) return null;
 
   /* Arrow from public/mouse pointer.svg, inlined so the outline can keep a
      1px stroke at cursor size (scaled as an <img>, its lines go hairline).
-     Plain white outline. */
+     White outline, switching to the page blue over white image pixels. */
   return (
     <svg
       ref={dotRef}
@@ -50,9 +141,10 @@ export default function CursorDot() {
       fill="none"
       stroke="white"
       strokeWidth={1.2}
-      className="pointer-events-none fixed top-0 left-0 z-[9999] h-[31px] w-[40px]"
+      className="pointer-events-none fixed top-0 left-0 z-[9999] h-[23px] w-[30px]"
       style={{
         willChange: "transform",
+        transition: "stroke 120ms ease",
         transform: "translate(-100px, -100px)",
       }}
     >
