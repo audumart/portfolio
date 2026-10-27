@@ -4,7 +4,7 @@ import StickyHeader from "../components/StickyHeader";
 import BackButton from "../components/BackButton";
 import GalleryGrid, { type GalleryItem } from "./GalleryGrid";
 import { notFound } from "next/navigation";
-import { readdir } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import { join, extname, basename } from "node:path";
 
 const IMAGE_EXT = [".png", ".jpg", ".jpeg", ".webp", ".gif", ".avif", ".svg"];
@@ -13,16 +13,64 @@ const VIDEO_EXT = [".mp4", ".webm", ".mov"];
 // Everything dropped into public/gallery shows up here, ordered by filename
 // (prefix files with 01-, 02-, ... to control the order)
 async function getGalleryItems(): Promise<GalleryItem[]> {
-  const files = await readdir(join(process.cwd(), "public/gallery")).catch(() => []);
-  return files
+  const dir = join(process.cwd(), "public/gallery");
+  const files = await readdir(dir).catch(() => []);
+  const items = files
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-    .flatMap((file): GalleryItem[] => {
+    .flatMap((file) => {
       const ext = extname(file).toLowerCase();
       const kind = IMAGE_EXT.includes(ext) ? "image" : VIDEO_EXT.includes(ext) ? "video" : null;
       if (!kind) return [];
       const alt = basename(file, extname(file)).replace(/^\d+[-_ ]*/, "");
-      return [{ src: `/gallery/${encodeURIComponent(file)}`, alt, kind }];
+      return [{ file, kind, alt, src: `/gallery/${encodeURIComponent(file)}` } as const];
     });
+
+  const measured = await Promise.all(
+    items.map(async ({ file, kind, alt, src }) => ({
+      src, alt, kind,
+      ratio: await (kind === "image" ? imageRatio : videoRatio)(join(dir, file)),
+    })),
+  );
+
+  // Portrait videos are phone recordings: give them the same tile shape as the
+  // first portrait image (the phone mockup) and inset them where that mockup's
+  // screen sits, so both read as the same phone at the same size.
+  const phone = measured.find((m) => m.kind === "image" && m.ratio < 1);
+  return measured.map((m) =>
+    phone && m.kind === "video" && m.ratio < 1 ? { ...m, ratio: phone.ratio, screen: true } : m,
+  );
+}
+
+// Read dimensions server-side so the layout is right on first paint.
+// sharp ships with Next as an optional dependency; fall back if it's missing.
+async function imageRatio(path: string): Promise<number> {
+  try {
+    const { default: sharp } = await import("sharp");
+    const { width, height, orientation } = await sharp(path).metadata();
+    if (!width || !height) return 4 / 3;
+    // EXIF orientations 5-8 are rotated 90°, so width and height swap
+    return orientation && orientation >= 5 ? height / width : width / height;
+  } catch {
+    return 4 / 3;
+  }
+}
+
+// MP4/MOV store each track's display size in its "tkhd" box as 16.16 fixed
+// point after a 3×3 matrix; the video track is the one with a non-zero size.
+// A matrix with a=0 means the track is rotated 90°, so width and height swap.
+async function videoRatio(path: string): Promise<number> {
+  try {
+    const buf = await readFile(path);
+    for (let i = buf.indexOf("tkhd"); i >= 0; i = buf.indexOf("tkhd", i + 4)) {
+      const matrix = i + 8 + (buf[i + 4] === 1 ? 32 : 20) + 16;
+      const width = buf.readUInt32BE(matrix + 36) / 65536;
+      const height = buf.readUInt32BE(matrix + 40) / 65536;
+      if (!width || !height) continue;
+      const rotated = buf.readInt32BE(matrix) === 0;
+      return rotated ? height / width : width / height;
+    }
+  } catch {}
+  return 16 / 9;
 }
 
 const A = {
@@ -114,17 +162,13 @@ export default async function GalleryPage() {
           <BackButton />
         </div>
 
-        <section aria-label="Design explorations" className="mt-[24px] xl:mt-[32px] enter-1">
-          <h1 className="font-ui text-[24px] md:text-[32px] xl:text-[40px] leading-none tracking-[-0.02em] text-white">
-            Design explorations
-          </h1>
-          <p className="mt-[12px] xl:mt-[16px] font-ui text-[16px] md:text-[20px] leading-[1.7] text-white/80 tracking-[0.16px]">
-            Component studies, interaction concepts, and visual directions.
-          </p>
-        </section>
+        {/* No visible text on this page; the heading is kept for screen readers */}
+        <h1 className="sr-only">Design explorations</h1>
 
+        {/* Breaks out of the 1440px column to span the window, with
+            tormo.at's gutter: 16px on phones up to 160px on very wide screens */}
         {items.length > 0 && (
-          <section aria-label="Gallery" className="mt-[32px] xl:mt-[48px] enter-2">
+          <section aria-label="Gallery" className="mt-[32px] xl:mt-[48px] mx-[calc(50%-50vw)] px-[clamp(1rem,-0.375rem+2.25vw,10rem)] enter-2">
             <GalleryGrid items={items} />
           </section>
         )}
