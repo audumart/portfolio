@@ -3,7 +3,7 @@
 import StickyHeader from "../components/StickyHeader";
 import Reveal from "../components/Reveal";
 import BackButton from "../components/BackButton";
-import LiveSiteBanner, { LiveSiteLink } from "../components/LiveSiteBanner";
+import LiveSiteBanner from "../components/LiveSiteBanner";
 
 const A = {
   hline:       "/ecb27c82bc7b69aa0e749a8df55fe8a8009a4306.svg",
@@ -29,6 +29,8 @@ const A = {
   typeColor:   "/Type&color.webp",
   mobile:      "/nuton mobile.webp",
   designSys:   "/Design system shot.webp",
+  // Shared with the gallery; renaming the gallery file breaks this
+  dsDocs:      "/gallery/04-Nuton design system docs.webp",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
@@ -287,13 +289,25 @@ export default function NutonPage() {
           />
         </Reveal>
 
+        {/* ── Design system docs site, the image links to it ──── */}
+        <Reveal className="mt-[40px] xl:mt-[64px]">
+          <a
+            href="https://nuton-design-system.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open the Nuton design system site"
+            className="block overflow-hidden rounded-[5px] transition-opacity hover:opacity-90"
+          >
+            <img loading="lazy" decoding="async"
+              src={A.dsDocs}
+              alt="Nuton design system documentation site"
+              className="block w-full h-auto pointer-events-none"
+            />
+          </a>
+        </Reveal>
+
         {/* ── Type & color ──────────────────────────────────────── */}
         <Reveal className="mt-[40px] xl:mt-[64px]">
-          <LiveSiteLink
-            href="https://nuton-design-system.vercel.app/"
-            label="VIEW DESIGN SYSTEM"
-            className="pb-[10px] xl:pb-[13px]"
-          />
           <img loading="lazy" decoding="async"
             src={A.typeColor}
             alt="Nuton type and color system"
