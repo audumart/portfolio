@@ -267,11 +267,11 @@ function Projects() {
       <div className="min-[1440px]:mx-[calc(50%-50vw)]">
       <div className="mx-auto flex max-w-[1040px] min-[1440px]:max-w-none min-[1440px]:w-[72vw] flex-col gap-[20px] md:gap-[24px] xl:gap-[28px] min-[1440px]:gap-[2vw]">
         <div className="enter-2"><FeaturedCard /></div>
+        <Reveal><WysemarketCard /></Reveal>
         <Reveal><AssayCard /></Reveal>
         <Reveal><CrateCard /></Reveal>
         <Reveal><QrPayCard /></Reveal>
         <Reveal><TseCard /></Reveal>
-        <Reveal><WysemarketCard /></Reveal>
         <Reveal><NextHavnCard /></Reveal>
       </div>
       </div>
