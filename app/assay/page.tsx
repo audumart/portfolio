@@ -288,7 +288,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Batch setup</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Warned about unresolved disputes on the check suite for the batch. Launches anyway.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s1} alt="Batch setup" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s1} alt="Batch setup" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -297,7 +297,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Review queue</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Views the batch. Calibration shown against other reviewers in the cohort, never as a score.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s2} alt="Review queue" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s2} alt="Review queue" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -306,7 +306,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Rubric briefing</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">First time on this rubric. Four criteria, each with its anchors.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s3} alt="Rubric briefing" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s3} alt="Rubric briefing" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -315,7 +315,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Trajectory</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Opens item 7. Two checks have already failed, pinned to steps 1 and 5.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s4} alt="Trajectory" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s4} alt="Trajectory" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -324,7 +324,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Attaching evidence</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Attaches step 5 to a criterion. Three of four scored, one still unscored.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s5} alt="Attaching evidence" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s5} alt="Attaching evidence" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -333,7 +333,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dispute a check</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">The cold chain check fires wrongly on continuation legs. The reviewer submits a dispute with evidence.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s6} alt="Dispute a check" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s6} alt="Dispute a check" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -342,7 +342,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Check suite builder</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">The program lead reads all disputes on one check and proceeds to amend the rule.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s7} alt="Check suite builder" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s7} alt="Check suite builder" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -351,7 +351,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Version diff</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Amends the check and is shown hat the rewritten check in v3.1 changes and what it costs the items already scored under the previous version</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s8} alt="Version diff" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s8} alt="Version diff" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -360,7 +360,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dispute reply</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">The suite owner answers in My flags. v3.1 adds an exemption for continuation legs, and the 60 items already checked under v3.0 keep their results.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s9} alt="Dispute reply" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s9} alt="Dispute reply" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -369,7 +369,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Adjudication</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Two reviewers scored recovery quality 2 and 5 on the same item. Only one attached evidence.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s10} alt="Adjudication" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s10} alt="Adjudication" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -378,7 +378,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Quality dashboard</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Sees overview of scoring on the batch. Recovery quality sits at 0.44 agreement against a floor of 0.70.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s11} alt="Quality dashboard" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s11} alt="Quality dashboard" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -387,7 +387,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Rubric criterion</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Anchors written at 1 and 5 only. 78% of real scores land in the blanks.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s12} alt="Rubric criterion" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s12} alt="Rubric criterion" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         <Reveal className="mt-[40px] xl:mt-[64px]">
@@ -396,7 +396,7 @@ export default function AssayPage() {
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Dataset release</p>
             <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">The gate blocked on exactly the criterion the first screen warned about. They release scoped: 51 items ship, 9 held back, one check still amber.</p>
           </div>
-          <img loading="lazy" decoding="async" src={A.s13} alt="Dataset release" className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none" />
+          <img loading="lazy" decoding="async" src={A.s13} alt="Dataset release" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>
 
         {/* ── One platform any domain ───────────────────────────── */}
@@ -446,7 +446,7 @@ export default function AssayPage() {
           <img loading="lazy" decoding="async"
             src={A.s14}
             alt="The same problem outside a lab"
-            className="w-full h-auto rounded-[10px] xl:rounded-[14px] pointer-events-none"
+            className="w-full h-auto rounded-[5px] pointer-events-none"
           />
         </Reveal>
 
