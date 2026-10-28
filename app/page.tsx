@@ -128,7 +128,7 @@ function FeaturedCard() {
         <CardOverlay name="Nuton" desc="Learn it once. Actually remember." />
       </div>
       <CardLabel>Nuton</CardLabel>
-      <CardDesc>AI-powered learning tool that turns any source material into a structured course with lessons, flashcards, quizzes, and a podcast mode.</CardDesc>
+      <CardDesc>AI learning tool that turns any source into a structured course.</CardDesc>
     </Link>
   );
 }
@@ -146,7 +146,7 @@ function WysemarketCard() {
         <CardOverlay name="Wysemarket" desc="Prediction markets for real-world outcomes" />
       </div>
       <CardLabel>Wysemarket</CardLabel>
-      <CardDesc>A prediction market app for real-world outcomes with markets that settle automatically from verified public results.</CardDesc>
+      <CardDesc>Prediction markets that settle from verified public results.</CardDesc>
     </a>
   );
 }
@@ -164,7 +164,7 @@ function AssayCard() {
         <CardOverlay name="Assay" desc="Evidence-anchored scoring for AI agents" />
       </div>
       <CardLabel>Assay</CardLabel>
-      <CardDesc>Evidence-anchored scoring tool for AI agent trajectories. Tracks reviewer agreement, routes disputes and gates dataset release.</CardDesc>
+      <CardDesc>Scoring tool for AI agent trajectories, with evidence pinned to each step.</CardDesc>
     </Link>
   );
 }
@@ -182,7 +182,7 @@ function CrateCard() {
         <CardOverlay name="[crate]" desc="Separate stems. Anywhere, anytime." />
       </div>
       <CardLabel>[crate]</CardLabel>
-      <CardDesc>A stem-splitting app that isolates vocals, drums, bass, and instrumentals from any song in a few taps.</CardDesc>
+      <CardDesc>Stem-splitting app that pulls vocals, drums and bass from any song.</CardDesc>
     </Link>
   );
 }
@@ -200,7 +200,7 @@ function TseCard() {
         <CardOverlay name="TSE Studio" desc="Breaking creative boundaries one shot at a time" />
       </div>
       <CardLabel>TSE Studio</CardLabel>
-      <CardDesc>Website redesign for a photography studio, translating a bold creative identity into a clean editorial web presence.</CardDesc>
+      <CardDesc>Portfolio site redesign for a photography studio.</CardDesc>
     </Link>
   );
 }
@@ -218,7 +218,7 @@ function NextHavnCard() {
         <CardOverlay name="NextHavn" desc="The creative industry's next operating system" />
       </div>
       <CardLabel>NextHavn</CardLabel>
-      <CardDesc>End-to-end design of a creative marketplace where makers and buyers meet, built for discovery with browsing that stays out of the way.</CardDesc>
+      <CardDesc>One marketplace for creative talent, studios and gear.</CardDesc>
     </Link>
   );
 }
@@ -252,7 +252,7 @@ function QrPayCard() {
         <CardOverlay name="QR Pay by DIVE HQ" desc="Dive into effortless transactions." />
       </div>
       <CardLabel>QR Pay by DIVE HQ</CardLabel>
-      <CardDesc>A mobile payment app built around Scan to Pay, with bank transfers, Dive Tags, and bill-splitting in one place.</CardDesc>
+      <CardDesc>Mobile payments built around Scan to Pay.</CardDesc>
     </Link>
   );
 }
