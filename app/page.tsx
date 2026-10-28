@@ -21,7 +21,8 @@ const A = {
   nineLives: "/5886ad421872366dda0a22171f4ae2e1d0f9222c.webp",
   qrPay:     "/5d183971d6ba060bdca6dc2f89622c5fa941b93b.webp",
   nextHavn:  "/ccbcfdbc1bf93c62740275332ce5e07d07322a3f.webp",
-  assay:     "/assay screens/assay hero image.webp",
+  // Framed export for the card; the case study hero is a tighter crop
+  assay:     "/assay screens/assay card.webp",
   decision:      "/d1c91116a8ea2b156cb4f56aca4dc4784ec92ea1.webp",
   accessibility: "/8a9a6668df0e16ad2011b371781a547d74a5dac5.webp",
 };
@@ -159,7 +160,7 @@ function AssayCard() {
         <img loading="lazy" decoding="async"
           src={A.assay}
           alt="Assay AI evaluation tool"
-          className="absolute inset-0 size-full max-w-none object-cover object-top pointer-events-none"
+          className="absolute inset-0 size-full max-w-none object-cover object-center pointer-events-none"
         />
         <CardOverlay name="Assay" desc="Evidence-anchored scoring for AI agents" />
       </div>
