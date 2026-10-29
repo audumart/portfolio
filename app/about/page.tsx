@@ -305,7 +305,7 @@ export default function AboutPage() {
             <div className="font-subtitle text-[22px] md:text-[30px] xl:text-[40px] leading-[0] text-white tracking-[-0.44px] md:tracking-[-0.6px] xl:tracking-[-0.8px]">
               <p className="leading-[1.34]">
                 I&apos;ve spent 6+ years designing products, using research and
-                fast iteration to turn a team&apos;s goals into clean interfaces
+                fast iteration to turn problems and goals into interfaces
                 that work.
               </p>
             </div>
