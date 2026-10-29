@@ -263,9 +263,10 @@ function Projects() {
   return (
     <section id="work" aria-label="Projects" className="relative z-10 mt-[48px] px-[24px] md:px-[40px] xl:px-[80px]">
       {/* Single centred column, one project per row. Past 1440px it breaks out
-          of the page column like the gallery and keeps the same share of the window */}
+          of the page column like the gallery and keeps the same share of the
+          window, up to 1440px wide, which is as far as the card images stay sharp */}
       <div className="min-[1440px]:mx-[calc(50%-50vw)]">
-      <div className="mx-auto flex max-w-[1040px] min-[1440px]:max-w-none min-[1440px]:w-[72vw] flex-col gap-[20px] md:gap-[24px] xl:gap-[28px] min-[1440px]:gap-[2vw]">
+      <div className="mx-auto flex max-w-[1040px] min-[1440px]:max-w-none min-[1440px]:w-[min(72vw,1440px)] flex-col gap-[20px] md:gap-[24px] xl:gap-[28px] min-[1440px]:gap-[min(2vw,40px)]">
         <div className="enter-2"><FeaturedCard /></div>
         <Reveal><WysemarketCard /></Reveal>
         <Reveal><AssayCard /></Reveal>

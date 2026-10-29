@@ -3,12 +3,32 @@
 import StickyHeader from "../components/StickyHeader";
 import BackButton from "../components/BackButton";
 import GalleryGrid, { type GalleryItem } from "./GalleryGrid";
-import { notFound } from "next/navigation";
 import { readdir, readFile } from "node:fs/promises";
 import { join, extname, basename } from "node:path";
 
 const IMAGE_EXT = [".png", ".jpg", ".jpeg", ".webp", ".gif", ".avif", ".svg"];
 const VIDEO_EXT = [".mp4", ".webm", ".mov"];
+
+// Short description shown under each item in the lightbox, keyed by filename
+// without its number prefix. Deliberately no product names. Files without
+// an entry fall back to their filename.
+const CAPTIONS: Record<string, string> = {
+  "Assay landing page hero": "AI evaluation tool landing page",
+  "stylesphere interaction": "Adding an item to a digital wardrobe",
+  "crate library empty state": "Audio library empty state",
+  "Murmur step cards": "Meeting notes onboarding steps",
+  "Nuton design system docs": "Design system documentation site",
+  "Overhead spikes interaction": "Cloud spend spike analysis",
+  "Ledgerline invoicing dashboard": "Invoicing dashboard",
+  "Library+ discover screen": "Book discovery screen",
+  "Assay feature cards": "Animated feature cards",
+  "WM components": "Prediction market components",
+  "Murmur interaction": "Live meeting transcription",
+  "Northwind cloud spend overview": "Cloud spend overview",
+  "Ledgerline interaction": "Invoice list interaction",
+  "Fennel interaction": "AI research workspace",
+  "pickup soccer game booking app": "Pickup football booking flow",
+};
 
 // Everything dropped into public/gallery shows up here, ordered by filename
 // (prefix files with 01-, 02-, ... to control the order)
@@ -24,23 +44,17 @@ async function getGalleryItems(): Promise<GalleryItem[]> {
       if (ext !== ".webp" && (files as string[]).includes(`${basename(file, extname(file))}.webp`)) return [];
       const kind = IMAGE_EXT.includes(ext) ? "image" : VIDEO_EXT.includes(ext) ? "video" : null;
       if (!kind) return [];
-      const alt = basename(file, extname(file)).replace(/^\d+[-_ ]*/, "");
+      const name = basename(file, extname(file)).replace(/^\d+[-_ ]*/, "");
+      const alt = CAPTIONS[name] ?? name;
       return [{ file, kind, alt, src: `/gallery/${encodeURIComponent(file)}` } as const];
     });
 
-  const measured = await Promise.all(
+  // Every item, video included, gets a tile in its own shape
+  return Promise.all(
     items.map(async ({ file, kind, alt, src }) => ({
       src, alt, kind,
       ratio: await (kind === "image" ? imageRatio : videoRatio)(join(dir, file)),
     })),
-  );
-
-  // Portrait videos are phone recordings: give them the same tile shape as the
-  // first portrait image (the phone mockup) and inset them where that mockup's
-  // screen sits, so both read as the same phone at the same size.
-  const phone = measured.find((m) => m.kind === "image" && m.ratio < 1);
-  return measured.map((m) =>
-    phone && m.kind === "video" && m.ratio < 1 ? { ...m, ratio: phone.ratio, screen: true } : m,
   );
 }
 
@@ -144,9 +158,6 @@ function Footer() {
 }
 
 export default async function GalleryPage() {
-  // Hidden in production until it's ready
-  if (process.env.NODE_ENV !== "development") notFound();
-
   const items = await getGalleryItems();
 
   return (
@@ -169,10 +180,14 @@ export default async function GalleryPage() {
         <h1 className="sr-only">Design explorations</h1>
 
         {/* Breaks out of the 1440px column to span the window, with
-            tormo.at's gutter: 16px on phones up to 160px on very wide screens */}
+            tormo.at's gutter: 16px on phones up to 160px on very wide screens.
+            Capped at 2400px so ultrawide screens don't stretch the shots
+            past their own resolution. */}
         {items.length > 0 && (
           <section aria-label="Gallery" className="mt-[32px] xl:mt-[48px] mx-[calc(50%-50vw)] px-[clamp(1rem,-0.375rem+2.25vw,10rem)] enter-2">
-            <GalleryGrid items={items} />
+            <div className="mx-auto max-w-[2400px]">
+              <GalleryGrid items={items} />
+            </div>
           </section>
         )}
 

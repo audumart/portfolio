@@ -19,14 +19,7 @@ export type GalleryItem = {
   kind: "image" | "video";
   /** width / height, read server-side */
   ratio: number;
-  /** phone recording shown inset like the screen of the phone mockup */
-  screen?: boolean;
 };
-
-// Where the screen sits inside the Library+ phone mockup (measured from the
-// image): 10% in from the sides, 6.9% from top and bottom, with corners
-// matching the mockup's screen. Radius is % of width / % of height.
-const SCREEN_STYLE = { top: "6.9%", left: "10%", width: "80%", height: "86.2%", borderRadius: "9.5% / 4.4%" };
 
 const LAYOUTS = [
   { perRow: 1, className: "flex sm:hidden" },
@@ -43,15 +36,13 @@ function toRows(items: GalleryItem[], perRow: number) {
 function Media({ item }: { item: GalleryItem }) {
   const isVideo = item.kind === "video";
   // rounded-[inherit] + isolate keep corners clipped on video in Safari.
-  // Videos sit on black and are fitted (contain), since their tile may be
-  // matched to another item's shape; images fill their tile.
-  const media = `block size-full rounded-[inherit] ${isVideo ? "object-contain" : "object-cover"}`;
+  // Tiles take each item's own shape, so both fill their tile exactly.
+  const media = "block size-full rounded-[inherit] object-cover";
   return isVideo ? (
     // Plays like a GIF, as on the TSE page: autoplay, loop, muted, no controls
     <video
       autoPlay loop muted playsInline aria-label={item.alt} src={item.src}
-      className={item.screen ? "absolute block object-cover" : media}
-      style={item.screen ? SCREEN_STYLE : undefined}
+      className={media}
     />
   ) : (
     <img src={item.src} alt={item.alt} loading="lazy" className={media} />
@@ -59,7 +50,6 @@ function Media({ item }: { item: GalleryItem }) {
 }
 
 const FIGURE = "relative m-0 min-w-0 isolate overflow-hidden rounded-[0.3rem]";
-const bg = (item: GalleryItem) => (item.kind === "video" ? "bg-black" : "bg-white/5");
 
 export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
   const [open, setOpen] = useState<number | null>(null);
@@ -75,7 +65,7 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
                   type="button"
                   aria-label={`Open ${item.alt}`}
                   onClick={() => setOpen(items.indexOf(item))}
-                  className={`${FIGURE} ${bg(item)} block cursor-zoom-in p-0 transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`}
+                  className={`${FIGURE} bg-white/5 block cursor-zoom-in p-0 transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`}
                   // grow is scaled ×100: flex-grow values summing below 1 only hand out that
                   // fraction of the free space, which left lone tall images half-width
                   style={{ flex: `${item.ratio * 100} 1 0`, aspectRatio: item.ratio }}
@@ -153,6 +143,16 @@ function Lightbox({ items, index, onChange }: { items: GalleryItem[]; index: num
       >
         ×
       </button>
+
+      {/* Description and position, as small tags under the stage */}
+      <div className="pointer-events-none absolute bottom-[16px] md:bottom-[24px] left-1/2 flex -translate-x-1/2 items-center gap-[6px] whitespace-nowrap font-mono text-[11px] leading-none text-[#1a1a1a]">
+        <span className="rounded-[3px] bg-white px-[8px] py-[6px]">{item.alt}</span>
+        {items.length > 1 && (
+          <span className="rounded-[3px] bg-white px-[8px] py-[6px] tabular-nums">
+            {index + 1} / {items.length}
+          </span>
+        )}
+      </div>
     </dialog>
   );
 }
