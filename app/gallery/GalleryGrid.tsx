@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { TOP_LAYER_EVENT } from "../components/CursorDot";
 
 /* Justified rows, 1:1 with tormo.at's gallery: rows of 3 items ≥1024px,
    2 ≥640px, 1 below, 12px gaps, 0.3rem corners. Every item in a row shares
@@ -93,6 +94,8 @@ function Lightbox({ items, index, onChange }: { items: GalleryItem[]; index: num
   useEffect(() => {
     const dialog = ref.current;
     dialog?.showModal();
+    // Let the custom cursor re-enter the top layer above this dialog
+    window.dispatchEvent(new Event(TOP_LAYER_EVENT));
     document.documentElement.style.overflow = "hidden";
     return () => {
       document.documentElement.style.overflow = "";

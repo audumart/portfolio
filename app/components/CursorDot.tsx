@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 const DESKTOP_MQ = "(min-width: 1280px) and (pointer: fine) and (hover: hover)";
 const INK = "#415a77";
+/** Fired after something enters the top layer (e.g. a modal dialog opens) */
+export const TOP_LAYER_EVENT = "toplayerchange";
 const SAMPLE_W = 96;
 const WHITE_LUM = 0.9;
 
@@ -78,6 +80,7 @@ function imageAt(x: number, y: number) {
 
 export default function CursorDot() {
   const dotRef = useRef<SVGSVGElement>(null);
+  const layerRef = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
   /* Inject cursor:none at runtime, sits after all static stylesheets,
@@ -128,12 +131,38 @@ export default function CursorDot() {
     };
   }, [isDesktop]);
 
+  /* Modal dialogs (the gallery lightbox) sit in the browser's top layer,
+     above any z-index. Keep the cursor in the top layer too, as a manual
+     popover, and re-show it whenever something else enters the top layer
+     so it ends up last, which is on top. */
+  useEffect(() => {
+    const layer = layerRef.current;
+    if (!isDesktop || !layer || typeof layer.showPopover !== "function") return;
+    const raise = () => {
+      if (layer.matches(":popover-open")) layer.hidePopover();
+      layer.showPopover();
+    };
+    raise();
+    window.addEventListener(TOP_LAYER_EVENT, raise);
+    return () => {
+      window.removeEventListener(TOP_LAYER_EVENT, raise);
+      if (layer.matches(":popover-open")) layer.hidePopover();
+    };
+  }, [isDesktop]);
+
   if (!isDesktop) return null;
 
   /* Arrow from public/mouse pointer.svg, inlined so the outline can keep a
      1px stroke at cursor size (scaled as an <img>, its lines go hairline).
      White outline, switching to the page blue over white image pixels. */
   return (
+    <div
+      ref={layerRef}
+      popover="manual"
+      aria-hidden="true"
+      // Reset the UA popover box so it is just an invisible layer
+      className="pointer-events-none fixed inset-auto top-0 left-0 m-0 size-0 overflow-visible border-0 bg-transparent p-0"
+    >
     <svg
       ref={dotRef}
       aria-hidden="true"
@@ -155,5 +184,6 @@ export default function CursorDot() {
         <path vectorEffect="non-scaling-stroke" d="M20.9991 41.3463V61.3263C21.0091 62.7863 20.139 63.9863 18.409 64.9363C16.669 65.8763 14.589 66.3663 12.169 66.4263C9.63906 66.4263 7.47907 65.9263 5.67907 64.9563C3.87907 63.9763 2.97905 62.7563 2.96905 61.2963L2.78906 27.8863V7.88623L2.88903 27.0563L2.96905 41.2963C2.97905 42.7563 3.87907 43.9763 5.67907 44.9563C7.47907 45.9263 9.63906 46.4263 12.169 46.4263C14.589 46.3663 16.669 45.8763 18.409 44.9363C19.779 44.1863 20.609 43.2763 20.889 42.2063C20.959 41.9263 20.9991 41.6463 20.9991 41.3463Z" />
       </g>
     </svg>
+    </div>
   );
 }
