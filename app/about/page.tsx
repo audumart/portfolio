@@ -20,16 +20,24 @@ const A = {
   folder:  "/05889087ae0710df25ba5f60ad930700a19483d4.webp",
 };
 
-/* ── Tooling logos (Simple Icons + provenbyusers.com / supernova.io favicons) ── */
+/* ── Tooling logos (Simple Icons, provenbyusers.com / supernova.io favicons,
+   and one-colour redraws of the Paper, Pencil, v0, DialKit and Agentation marks) ── */
 const TOOLS = [
   { name: "Figma",                src: "/logos/figma.svg",              href: "https://www.figma.com" },
+  { name: "Paper",                src: "/logos/paper.svg",              href: "https://paper.design" },
+  { name: "Pencil",               src: "/logos/pencil.svg",             href: "https://www.pen.dev" },
   { name: "Supernova",            src: "/logos/supernova.png",          href: "https://www.supernova.io" },
   { name: "Adobe Creative Cloud", src: "/logos/adobecreativecloud.svg", href: "https://www.adobe.com/creativecloud.html" },
   { name: "ProvenByUsers",        src: "/logos/provenbyusers.png",      href: "https://provenbyusers.com" },
+  { name: "v0",                   src: "/logos/v0.svg",                 href: "https://v0.app" },
   { name: "Codex",                src: "/logos/openai.svg",             href: "https://openai.com/codex" },
   { name: "Claude Code & Claude Design", src: "/logos/claude.svg",      href: "https://claude.com" },
-  { name: "Mixpanel",             src: "/logos/mixpanel.svg",           href: "https://mixpanel.com" },
   { name: "Cursor",               src: "/logos/cursor.svg",             href: "https://cursor.com" },
+  { name: "Next.js",              src: "/logos/nextdotjs.svg",          href: "https://nextjs.org" },
+  { name: "GitHub",               src: "/logos/github.svg",             href: "https://github.com" },
+  { name: "DialKit",              src: "/logos/dialkit.svg",            href: "https://www.dialkit.dev" },
+  { name: "Agentation",           src: "/logos/agentation.svg",         href: "https://www.agentation.com" },
+  { name: "Mixpanel",             src: "/logos/mixpanel.svg",           href: "https://mixpanel.com" },
   { name: "Miro",                 src: "/logos/miro.svg",               href: "https://miro.com" },
 ];
 
@@ -151,7 +159,7 @@ function Capabilities() {
 
         {/* Tooling */}
         <p className="font-subtitle text-[26px] md:text-[32px] text-[#415a77] tracking-[-0.52px] mb-[10px]">Tooling</p>
-        <ToolLogos size={28} className="gap-[20px] mb-[32px]" />
+        <ToolLogos size={24} className="gap-[18px] mb-[32px]" />
         <hr className="border-[#415a77]/20 mb-[32px]" />
 
         {/* CTA */}
@@ -216,8 +224,8 @@ function Capabilities() {
           <p className="leading-[1.34]">INFORMATION ARCHITECTURE</p>
         </Skills>
         {/* vertically centred on the "Tooling" label */}
-        <div className="absolute" style={{ right: 48, top: 479 }}>
-          <ToolLogos size={36} className="justify-end gap-[28px]" />
+        <div className="absolute" style={{ right: 48, top: 482 }}>
+          <ToolLogos size={30} className="justify-end gap-[24px]" />
         </div>
 
         <p className="absolute w-[469px] text-center font-subtitle text-[40px] leading-[1.34] text-[#415a77] tracking-[-0.8px]"
