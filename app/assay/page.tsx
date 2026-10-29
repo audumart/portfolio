@@ -349,7 +349,7 @@ export default function AssayPage() {
           <div className="mb-[12px]">
             <p className="font-ui text-[12px] tracking-[0.1em] uppercase text-white/65 mb-[4px]">08 · Program Lead</p>
             <p className="font-ui text-[17px] md:text-[20px] font-semibold text-white leading-tight mb-[5px]">Version diff</p>
-            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Amends the check and is shown hat the rewritten check in v3.1 changes and what it costs the items already scored under the previous version</p>
+            <p className="font-ui text-[14px] md:text-[15px] leading-[1.5] text-white/75">Amends the check and is shown what the rewritten check in v3.1 changes and what it costs the items already scored under the previous version</p>
           </div>
           <img loading="lazy" decoding="async" src={A.s8} alt="Version diff" className="w-full h-auto rounded-[5px] pointer-events-none" />
         </Reveal>

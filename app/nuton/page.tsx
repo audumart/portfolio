@@ -29,8 +29,7 @@ const A = {
   typeColor:   "/Type&color.webp",
   mobile:      "/nuton mobile.webp",
   designSys:   "/Design system shot.webp",
-  // Shared with the gallery; renaming the gallery file breaks this
-  dsDocs:      "/gallery/04-Nuton design system docs.webp",
+  dsDocs:      "/Nuton design system docs.webp",
 };
 
 function GridTile({ index, left }: { index: number; left: string }) {
